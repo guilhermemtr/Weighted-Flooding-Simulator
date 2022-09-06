@@ -160,7 +160,7 @@ corruptions_stake_protocol_simulator::round ()
   {
     if (this->is_corrupted (i))
     {
-      this->adversary (i, adversary_phase::begin);
+      this->adversary (i, adversary_phase::end);
     }
   }
 
