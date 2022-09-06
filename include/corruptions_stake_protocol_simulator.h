@@ -10,7 +10,6 @@
 #include <ctime>
 #include <cstdlib>
 
-#include "corruptions_stake_protocol_simulator_run_data_extractor.h"
 #include "yal_log.h"
 
 /**
@@ -60,8 +59,6 @@ class corruptions_stake_protocol_simulator : public protocol_simulator
   protocol_round () = 0;
 
     public:
-  friend class corruptions_stake_protocol_simulator_run_data_extractor;
-
   corruptions_stake_protocol_simulator (std::vector<stake_t> stakes);
   virtual ~corruptions_stake_protocol_simulator ();
 

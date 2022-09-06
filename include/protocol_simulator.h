@@ -7,10 +7,6 @@
 #ifndef __PROT_SIM__
 #define __PROT_SIM__
 
-#include "protocol_simulator_run_data_extractor.h"
-
-//@todo Find way to get the number of messages each party sends per round.
-
 /**
  * @class protocol_simulator
  * @brief Abstract class for protocol simulators.
@@ -32,16 +28,10 @@ class protocol_simulator
   round_t curr_round;
 
   /**
-   * Vector that has the number of messages sent per round per party.
-   */
-  // std::vector<std::vector<counter_t>> nr_messages;
-
-  /**
    * Vector that has the number of messages sent per round.
    */
   std::vector<counter_t> nr_messages;
 
-  // vector where, for each party i:
   /**
    * For each party i:
    *   got_msg[i] = ROUND_T_MAX,  if i did not yet get the message;
@@ -59,9 +49,6 @@ class protocol_simulator
   round () = 0;
 
     public:
-  friend class protocol_simulator_run_data_extractor;
-  friend class corruptions_stake_protocol_simulator_run_data_extractor;
-
   /**
    * Given a number of parties, constructs a new protocol_simulator object.
    */

@@ -5,6 +5,8 @@
 #ifndef __PROT_SIM_TYPES__
 #define __PROT_SIM_TYPES__
 
+// Defines some basic types
+
 typedef std::size_t       party_t;
 typedef std::size_t       counter_t;
 typedef unsigned long int round_t;

@@ -10,26 +10,18 @@
 
 class scoped_lock
 {
-    private:
+private:
   pthread_mutex_t *l;
-  pthread_cond_t  *c;
 
-    public:
-  scoped_lock (pthread_mutex_t *l, pthread_cond_t *c = NULL);
-
-  void
-  wait ();
-  void
-  signal ();
-  void
-  broadcast ();
+public:
+  scoped_lock (pthread_mutex_t *l);
 
   virtual ~scoped_lock ();
 
   static void
-  init_lock (pthread_mutex_t *l, pthread_cond_t *c = NULL);
+  init_lock (pthread_mutex_t *l);
   static void
-  del_lock (pthread_mutex_t *l, pthread_cond_t *c = NULL);
+  del_lock (pthread_mutex_t *l);
 };
 
 #endif

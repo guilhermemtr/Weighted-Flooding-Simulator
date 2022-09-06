@@ -9,16 +9,13 @@ OBJ_PATH=obj/
 
 INCS=$(foreach d, $(INC_PATH), -I$d)
 
-# -fcilkplus -lcilkrts
-# -fopenmp
-
 CFLAGS=-Wall $(MODE) $(INCS)
 LDFLAGS=-lpthread -lm
 
 FILE_PREFIX=.cc
 OBJ=.o
 
-SOURCES=$(SRC_PATH)protocol_simulator.cc $(SRC_PATH)corruptions_stake_protocol_simulator.cc $(SRC_PATH)abstract_send_protocol_simulator.cc $(SRC_PATH)abstract_receive_protocol_simulator.cc $(SRC_PATH)send_protocol_simulator.cc $(SRC_PATH)generate_stake_distribution.cc $(SRC_PATH)receiver_protocol_simulator.cc $(SRC_PATH)hybrid_protocol_simulator.cc $(SRC_PATH)k_out_protocol_simulator.cc $(SRC_PATH)hybrid_k_out_protocol_simulator.cc $(SRC_PATH)protocol_simulator_run_data_extractor.cc $(SRC_PATH)corruptions_stake_protocol_simulator_run_data_extractor.cc $(SRC_PATH)random_sampler.cc $(SRC_PATH)random_utils.cc $(UTILS_SRC_PATH)io_stake_distribution.cc $(UTILS_SRC_PATH)read_args.cc $(UTILS_SRC_PATH)yal_log.cc $(UTILS_SRC_PATH)main_utils.cc $(UTILS_SRC_PATH)scoped_lock.cc
+SOURCES=$(SRC_PATH)protocol_simulator.cc $(SRC_PATH)corruptions_stake_protocol_simulator.cc $(SRC_PATH)abstract_send_protocol_simulator.cc $(SRC_PATH)abstract_receive_protocol_simulator.cc $(SRC_PATH)send_protocol_simulator.cc $(SRC_PATH)generate_stake_distribution.cc $(SRC_PATH)receiver_protocol_simulator.cc $(SRC_PATH)hybrid_protocol_simulator.cc $(SRC_PATH)k_out_protocol_simulator.cc $(SRC_PATH)hybrid_k_out_protocol_simulator.cc $(SRC_PATH)random_sampler.cc $(SRC_PATH)random_utils.cc $(UTILS_SRC_PATH)io_stake_distribution.cc $(UTILS_SRC_PATH)read_args.cc $(UTILS_SRC_PATH)yal_log.cc $(UTILS_SRC_PATH)main_utils.cc $(UTILS_SRC_PATH)scoped_lock.cc
 
 
 KOUT_SOURCES=main.cc $(SOURCES)
@@ -39,17 +36,15 @@ KOUT_EXECUTABLE=koutbin
 HYBRID_EXECUTABLE=hybin
 
 
-#MODE=$(DEBUG)
-#MODE=$(SLOW_RELEASE)
-#MODE=$(RELEASE)
-MODE=$(PRELEASE)
-
-
 PROFILING=-pg
 PRELEASE=-O5 -std=gnu++20 -fopenmp
 RELEASE=-O5 -std=gnu++20
 SLOW_RELEASE=-std=gnu++20 -D OMP_NUM_THREADS=1
 DEBUG=-g -D __YAL_ON__ -std=gnu++20
+
+#Should be set to one of the variables above
+MODE=$(PRELEASE)
+
 
 kout: $(KOUT_SOURCES) $(KOUT_EXECUTABLE)
 	$(CC) $(CFLAGS) $(KOUT_OBJECTS) -o $(KOUT_EXECUTABLE) $(LDFLAGS)

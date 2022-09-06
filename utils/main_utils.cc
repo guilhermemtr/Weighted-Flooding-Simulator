@@ -5,9 +5,9 @@
 void
 init ()
 {
-  __yal_init_logger ();
-  __yal_set_lvl_err ();
-  init_random_utils ();
+  __yal_init_logger (); // initializes the logger
+  __yal_set_lvl_err (); // sets the logging level
+  init_random_utils (); // initialization of our randomness sources
 }
 
 std::vector<stake_t>
@@ -28,56 +28,56 @@ generate_stake_distribution (party_t           n,
 
   // Deterministic Distributions
   // test constant distribution
-  if (flags & 0b1)
+  if (flags & DET_CONST_DIST)
   {
     stakes = sdgen.constant_stake (n, 1);
   }
 
   // test few fat distribution, thin sender
-  if (flags & 0b10)
+  if (flags & DET_FF_THIN_DIST)
   {
     stakes = sdgen.few_fat_thin_stake (n, param1, param2);
   }
 
   // test few fat distribution, fat sender
-  if (flags & 0b100)
+  if (flags & DET_FF_FAT_DIST)
   {
     stakes = sdgen.few_fat_fat_stake (n, param1, param2);
   }
 
   // test exponential distribution, thinnest sender
-  if (flags & 0b1000)
+  if (flags & DET_EXP_THIN_DIST)
   {
     stakes = sdgen.exponential_thinnest_stake (n, param1);
   }
 
   // test exponential distribution, median sender
-  if (flags & 0b10000)
+  if (flags & DET_EXP_MEDN_DIST)
   {
     stakes = sdgen.exponential_median_stake (n, param1);
   }
 
   // test exponential distribution, thinnest sender
-  if (flags & 0b100000)
+  if (flags & DET_EXP_FAT_DIST)
   {
     stakes = sdgen.exponential_fattest_stake (n, param1);
   }
 
   // Random Distributions
   // test random exponential distribution
-  if (flags & (0b1 << RAND_TEST_TYPE_OFFSET))
+  if (flags & RAND_EXP_RAND_SND_DIST)
   {
     stakes = sdgen.sample_exponential_stake (n, param1);
   }
 
   // test uniform distribution
-  if (flags & (0b10 << RAND_TEST_TYPE_OFFSET))
+  if (flags & RAND_UNIF_RAND_SND_DIST)
   {
     stakes = sdgen.sample_uniform_stake (n, 0, param1);
   }
 
   // test geometric distribution
-  if (flags & (0b100 << RAND_TEST_TYPE_OFFSET))
+  if (flags & RAND_GEOM_RAND_SND_DIST)
   {
     stakes = sdgen.sample_geometric_stake (n, param1);
   }
@@ -92,7 +92,7 @@ generate_stake_distribution (party_t           n,
     succeeded = succeeded && test_stake_distribution (stakes);
     }*/
 
-  if (flags & (-1 << RAND_TEST_TYPE_OFFSET))
+  if (flags & (RAND_EXP_RAND_SND_DIST | RAND_UNIF_RAND_SND_DIST | RAND_GEOM_RAND_SND_DIST))
   {
     sdgen.add_to_stake_distribution (stakes, 1);
   }
@@ -138,7 +138,7 @@ get_corrupted_parties (std::vector<stake_t> stakes,
 
   switch (corruption_strategy)
   {
-    case 1:    // corrupt parties randomly
+    case CORR_RAND:    // corrupt parties randomly
       corruptions = corrupt_parties_by_stake (
         stakes,
         honest,
@@ -149,7 +149,7 @@ get_corrupted_parties (std::vector<stake_t> stakes,
         });
       break;
 
-    case 2:    // corrupt rich first
+    case CORR_RICH_FIRST:    // corrupt rich first
       corruptions = corrupt_parties_by_stake (
         stakes,
         honest,
@@ -164,7 +164,7 @@ get_corrupted_parties (std::vector<stake_t> stakes,
         });
       break;
 
-    case 3:    // corrupt poor first
+    case CORR_POOR_FIRST:    // corrupt poor first
       corruptions = corrupt_parties_by_stake (
         stakes,
         honest,
@@ -179,13 +179,14 @@ get_corrupted_parties (std::vector<stake_t> stakes,
         });
       break;
 
-    case 0:
+    case NO_CORR:
     default:
       corruptions = std::vector<corruption_t> (stakes.size (), 0);
       break;
   }
 
-  if (__yal_logging (__YAL_DBG))
+  if (__yal_logging (__YAL_DBG)) // if logging is on, print information about
+                                 // the corruption set
   {
     size_t  corr_parties = 0;
     stake_t corr_stake   = 0;
@@ -344,7 +345,7 @@ run_tests (party_t           n,
 
   std::vector<T> run_data (runs);
 
-
+  // run each test of a series in parallel
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif    // _OPENMP
@@ -361,6 +362,7 @@ run_tests (party_t           n,
 
     sim->set_sender (sender);
 
+    // this is the computationally heavy part
     sim->execute_protocol ();
 
 #ifdef _OPENMP

@@ -4,6 +4,10 @@
 
 random_generator *rg = NULL;
 
+/**
+ * Picks a fresh 64 bit long seed.
+ * @return a freshly picked 64 bit long seed.
+ */
 static uint64_t
 get_64_seed ()
 {

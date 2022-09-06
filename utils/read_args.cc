@@ -12,29 +12,27 @@ print_arguments ()
   std::cout << "Expecting arguments: " << args << std::endl;
 
   std::cout << "Possible test flags:" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b1) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_CONST_DIST) << "  -  "
             << "Deterministic Constant distribution" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b10) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_FF_THIN_DIST) << "  -  "
             << "Deterministic Few-Fat distribution, thin sender" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b100) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_FF_FAT_DIST) << "  -  "
             << "Deterministic Few-Fat distribution, fat sender" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b1000) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_EXP_THIN_DIST) << "  -  "
             << "Deterministic Exponential distribution, thinnest sender"
             << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b10000) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_EXP_MEDN_DIST) << "  -  "
             << "Deterministic Exponential distribution, median sender"
             << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b100000) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (DET_EXP_FAT_DIST) << "  -  "
             << "Deterministic Exponential distribution, fattest sender"
             << std::endl;
 
-  std::cout << std::bitset<TEST_TYPES> (0b1 << RAND_TEST_TYPE_OFFSET) << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (RAND_EXP_RAND_SND_DIST) << "  -  "
             << "Random Exponential distribution" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b10 << RAND_TEST_TYPE_OFFSET)
-            << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (RAND_UNIF_RAND_SND_DIST) << "  -  "
             << "Random Uniform distribution" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (0b100 << RAND_TEST_TYPE_OFFSET)
-            << "  -  "
+  std::cout << std::bitset<TEST_TYPES> (RAND_GEOM_RAND_SND_DIST) << "  -  "
             << "Random Geometric distribution" << std::endl;
 }
 
@@ -86,7 +84,7 @@ read_parameters (int argc, char **argv)
   __yal_log (__YAL_INFO, "]\n");
 
 
-  if (argc < NR_ARGS)
+  if (argc < NR_ARGS + 1)
   {
     std::cout << "Unexpected number of arguments" << std::endl;
     print_arguments ();
@@ -147,6 +145,11 @@ read_parameters (int argc, char **argv)
   try
   {
     corruption_strategy = std::stoi (str_corruption_strategy.c_str ());
+    if (corruption_strategy >= CORR_TYPES)
+    {
+      throw std::invalid_argument (
+        "Corruption strategy must be an integer value between 0 and 3");
+    }
   } catch (std::invalid_argument const &ex)
   {
     std::cout << "std::invalid_argument::what(): " << ex.what () << std::endl;
@@ -220,11 +223,13 @@ read_parameters (int argc, char **argv)
   {
     if (!str_to_show.compare (std::string ("a")))
     {
-      to_show = -1 & (0b11111);    // sets all main show flags to 1, except for
-                                   // the histogram flag.
+      to_show =
+        -1 & ~(1 << NR_OUTPUTS_SHOW);    // sets all main show flags to 1,
+                                         // except for the histogram flag.
     } else if (!str_to_show.compare (std::string ("h")))
     {
-      to_show = -1 & (0b111111);    // sets all main show flags to 1.
+      to_show =
+        -1 & ~(1 << NR_OUTPUTS_SHOW);    // sets all main show flags to 1.
     } else if (!str_to_show.compare (std::string ("f")))
     {
       to_show = -1;    // sets all show flags to 1 (verbose).

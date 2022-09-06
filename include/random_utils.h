@@ -9,6 +9,12 @@
 #ifndef __RANDOM_UTILS__
 #define __RANDOM_UTILS__
 
+/**
+ * @class random_generator
+ * @brief class used for creating random generators.
+ *
+ * Class for creating randomness generators.
+ */
 class random_generator
 {
     private:
@@ -22,13 +28,24 @@ class random_generator
   random_generator ();
   virtual ~random_generator ();
 
+  /**
+   * Generates a new random engine with a fresh seed.
+   * @return a new random engine.
+   */
   std::mt19937_64 *
   get_random_engine ();
 };
 
+/**
+ * Initializes the randomness utility functions.
+ */
 void
 init_random_utils ();
 
+/**
+ * Generates a new random generator with a fresh seed.
+ * @return a pointer to a new random generator.
+ */
 std::mt19937_64 *
 get_random_generator ();
 
