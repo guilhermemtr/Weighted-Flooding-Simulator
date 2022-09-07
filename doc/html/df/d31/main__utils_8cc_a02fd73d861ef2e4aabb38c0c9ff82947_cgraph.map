@@ -1,0 +1,4 @@
+<map id="init" name="init">
+<area shape="rect" id="node1" title="Runs initialization procedures." alt="" coords="5,5,52,35"/>
+<area shape="rect" id="node2" href="$d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2" title="Initializes the randomness utility functions." alt="" coords="100,5,257,35"/>
+</map>

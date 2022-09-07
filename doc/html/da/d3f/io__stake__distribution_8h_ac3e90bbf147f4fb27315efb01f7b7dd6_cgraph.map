@@ -1,0 +1,4 @@
+<map id="write_stake_distribution_file" name="write_stake_distribution_file">
+<area shape="rect" id="node1" title="Writes a given stake distribution to a file." alt="" coords="5,5,248,35"/>
+<area shape="rect" id="node2" href="$db/dd2/io__stake__distribution_8cc.html#a61a25614e8ba7b65d34005ba3255900b" title="Writes a given stake distribution to a given output stream." alt="" coords="296,5,519,35"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,59,68,88"/>
+<area shape="rect" id="node2" href="$df/d31/main__utils_8cc.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Runs initialization procedures." alt="" coords="213,19,259,48"/>
+<area shape="rect" id="node4" href="$df/d31/main__utils_8cc.html#a8f4afe28d9c87b5957823f96ebe7dd48" title=" " alt="" coords="116,85,356,115"/>
+<area shape="rect" id="node3" href="$d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2" title="Initializes the randomness utility functions." alt="" coords="425,5,582,35"/>
+<area shape="rect" id="node5" href="$d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4" title="Prints the parameters for the run." alt="" coords="423,59,584,88"/>
+<area shape="rect" id="node6" href="$d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b" title="Reads the input parameters." alt="" coords="423,112,583,141"/>
+<area shape="rect" id="node7" href="$df/d31/main__utils_8cc.html#a4a5dbbd7c40fe6e2edd8785be992bca6" title="Prints the distribution name for a given set of flags (which represent a distribution)." alt="" coords="404,165,603,195"/>
+<area shape="rect" id="node8" href="$df/d31/main__utils_8cc.html#ad1b6cbe8df7ce0708db2a999eabbc1f4" title=" " alt="" coords="432,219,575,248"/>
+</map>

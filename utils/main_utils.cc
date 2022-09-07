@@ -5,9 +5,9 @@
 void
 init ()
 {
-  __yal_init_logger (); // initializes the logger
-  __yal_set_lvl_err (); // sets the logging level
-  init_random_utils (); // initialization of our randomness sources
+  __yal_init_logger ();    // initializes the logger
+  __yal_set_lvl_err ();    // sets the logging level
+  init_random_utils ();    // initialization of our randomness sources
 }
 
 std::vector<stake_t>
@@ -92,7 +92,9 @@ generate_stake_distribution (party_t           n,
     succeeded = succeeded && test_stake_distribution (stakes);
     }*/
 
-  if (flags & (RAND_EXP_RAND_SND_DIST | RAND_UNIF_RAND_SND_DIST | RAND_GEOM_RAND_SND_DIST))
+  if (flags
+      & (RAND_EXP_RAND_SND_DIST | RAND_UNIF_RAND_SND_DIST
+         | RAND_GEOM_RAND_SND_DIST))
   {
     sdgen.add_to_stake_distribution (stakes, 1);
   }
@@ -185,8 +187,8 @@ get_corrupted_parties (std::vector<stake_t> stakes,
       break;
   }
 
-  if (__yal_logging (__YAL_DBG)) // if logging is on, print information about
-                                 // the corruption set
+  if (__yal_logging (__YAL_DBG))    // if logging is on, print information about
+                                    // the corruption set
   {
     size_t  corr_parties = 0;
     stake_t corr_stake   = 0;
@@ -262,12 +264,11 @@ show_distribution_info (unsigned int flags, unsigned int to_show)
 }
 
 void
-show_run_data (std::string               prot_name,
-               double                    correct_runs,
-               double                    runs,
-               size_t                    factor,
-               unsigned int              to_show,
-               std::map<round_t, size_t> histogram)
+show_run_data (std::string  prot_name,
+               double       correct_runs,
+               double       runs,
+               size_t       factor,
+               unsigned int to_show)
 {
   // To do: output the protocol name too; have to add this to the flags in the
   // read_arguments source/header files
@@ -288,15 +289,6 @@ show_run_data (std::string               prot_name,
   if (to_show & SHOW_SUCCESS)
   {
     std::cout << std::setw (8) << success_rate << "%" << std::endl;
-  }
-
-  if (to_show & SHOW_HISTOGRAM)
-  {
-    std::cout << "Latency histogram:" << std::endl;
-    for (auto it = histogram.begin (); it != histogram.end (); it++)
-    {
-      std::cout << it->first << "\t: " << it->second << std::endl;
-    }
   }
 }
 
@@ -323,8 +315,8 @@ run_tests (party_t           n,
              corruption_strategy,
              corruption_threshold,
              factor,
-             param1,
-             param2);
+             rich_poor_ratio,
+             nr_rich);
 
   if (!flags)
   {
@@ -392,20 +384,16 @@ run_tests (party_t           n,
            std::function<std::pair<bool, round_t> (
              corruptions_stake_protocol_simulator *)> get_data);
 
-
-
-/*void
+void
 run_command_parameters (
   int                                       argc,
   char                                    **argv,
+  std::string                               prot_name,
   std::function<corruptions_stake_protocol_simulator *(
     std::vector<stake_t>, stake_t, size_t)> simulator_constructor)
 {
   __yal_init_logger ();
   __yal_set_lvl_info ();
-
-  // to do: make the protocol name not hardcoded
-  std::string prot_name = "";
 
   simulation_parameters_t params;
   try
@@ -418,9 +406,9 @@ run_command_parameters (
     return;
   }
 
-#ifdef __YAL_ON
+  //#ifdef __YAL_ON
   print_parameters (params);
-#endif    // __YAL_ON
+  //#endif    // __YAL_ON
 
   init_random_utils ();
 
@@ -441,26 +429,48 @@ run_command_parameters (
                   << std::endl;
       }
 
+      if (!(tc & params.tests))
+      {
+        continue;
+      }
+
       show_distribution_info (tc & params.tests, to_show);
 
       for (size_t factor = params.min_factor; factor <= params.max_factor;
            factor++)
       {
-        run_tests (NULL,
-                   prot_name,
-                   n,
-                   tc & params.tests,
-                   params.runs,
-                   params.corruption_strategy,
-                   params.corruption_threshold,
-                   factor,
-                   params.to_show,
-                   params.ratio_rich_poor,
-                   params.nr_rich_parties,
-                   simulator_constructor);
+        std::vector<std::pair<bool, round_t>> results =
+          run_tests<std::pair<bool, round_t>> (
+            n,
+            tc & params.tests,
+            params.runs,
+            params.corruption_strategy,
+            params.corruption_threshold,
+            factor,
+            params.ratio_rich_poor,
+            params.nr_rich_parties,
+            simulator_constructor,
+            [&] (corruptions_stake_protocol_simulator *sim) {
+              return std::make_pair<bool, round_t> (
+                sim->protocol_simulator::all_got_msg (),
+                sim->protocol_simulator::get_latency ());
+            });
+
+        double correct_runs = 0;
+
+        for (size_t i = 0; i < params.runs; i++)
+        {
+          if (std::get<0> (results[i]))
+          {
+            correct_runs++;
+          }
+        }
+
+        show_run_data (
+          prot_name, correct_runs, params.runs, factor, params.to_show);
       }
     }
   }
 }
-*/
+
 #endif    // __MAIN_UTILS__

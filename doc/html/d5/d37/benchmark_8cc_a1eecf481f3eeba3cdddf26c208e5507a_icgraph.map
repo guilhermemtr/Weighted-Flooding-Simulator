@@ -1,0 +1,7 @@
+<map id="get_maximum_latency" name="get_maximum_latency">
+<area shape="rect" id="node1" title="Computes the maximum latency of successful tests from &lt;parameter test_data&gt;." alt="" coords="307,59,509,88"/>
+<area shape="rect" id="node2" href="$d5/d37/benchmark_8cc.html#ad5f14834828d0d7a94cf4be286397e52" title=" " alt="" coords="116,5,259,35"/>
+<area shape="rect" id="node4" href="$d5/d37/benchmark_8cc.html#a4e52a32ecd48cbcdcd7b1765d8a066b2" title=" " alt="" coords="116,59,259,88"/>
+<area shape="rect" id="node5" href="$d5/d37/benchmark_8cc.html#acc954800ffa480f4eac9b6544883f1bc" title=" " alt="" coords="125,112,250,141"/>
+<area shape="rect" id="node3" href="$d5/d37/benchmark_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,59,68,88"/>
+</map>

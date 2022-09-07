@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$da/d73/classprotocol__simulator.html" title="Abstract class for protocol simulators." alt="" coords="5,85,176,115"/>
+<area shape="rect" id="node2" href="$df/dcc/classcorruptions__stake__protocol__simulator.html" title="Abstract class for protocol simulators with stake and corruptions." alt="" coords="224,85,543,115"/>
+<area shape="rect" id="node3" href="$d6/d8a/classabstract__receive__protocol__simulator.html" title=" " alt="" coords="591,112,901,141"/>
+<area shape="rect" id="node7" href="$da/d2c/classabstract__send__protocol__simulator.html" title=" " alt="" coords="601,59,891,88"/>
+<area shape="rect" id="node4" href="$d2/d21/classreceiver__protocol__simulator.html" title=" " alt="" coords="949,112,1192,141"/>
+<area shape="rect" id="node5" href="$d7/d76/classhybrid__k__out__protocol__simulator.html" title=" " alt="" coords="1240,99,1519,128"/>
+<area shape="rect" id="node6" href="$d0/d86/classhybrid__protocol__simulator.html" title=" " alt="" coords="1265,19,1493,48"/>
+<area shape="rect" id="node8" href="$de/d66/classk__out__protocol__simulator.html" title=" " alt="" coords="960,59,1181,88"/>
+<area shape="rect" id="node9" href="$df/d1d/classsend__protocol__simulator.html" title=" " alt="" coords="963,5,1179,35"/>
+</map>

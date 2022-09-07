@@ -1,0 +1,5 @@
+<map id="plot_graph_1_3" name="plot_graph_1_3">
+<area shape="rect" id="node1" title=" " alt="" coords="5,32,148,61"/>
+<area shape="rect" id="node2" href="$d5/d37/benchmark_8cc.html#a1eecf481f3eeba3cdddf26c208e5507a" title="Computes the maximum latency of successful tests from &lt;parameter test_data&gt;." alt="" coords="218,5,421,35"/>
+<area shape="rect" id="node3" href="$d5/d37/benchmark_8cc.html#a817b47edcb712257bae32a9b6ee1a23e" title="Computes the minimum nr of successful tests from &lt;parameter test_data&gt;." alt="" coords="196,59,443,88"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="receiver_protocol_simulator" name="receiver_protocol_simulator">
+<area shape="rect" id="node1" title=" " alt="" coords="25,1289,365,1635"/>
+<area shape="rect" id="node2" href="$d6/d8a/classabstract__receive__protocol__simulator.html" title=" " alt="" coords="18,948,371,1241"/>
+<area shape="rect" id="node3" href="$df/dcc/classcorruptions__stake__protocol__simulator.html" title="Abstract class for protocol simulators with stake and corruptions." alt="" coords="5,468,384,900"/>
+<area shape="rect" id="node4" href="$da/d73/classprotocol__simulator.html" title="Abstract class for protocol simulators." alt="" coords="17,5,372,420"/>
+</map>

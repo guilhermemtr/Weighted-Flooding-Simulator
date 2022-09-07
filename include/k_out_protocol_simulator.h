@@ -18,19 +18,19 @@ class k_out_protocol_simulator : virtual public abstract_send_protocol_simulator
 {
     protected:
   // variables used to get randomness
-  std::mt19937_64                      *re; // the randomness generator
-  std::function<size_t (party_t)>       get_nr_targets; // the function that
-                                                        // outputs the number of
-                                                        // targets of a given party
-  std::function<size_t (party_t)>       imitation_function; // the imitation function
-  std::list<std::pair<size_t, party_t>> sample_domain; // the sampling domain
+  std::mt19937_64                      *re; //!< the randomness generator
+  std::function<size_t (party_t)>       get_nr_targets; //!< the function that
+                                                        //!< outputs the number of
+                                                        //!< targets of a given party
+  std::function<size_t (party_t)>       imitation_function; //!< the imitation function
+  std::list<std::pair<size_t, party_t>> sample_domain; //!< the sampling domain
 
-  size_t total_imitated_nodes;
+  size_t total_imitated_nodes; //!< total number of imitated nodes
 
-  size_t histogram_interval_size; // interval size of the histogram (how many
-                                  // parties should be put together in the histogram).
+  size_t histogram_interval_size; //!< interval size of the histogram (how many
+                                  //!< parties should be put together in the histogram).
   std::map<party_t, size_t>
-    histogram;    // histogram of which parties were targeted
+    histogram;    //!< histogram of which parties were targeted
 
   /**
    * Decides whether the sender should send a message to the receiver.

@@ -1,0 +1,9 @@
+<map id="hybrid_k_out_protocol_simulator" name="hybrid_k_out_protocol_simulator">
+<area shape="rect" id="node1" title=" " alt="" coords="183,1787,584,2080"/>
+<area shape="rect" id="node2" href="$d2/d21/classreceiver__protocol__simulator.html" title=" " alt="" coords="31,1350,371,1695"/>
+<area shape="rect" id="node3" href="$d6/d8a/classabstract__receive__protocol__simulator.html" title=" " alt="" coords="5,957,359,1250"/>
+<area shape="rect" id="node4" href="$df/dcc/classcorruptions__stake__protocol__simulator.html" title="Abstract class for protocol simulators with stake and corruptions." alt="" coords="194,468,573,900"/>
+<area shape="rect" id="node7" href="$da/d2c/classabstract__send__protocol__simulator.html" title=" " alt="" coords="383,948,789,1259"/>
+<area shape="rect" id="node5" href="$da/d73/classprotocol__simulator.html" title="Abstract class for protocol simulators." alt="" coords="206,5,561,420"/>
+<area shape="rect" id="node6" href="$de/d66/classk__out__protocol__simulator.html" title=" " alt="" coords="404,1307,749,1739"/>
+</map>

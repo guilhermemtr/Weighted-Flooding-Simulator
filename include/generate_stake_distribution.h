@@ -21,9 +21,9 @@
 class stake_distribution_generator
 {
     protected:
-  // variables used to get randomness
-  std::random_device         rd;
-  std::default_random_engine re;
+  //!< variables used to get randomness
+  std::random_device         rd; //!< random device
+  std::default_random_engine re; //!< default random engine
 
   /**
    * Generates a few fat stake distribution with the given parameters.

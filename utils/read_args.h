@@ -42,10 +42,9 @@
 #define SHOW_SUCCESS      (1 << 2) // Show success rate of tests
 #define SHOW_NR_PARTIES   (1 << 3) // Show number of parties
 #define SHOW_TEST         (1 << 4) // Show test being run
-#define SHOW_HISTOGRAM    (1 << 5) // Show histogram of how many parties got the message per round
 
 // number of different flags
-#define NR_OUTPUTS_SHOW 6
+#define NR_OUTPUTS_SHOW 5
 
 
 
@@ -63,35 +62,35 @@
  */
 typedef struct
 {
-  counter_t runs; // number of runs to make
+  counter_t runs; //!< number of runs to make
 
-  unsigned int tests; // which tests to run
+  unsigned int tests; //!< which tests to run
 
-  corruption_t corruption_strategy; // how parties should be corrupted
-  double       corruption_threshold; // upper bound on corruption fraction
+  corruption_t corruption_strategy; //!< how parties should be corrupted
+  double       corruption_threshold; //!< upper bound on corruption fraction
 
   /**
    * The parameters below are only relevant for the generation of the stake distributions.
    * The simulator is run with (2^i) * min_nr_parties, for i from 0 up to the
    * largest value for which (2^i) * min_nr_parties <= max_nr_parties
    */
-  party_t min_nr_parties; // minimum number of parties
-  party_t max_nr_parties; // maximum number of parties
+  party_t min_nr_parties; //!< minimum number of parties
+  party_t max_nr_parties; //!< maximum number of parties
 
-  double  ratio_rich_poor; // ratio between richest party(ies) and poorest party(ies).
-  party_t nr_rich_parties; // number of rich parties (only relevant for the few
-                           // fat stake distribution
+  double  ratio_rich_poor; //!< ratio between richest party(ies) and poorest party(ies).
+  party_t nr_rich_parties; //!< number of rich parties (only relevant for the few
+                           //!< fat stake distribution
 
-  unsigned int to_show; // the flags that indicate what information to display
-                        // when running the simulator
+  unsigned int to_show; //!< the flags that indicate what information to display
+                        //!< when running the simulator
 
   /**
    * The minimum and maximum factors to test:
    * The simulator is run for a factor starting at factor = min_factor, up to
    * factor <= max_factor, with increments of 1.
    */
-  size_t min_factor; // the minimum factor to test
-  size_t max_factor; // the maximum factor to test
+  size_t min_factor; //!< the minimum factor to test
+  size_t max_factor; //!< the maximum factor to test
 
 } simulation_parameters_t;
 

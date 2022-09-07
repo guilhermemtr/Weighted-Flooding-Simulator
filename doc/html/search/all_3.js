@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['constant_5fstake_0',['constant_stake',['../da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661',1,'stake_distribution_generator']]],
+  ['corr_5fpoor_5ffirst_1',['CORR_POOR_FIRST',['../d1/dde/read__args_8h.html#a610f5f9eddf60cacb3168e3bf1687491',1,'read_args.h']]],
+  ['corr_5frand_2',['CORR_RAND',['../d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3',1,'read_args.h']]],
+  ['corr_5frich_5ffirst_3',['CORR_RICH_FIRST',['../d1/dde/read__args_8h.html#a10099c8d45446b1142928924f3f2923b',1,'read_args.h']]],
+  ['corr_5ftypes_4',['CORR_TYPES',['../d1/dde/read__args_8h.html#a14c47d44c6631e893b453751a3461329',1,'read_args.h']]],
+  ['corrupt_5fparties_5',['corrupt_parties',['../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f',1,'corruptions_stake_protocol_simulator']]],
+  ['corrupt_5fparties_5fby_5fstake_6',['corrupt_parties_by_stake',['../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa',1,'corruptions_stake_protocol_simulator.h']]],
+  ['corrupted_7',['corrupted',['../df/dcc/classcorruptions__stake__protocol__simulator.html#ab4ddaf369777391dabd2a7f72016fbc0',1,'corruptions_stake_protocol_simulator']]],
+  ['corruption_5fstrategy_8',['corruption_strategy',['../d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84',1,'simulation_parameters_t']]],
+  ['corruption_5ft_9',['corruption_t',['../d9/d49/types_8h.html#ab7662475b458e14534004c28ee68aebb',1,'types.h']]],
+  ['corruption_5ft_5fmax_10',['CORRUPTION_T_MAX',['../d9/d49/types_8h.html#a8759b72bbce8bdea9d959faac9c6bc55',1,'types.h']]],
+  ['corruption_5fthreshold_11',['corruption_threshold',['../d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9',1,'simulation_parameters_t']]],
+  ['corruptions_5fstake_5fprotocol_5fsimulator_12',['corruptions_stake_protocol_simulator',['../df/dcc/classcorruptions__stake__protocol__simulator.html#a14d846325031ff8c347af0eb5e25a85f',1,'corruptions_stake_protocol_simulator::corruptions_stake_protocol_simulator()'],['../df/dcc/classcorruptions__stake__protocol__simulator.html',1,'corruptions_stake_protocol_simulator']]],
+  ['corruptions_5fstake_5fprotocol_5fsimulator_2ecc_13',['corruptions_stake_protocol_simulator.cc',['../de/de3/corruptions__stake__protocol__simulator_8cc.html',1,'']]],
+  ['corruptions_5fstake_5fprotocol_5fsimulator_2eh_14',['corruptions_stake_protocol_simulator.h',['../d8/de7/corruptions__stake__protocol__simulator_8h.html',1,'']]],
+  ['counter_5ft_15',['counter_t',['../d9/d49/types_8h.html#afd03de299b5a99fd58a54cdc55cc04fe',1,'types.h']]],
+  ['counter_5ft_5fmax_16',['COUNTER_T_MAX',['../d9/d49/types_8h.html#a3b34c8649984cee742c66ebb2f3a60d5',1,'types.h']]],
+  ['curr_5fround_17',['curr_round',['../da/d73/classprotocol__simulator.html#a195abb95c64b4cb553e48bac06eeeeef',1,'protocol_simulator']]]
+];

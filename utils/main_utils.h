@@ -33,7 +33,8 @@ init ();
  * Generates a stake distribution.
  * Flags should only have a single bit set to 1.
  * @param the number of parties.
- * @param the stake ratio between the poorest party(ies) and the richest party(ies).
+ * @param the stake ratio between the poorest party(ies) and the richest
+ * party(ies).
  * @param the number of rich parties.
  * @param the flags for generating the stake distribution.
  * @return the stake distribution.
@@ -58,7 +59,8 @@ get_corrupted_parties (std::vector<stake_t> stakes,
                        double               corruption_threshold);
 
 /**
- * Prints the distribution name for a given set of flags (which represent a distribution).
+ * Prints the distribution name for a given set of flags (which represent a
+ * distribution).
  * @param flags: the type of stake distribution.
  * @param to_show: flags indicating which information to show.
  */
@@ -92,7 +94,8 @@ show_run_data (double                    correct_runs,
  * @param ratio between stake of richest and poorest party(ies).
  * @param number of richest parties.
  * @param constructor for the protocol simulator to be used.
- * @param function that extracts data from a set of runs (with the same parameters).
+ * @param function that extracts data from a set of runs (with the same
+ * parameters).
  * @return a vector with the data from the tests run.
  */
 template <typename T>
@@ -112,12 +115,13 @@ run_tests (party_t                                   n,
 
 // program essentially starts here; simulator_constructor just allows having
 // multiple different main files for testing different protocols
-/*void
+void
 run_command_parameters (
   int                                       argc,
   char                                    **argv,
+  std::string                               prot_name,
   std::function<corruptions_stake_protocol_simulator *(
     std::vector<stake_t>, stake_t, size_t)> simulator_constructor);
-*/
+
 
 #endif    // __MAIN_UTILS__

@@ -18,11 +18,11 @@
 class random_generator
 {
     private:
-  pthread_mutex_t mutex;
-  std::mt19937_64 re;
+  pthread_mutex_t mutex; //!< mutex variable
+  std::mt19937_64 re; //!< random generator engine
 
-  // to check for re-used seeds (for debugging purposes)
-  std::unordered_set<uint64_t> seeds;
+  std::unordered_set<uint64_t> seeds; //!< to check for re-used seeds (for
+                                      //!< debugging purposes)
 
     public:
   random_generator ();

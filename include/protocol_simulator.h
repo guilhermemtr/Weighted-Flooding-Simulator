@@ -16,28 +16,15 @@
 class protocol_simulator
 {
     protected:
-  /**
-   * Number of parties participating in the protocol execution.
-   */
-  party_t nr_parties;
+  party_t nr_parties; //!< Number of parties participating in the protocol execution.
 
-  /**
-   * Current round of the protocol execution.
-   * The beginning of a protocol's execution is at round 0.
-   */
-  round_t curr_round;
+  round_t curr_round; //!< Current round of the protocol execution. The beginning of a protocol's execution is at round 0.
 
-  /**
-   * Vector that has the number of messages sent per round.
-   */
-  std::vector<counter_t> nr_messages;
+  std::vector<counter_t> nr_messages; //!< Vector that has the number of messages sent per round.
 
-  /**
-   * For each party i:
-   *   got_msg[i] = ROUND_T_MAX,  if i did not yet get the message;
-   *   got_msg[i] = r,            if i got the message at round r.
-   */
-  std::vector<round_t> got_msg;
+  std::vector<round_t> got_msg; //!< For each party i:
+                                //!< got_msg[i] = ROUND_T_MAX,  if i did not yet get the message;
+                                //!< got_msg[i] = r,            if i got the message at round r.
 
   /**
    * Abstract method that runs a round of the protocol.

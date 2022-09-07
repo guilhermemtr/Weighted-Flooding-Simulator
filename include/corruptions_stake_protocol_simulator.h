@@ -35,14 +35,10 @@ enum adversary_phase
 class corruptions_stake_protocol_simulator : public protocol_simulator
 {
     protected:
-  // vector assigning to each party a stake
-  std::vector<stake_t> stakes;
-
-  // the total stake
-  stake_t total_stake;
-
-  // vector assigning to each party a corruption type
-  std::vector<corruption_t> corrupted;
+  std::vector<stake_t> stakes;    //!< vector assigning to each party a stake
+  stake_t              total_stake;    //!< the total stake
+  std::vector<corruption_t>
+    corrupted;    //!< vector assigning to each party a corruption type
 
   /**
    * Returns the owner of a coin.
@@ -100,7 +96,7 @@ class corruptions_stake_protocol_simulator : public protocol_simulator
    */
   std::vector<corruption_t>
   get_corrupted ();
-  
+
   /**
    * Returns a party's corruption flag (0 meaning the party is not corrupted).
    * @param the party.

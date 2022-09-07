@@ -224,12 +224,7 @@ read_parameters (int argc, char **argv)
     if (!str_to_show.compare (std::string ("a")))
     {
       to_show =
-        -1 & ~(1 << NR_OUTPUTS_SHOW);    // sets all main show flags to 1,
-                                         // except for the histogram flag.
-    } else if (!str_to_show.compare (std::string ("h")))
-    {
-      to_show =
-        -1 & ~(1 << NR_OUTPUTS_SHOW);    // sets all main show flags to 1.
+        -1 & ~(1 << NR_OUTPUTS_SHOW);    // sets all main show flags to 1
     } else if (!str_to_show.compare (std::string ("f")))
     {
       to_show = -1;    // sets all show flags to 1 (verbose).
