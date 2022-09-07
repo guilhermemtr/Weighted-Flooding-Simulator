@@ -451,7 +451,7 @@ run_command_parameters (
             params.nr_rich_parties,
             simulator_constructor,
             [&] (corruptions_stake_protocol_simulator *sim) {
-              return std::make_pair<bool, round_t> (
+              return std::make_pair (
                 sim->protocol_simulator::all_got_msg (),
                 sim->protocol_simulator::get_latency ());
             });

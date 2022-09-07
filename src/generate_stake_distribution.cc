@@ -20,6 +20,11 @@ stake_distribution_generator::few_fat_stake (party_t nr_parties,
 {
   std::vector<stake_t> stakes (nr_parties, 1);
 
+  if (nr_rich >= nr_parties)
+  {
+    nr_rich = nr_parties;
+  }
+
   for (party_t i = 0; i < nr_rich; i++)
   {
     stakes[i] = rich_poor_ratio;
