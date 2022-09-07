@@ -13,21 +13,21 @@ The documentation of the code can be found inside the `./doc/html` folder.
 ### Building The Sources
 We provide a `Makefile` for compiling the source code of the project.
 The `Makefile` allows for compiling three distinct targets: 
-- `make bench` compiles `benchmark.cc` (and all other necessary files), generating executable `bench-bin`.
+- ```make bench``` compiles `benchmark.cc` (and all other necessary files), generating executable `bench-bin`.
 The purpose of this executable is benchmarking the performance of the `WFF` protocol via simulations (the results of the benchmarks are written to [`.csv`](https://en.wikipedia.org/wiki/Comma-separated_values) files).
 These are the same benchmarks considered in our [paper](https://eprint.iacr.org/2022/608)[^1].
-- `make kout` compiles `main.cc` (and all other necessary files), generating executable `kout-bin`.
+- ```make kout``` compiles `main.cc` (and all other necessary files), generating executable `kout-bin`.
 This executable allows running the simulator of the `WFF` protocol where the execution parameters are passed as command-line arguments.
-- `make hybrid` compiles `hybrid_main.cc` (and all other necessary files), generating executable `hybrid-bin`.
+- ```make hybrid``` compiles `hybrid_main.cc` (and all other necessary files), generating executable `hybrid-bin`.
 This executable allows running the simulator of a variant of the `WFF` protocol (more on this variant below) where the execution parameters are passed as command-line arguments.
 
 To cleanup all compilation object files and executables, run `make clean`.
 
 
 ### Running The Simulator
-To execute either `kout-bin` or `hybrid-bin`, run `./[kout-bin|hybrid-bin] <#runs> <tests (9 bits)> <corrupt_parties> <corruption_threshold in [0,1]> <#min_parties> <#max_parties> <ratio_rich_poor> <#rich_parties> <to_show (5 bits)> <#min_factor> <#max_factor>`.
+To execute either `kout-bin` or `hybrid-bin`, run ```./[kout-bin|hybrid-bin] <#runs> <tests (9 bits)> <corrupt_parties> <corruption_threshold in [0,1]> <#min_parties> <#max_parties> <ratio_rich_poor> <#rich_parties> <to_show (5 bits)> <#min_factor> <#max_factor>```
 This will run the simulator on each possible configuration for `<#runs>` times, each configuration being a different combination of the input parameters.
-For instance, for `./kout-bin 10 000000001 1 0.5 512 512 1000000 20 a 20 30` there are only 11 possible configurations, one for the multiplicative factor set to `20`, another for the multiplicative factor set to `21`, all the way up to `30`.
+For instance, for ```./kout-bin 10 000000001 1 0.5 512 512 1000000 20 a 20 30``` there are only 11 possible configurations, one for the multiplicative factor set to `20`, another for the multiplicative factor set to `21`, all the way up to `30`.
 In all configurations, the stake distribution is always the constant distribution (meaning all parties have exactly the same stake), parties are corrupted uniformly at random, the corruption threshold is `0.5` the total stake, there are `512` parties (both the minimum number of parties and the maximum number of parties is `512`), and the multiplicative factors vary from 20 (inclusive) to 30 (inclusive).
 Since for all the configurations the stake distribution is always the constant stake distribution, the parameters `1000000 20` are ignored, as they represent the ratio between the stake of the richest party(ies) and the poorest party(ies) (for more information on the stake distributions, refer to our [paper](https://eprint.iacr.org/2022/608)).
 
