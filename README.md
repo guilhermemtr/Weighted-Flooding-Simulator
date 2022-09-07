@@ -50,7 +50,7 @@ Since for all the configurations the stake distribution is always the constant s
 - `<#min_factor>` and `<#max_factor>`: Indicates the minimum and maximum multiplicative factors; the possible values for the factor are all integers that are greater or equal to `<#min_factor>` and smaller or equal to `<#max_factor>`.
 
 
-*`<tests (9 bits)>` Parameter Description*
+#### Parameter Description: `<tests (9 bits)>`
 - `000000001` - Deterministic Constant distribution; all parties have stake `1`.
 - `000000010` - Deterministic Few-Fat distribution, thin sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `1`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
 - `000000100` - Deterministic Few-Fat distribution, fat sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `<ratio_rich_poor>`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
@@ -62,7 +62,7 @@ Since for all the configurations the stake distribution is always the constant s
 - `100000000` - Random Geometric distribution; stakes of each party are picked according to a random geometric distribution with parameter `<ratio_rich_poor>`; the sender is picked uniformly at random.
 
 
-*`<to_show (5 bits)>` Parameter Description*
+#### Parameter Description: `<to_show (5 bits)>`
 - `00001` - Show Distribution: shows which (type of) stake distribution is being used for the test being executed.
 - `00010` - Show Factor: shows which multiplicative factor is being used for the test being executed.
 - `00100` - Show Success: shows the success rate of the test (i.e. how often all parties received the message).
