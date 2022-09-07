@@ -44,24 +44,23 @@ Since for all the configurations the stake distribution is always the constant s
 
 
 *`<tests (9 bits)>` Parameter Description*
-`000000001` - Deterministic Constant distribution; all parties have stake `1`.
-`000000010` - Deterministic Few-Fat distribution, thin sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `1`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
-`000000100` - Deterministic Few-Fat distribution, fat sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `<ratio_rich_poor>`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
-`000001000` - Deterministic Exponential distribution, thinnest sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `1000000`.
-`000010000` - Deterministic Exponential distribution, median sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `f^(<nr_parties/2>) * 1000000`.
-`000100000` - Deterministic Exponential distribution, fattest sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `<ratio_rich_poor> * 1000000`.
-`001000000` - Random Exponential distribution; stakes of each party are picked according to a (random) exponential distribution with parameter `<ratio_rich_poor>`; the sender is picked uniformly at random.
-`010000000` - Random Uniform distribution; stakes of each party are picked according to a (random)
-uniform distribution with parameters `(1,<ratio_rich_poor>+1)`; the sender is picked uniformly at random.
-`100000000` - Random Geometric distribution; stakes of each party are picked according to a random geometric distribution with parameter `<ratio_rich_poor>`; the sender is picked uniformly at random.
+-`000000001` - Deterministic Constant distribution; all parties have stake `1`.
+-`000000010` - Deterministic Few-Fat distribution, thin sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `1`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
+-`000000100` - Deterministic Few-Fat distribution, fat sender; all thin parties have stake `1`, whereas all fat parties have stake `<ratio_rich_poor>`; the sender has stake `<ratio_rich_poor>`; there are `<#rich_parties>` parties with stake `<ratio_rich_poor>`.
+-`000001000` - Deterministic Exponential distribution, thinnest sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `1000000`.
+-`000010000` - Deterministic Exponential distribution, median sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `f^(<nr_parties/2>) * 1000000`.
+-`000100000` - Deterministic Exponential distribution, fattest sender; thinnest party has stake `1000000`, second thinnest party has stake `f * 1000000`, third thinnest party has stake `f * (f * 1000000)`, ..., fattest party has stake `<ratio_rich_poor> * 1000000`; the sender has stake `<ratio_rich_poor> * 1000000`.
+-`001000000` - Random Exponential distribution; stakes of each party are picked according to a (random) exponential distribution with parameter `<ratio_rich_poor>`; the sender is picked uniformly at random.
+-`010000000` - Random Uniform distribution; stakes of each party are picked according to a (random) uniform distribution with parameters `(1,<ratio_rich_poor>+1)`; the sender is picked uniformly at random.
+-`100000000` - Random Geometric distribution; stakes of each party are picked according to a random geometric distribution with parameter `<ratio_rich_poor>`; the sender is picked uniformly at random.
 
 
 *`<to_show (5 bits)>` Parameter Description*
-`00001` - Show Distribution: shows which (type of) stake distribution is being used for the test being executed.
-`00010` - Show Factor: shows which multiplicative factor is being used for the test being executed.
-`00100` - Show Success: shows the success rate of the test (i.e. how often all parties received the message).
-`01000` - Show Number Of Parties: shows the number of parties for the current test being executed.
-`10000` - Show Test: shows the bitstring identifying which (type of) stake distribution is being used for the test being executed.
+- `00001` - Show Distribution: shows which (type of) stake distribution is being used for the test being executed.
+- `00010` - Show Factor: shows which multiplicative factor is being used for the test being executed.
+- `00100` - Show Success: shows the success rate of the test (i.e. how often all parties received the message).
+- `01000` - Show Number Of Parties: shows the number of parties for the current test being executed.
+- `10000` - Show Test: shows the bitstring identifying which (type of) stake distribution is being used for the test being executed.
 
 
 ### Running The Benchmarks
@@ -69,6 +68,6 @@ An alternative way for running the simulator is by simply running the benchmarks
 1. Run `./setup-bench clean-all` to erase folder `./results` and all its subfolders.
 2. Run `./setup-bench setup` to create all necessary directories.
 3. Run `./bench-bin` to run the benchmarks (beware, depending on the parameters defined in `benchmark.cc`, running the benchmarks may take a ==very long time==).
-4. The benchmark results will be stored inside the `results` folder.
+4. The benchmark results will be stored inside the `results` folder.\
 
 [^1]: One can actually replicate the results given in our [paper](https://eprint.iacr.org/2022/608) by running `bench-bin`. However, beware replicating our results takes a significant amount of computing time.
