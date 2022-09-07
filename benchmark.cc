@@ -87,14 +87,18 @@ std::function<corruptions_stake_protocol_simulator *(
  * default configuration parameters                         *
  *                                                          *
  ************************************************************/
-size_t                                    default_runs             = 1;
+std::string                               base_path = std::string ("results/");
+size_t                                    default_runs             = 100;
 size_t                                    default_min_factor       = 1;
 size_t                                    default_max_factor       = 50;
 std::set<size_t>                          default_nr_parties_tests = {1024};
 std::set<std::pair<corruption_t, double>> default_corruptions      = {
-  std::make_pair (CORR_RAND, 0.5),    // corrupt at random, up to half of the total stake
-  std::make_pair (CORR_RICH_FIRST, 0.5),    // corrupt rich first, up to half of the total stake
-  std::make_pair (CORR_POOR_FIRST, 0.5)     // corrupt poor first, up to half of the total stake
+       std::make_pair (CORR_RAND,
+                  0.5),    // corrupt at random, up to half of the total stake
+       std::make_pair (CORR_RICH_FIRST,
+                  0.5),    // corrupt rich first, up to half of the total stake
+       std::make_pair (CORR_POOR_FIRST,
+                  0.5)    // corrupt poor first, up to half of the total stake
 };
 
 /************************************************************
@@ -111,15 +115,17 @@ std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_unif = {
 
 // default few fat stake distributions
 std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_ff = {
-  std::make_tuple (DET_FF_THIN_DIST, 1000000.0, 10),    // few fat dist, thin snd
-  std::make_tuple (DET_FF_FAT_DIST, 1000000.0, 10)     // few fat dist, fat snd
+  std::make_tuple (
+    DET_FF_THIN_DIST, 1000000.0, 10),                 // few fat dist, thin snd
+  std::make_tuple (DET_FF_FAT_DIST, 1000000.0, 10)    // few fat dist, fat snd
 };
 
 // default exponential stake distributions
 std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_exp = {
-  std::make_tuple (DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
+  std::make_tuple (
+    DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
   std::make_tuple (DET_EXP_MEDN_DIST, 1000000.0, 0),    // exp dist, median snd
-  std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)     // exp dist, fattest snd
+  std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)      // exp dist, fattest snd
 };
 
 // default sets of stake distributions
@@ -217,7 +223,7 @@ get_maximum_latency (std::vector<std::pair<bool, round_t>> test_data)
 FILE *
 open_file_with_header (std::string fn, std::string header)
 {
-  std::string filename   = std::string ("results/") + fn;
+  std::string filename   = base_path + fn;
   FILE       *run_output = fopen (filename.c_str (), "w");
 
   if (run_output == NULL)
@@ -269,7 +275,7 @@ plot (
   std::string                                                  prefix,
   std::string                                                  header)
 {
-  std::string fn_prefix = prefix + protocol_name;
+  std::string fn_prefix = prefix + std::string("/") + protocol_name;
   for (size_t nr_parties : nr_parties_tests)
   {
     std::string fn_prefix_nr = fn_prefix + "-" + std::to_string (nr_parties);
@@ -339,10 +345,9 @@ plot (
 void
 plot_graph_1_3 ()
 {
-  std::set<size_t> nr_parties_tests = {
-    64, 128, 256, 512, 1024, 2048, 4096, 8192};
-  std::set<std::pair<corruption_t, double>> corruptions = {
-    std::make_pair (CORR_RAND, 0.5)};    // random corruptions
+  std::set<size_t>                          nr_parties_tests = {64, 128, 256, 512, 1024, 2048, 4096, 8192};
+  std::set<std::pair<corruption_t, double>> corruptions      = {
+         std::make_pair (CORR_RAND, 0.5)};    // random corruptions
 
   std::set<std::tuple<unsigned int, double, unsigned int>> unif_dists = {
     std::make_tuple (DET_CONST_DIST, 0.0, 0)};
@@ -350,7 +355,7 @@ plot_graph_1_3 ()
                      std::string>>
     dist_types = {std::make_pair (unif_dists, "unif")};
 
-  std::string fn_prefix = "plot-1-3";
+  std::string fn_prefix = "1-3";
 
   plot<std::pair<bool, round_t>> (
     default_min_factor,
@@ -391,7 +396,7 @@ plot_graph_1_3 ()
 void
 plot_graph_2_4 ()
 {
-  std::string fn_prefix = "plot-2-4";
+  std::string fn_prefix = "2-4";
   plot<std::pair<bool, round_t>> (
     default_min_factor,
     default_max_factor,
@@ -439,26 +444,32 @@ plot_graph_5 ()
   std::set<std::tuple<unsigned int, double, unsigned int>> one_dists_exp = {
     std::make_tuple (DET_EXP_THIN_DIST, 1.0, 0),    // exp dist, thinnest snd
     std::make_tuple (DET_EXP_MEDN_DIST, 1.0, 0),    // exp dist, median snd
-    std::make_tuple (DET_EXP_FAT_DIST , 1.0, 0)     // exp dist, fattest snd
+    std::make_tuple (DET_EXP_FAT_DIST, 1.0, 0)      // exp dist, fattest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> thousand_dists_exp =
     {
-      std::make_tuple (DET_EXP_THIN_DIST, 1000.0, 0),    // exp dist, thinnest snd
+      std::make_tuple (
+        DET_EXP_THIN_DIST, 1000.0, 0),    // exp dist, thinnest snd
       std::make_tuple (DET_EXP_MEDN_DIST, 1000.0, 0),    // exp dist, median snd
-      std::make_tuple (DET_EXP_FAT_DIST , 1000.0, 0)     // exp dist, fattest snd
+      std::make_tuple (DET_EXP_FAT_DIST, 1000.0, 0)    // exp dist, fattest snd
     };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> million_dists_exp = {
-    std::make_tuple (DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
-    std::make_tuple (DET_EXP_MEDN_DIST, 1000000.0, 0),    // exp dist, median snd
-    std::make_tuple (DET_EXP_FAT_DIST , 1000000.0, 0)     // exp dist, fattest snd
+    std::make_tuple (
+      DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
+    std::make_tuple (
+      DET_EXP_MEDN_DIST, 1000000.0, 0),                 // exp dist, median snd
+    std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)    // exp dist, fattest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> billion_dists_exp = {
-    std::make_tuple (DET_EXP_THIN_DIST, 1000000000.0, 0),    // exp dist, thinnest snd
-    std::make_tuple (DET_EXP_MEDN_DIST, 1000000000.0, 0),    // exp dist, median snd
-    std::make_tuple (DET_EXP_FAT_DIST , 1000000000.0, 0)     // exp dist, fattest snd
+    std::make_tuple (
+      DET_EXP_THIN_DIST, 1000000000.0, 0),    // exp dist, thinnest snd
+    std::make_tuple (
+      DET_EXP_MEDN_DIST, 1000000000.0, 0),    // exp dist, median snd
+    std::make_tuple (
+      DET_EXP_FAT_DIST, 1000000000.0, 0)    // exp dist, fattest snd
   };
 
   std::set<std::pair<std::set<std::tuple<unsigned int, double, unsigned int>>,
@@ -468,7 +479,7 @@ plot_graph_5 ()
                   std::make_pair (million_dists_exp, "1m"),
                   std::make_pair (billion_dists_exp, "1b")};
 
-  std::string fn_prefix = "plot-5";
+  std::string fn_prefix = "5";
 
   plot<std::pair<bool, round_t>> (
     min_factor,
@@ -542,12 +553,11 @@ plot_graph_5 ()
 void
 plot_graph_6 ()
 {
-  size_t           min_factor       = default_min_factor;
-  size_t           max_factor       = 200;
-  std::set<size_t> nr_parties_tests = {
-    64, 128, 256, 512, 1024, 2048, 4096, 8192};
-  std::set<std::pair<corruption_t, double>> corruptions = {
-    std::make_pair (NO_CORR, 0)};
+  size_t                                    min_factor = default_min_factor;
+  size_t                                    max_factor = 200;
+  std::set<size_t>                          nr_parties_tests = {64, 128, 256, 512, 1024, 2048, 4096, 8192};
+  std::set<std::pair<corruption_t, double>> corruptions      = {
+         std::make_pair (NO_CORR, 0)};
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_unif = {
     std::make_tuple (DET_CONST_DIST, 0.0, 0)    // uniform dist
@@ -570,7 +580,8 @@ plot_graph_6 ()
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_exp_b = {
-    std::make_tuple (DET_EXP_FAT_DIST, 1000000000.0, 0)    // exp dist, fattest snd
+    std::make_tuple (
+      DET_EXP_FAT_DIST, 1000000000.0, 0)    // exp dist, fattest snd
   };
 
   std::set<std::pair<std::set<std::tuple<unsigned int, double, unsigned int>>,
@@ -582,11 +593,11 @@ plot_graph_6 ()
                   std::make_pair (dists_exp_m, "exp_m"),
                   std::make_pair (dists_exp_b, "exp_b")};
 
-  std::string fn_prefix = "plot-6";
+  std::string fn_prefix = "6";
 
   for (size_t nr_parties : nr_parties_tests)
   {
-    std::string fn_prefix_nr = fn_prefix + "-" + std::to_string (nr_parties);
+    std::string fn_prefix_nr = fn_prefix + "/" + std::to_string (nr_parties);
     for (std::pair<corruption_t, double> corr : corruptions)
     {
       std::string fn_prefix_nr_corr =

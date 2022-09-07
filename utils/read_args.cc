@@ -223,10 +223,8 @@ read_parameters (int argc, char **argv)
   {
     if (!str_to_show.compare (std::string ("a")))
     {
-      to_show = SHOW_DISTRIBUTION | SHOW_FACTOR | SHOW_SUCCESS | SHOW_NR_PARTIES | SHOW_TEST; // sets all main show flags to 1
-    } else if (!str_to_show.compare (std::string ("f")))
-    {
-      to_show = ~0;    // sets all show flags to 1 (verbose).
+      // sets all show flags to 1
+      to_show = ~0; // SHOW_DISTRIBUTION | SHOW_FACTOR | SHOW_SUCCESS | SHOW_NR_PARTIES | SHOW_TEST;
     } else
     {
       to_show = std::stoi (str_to_show.c_str (), nullptr, 2);
