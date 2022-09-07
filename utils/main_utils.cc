@@ -230,31 +230,31 @@ show_distribution_info (unsigned int flags, unsigned int to_show)
   {
     switch (flags)
     {
-      case 0b1:
+      case DET_CONST_DIST:
         std::cout << "Deterministic Constant distribution";
         break;
-      case 0b10:
+      case DET_FF_THIN_DIST:
         std::cout << "Deterministic Few Fat distribution, thin sender";
         break;
-      case 0b100:
+      case DET_FF_FAT_DIST:
         std::cout << "Deterministic Few Fat distribution, fat sender";
         break;
-      case 0b1000:
+      case DET_EXP_THIN_DIST:
         std::cout << "Deterministic Exponential distribution, thinnest sender";
         break;
-      case 0b10000:
+      case DET_EXP_MEDN_DIST:
         std::cout << "Deterministic Exponential distribution, median sender";
         break;
-      case 0b100000:
+      case DET_EXP_FAT_DIST:
         std::cout << "Deterministic Exponential distribution, fattest sender";
         break;
-      case (0b1 << 16):
+      case RAND_EXP_RAND_SND_DIST:
         std::cout << "Random Exponential distribution";
         break;
-      case (0b10 << 16):
+      case RAND_UNIF_RAND_SND_DIST:
         std::cout << "Random Uniform distribution";
         break;
-      case (0b100 << 16):
+      case RAND_GEOM_RAND_SND_DIST:
         std::cout << "Random Geometric distribution";
         break;
     }
@@ -270,8 +270,6 @@ show_run_data (std::string  prot_name,
                size_t       factor,
                unsigned int to_show)
 {
-  // To do: output the protocol name too; have to add this to the flags in the
-  // read_arguments source/header files
   double success_rate = 100.00 * ((double) correct_runs) / ((double) runs);
 
   if (to_show & SHOW_FACTOR)
