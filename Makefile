@@ -43,7 +43,7 @@ SLOW_RELEASE=-std=gnu++20 -D OMP_NUM_THREADS=1
 DEBUG=-g -D __YAL_ON__ -std=gnu++20
 
 #Should be set to one of the variables above
-MODE=$(PRELEASE)
+MODE=$(DEBUG)
 
 
 kout: $(KOUT_SOURCES) $(KOUT_EXECUTABLE)

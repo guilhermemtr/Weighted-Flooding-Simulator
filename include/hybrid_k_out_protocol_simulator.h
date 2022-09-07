@@ -16,10 +16,6 @@ class hybrid_k_out_protocol_simulator : public receiver_protocol_simulator,
                                         public k_out_protocol_simulator
 {
     protected:
-  // variables used to get randomness
-  std::function<size_t (party_t)> get_nr_requests;
-  std::function<size_t (party_t)> get_nr_requests_to_handle;
-
   /**
    * Runs a round of the protocol.
    */

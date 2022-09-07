@@ -88,7 +88,7 @@ std::function<corruptions_stake_protocol_simulator *(
  *                                                          *
  ************************************************************/
 std::string                               base_path = std::string ("results/");
-size_t                                    default_runs             = 100;
+size_t                                    default_runs             = 10000;
 size_t                                    default_min_factor       = 1;
 size_t                                    default_max_factor       = 50;
 std::set<size_t>                          default_nr_parties_tests = {1024};
