@@ -77,4 +77,4 @@ An alternative way for running the simulator is by simply running the benchmarks
 3. Run `./bench-bin` to run the benchmarks (beware, depending on the parameters defined in `benchmark.cc`, running the benchmarks may take a ==very long time==).
 4. The benchmark results will be stored inside the `results` folder.\
 
-[^1]: One can actually replicate the results given in our [paper](https://eprint.iacr.org/2022/608) by running `bench-bin`. However, beware replicating our results takes a significant amount of computing time.
+[^1]: One can actually replicate the results given in our [paper](https://eprint.iacr.org/2022/608) by running `bench-bin`. However, beware replicating our results takes a significant amount of computing time (up to a day on a high end desktop processor [high end with respect to year 2022]).
