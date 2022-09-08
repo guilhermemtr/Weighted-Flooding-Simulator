@@ -1,5 +1,5 @@
 # Weighted-Flooding-Simulator
-Simulator for message flooding protocols on graphs where nodes (i.e. parties) have weights. This simulator is intended to evaluate the performance of the `WFF` protocol given in [paper](https://eprint.iacr.org/2022/608). For more details on the scope of the simulator as well as on the `WFF` protocol please refer to our [paper](https://eprint.iacr.org/2022/608).
+Simulator for message flooding protocols on graphs where nodes (i.e. parties) have weights. This simulator is intended to evaluate the performance of the `WFF` protocol given in the paper [Practical Provably Secure Flooding for Blockchains.](https://eprint.iacr.org/2022/608). For more details on the scope of the simulator as well as on the `WFF` protocol please refer to our [paper](https://eprint.iacr.org/2022/608).
 
 
 
@@ -12,6 +12,7 @@ The documentation of the code can be found inside the `./doc/html` folder.
 
 ### Building The Sources
 We provide a `Makefile` for compiling the source code of the project.
+The simulator relies on a library `<sys/sysinfo.h>` that (to the best of our knowledge) is not available in MacOS.
 The `Makefile` allows for compiling three distinct targets: 
 - ```make bench``` compiles `benchmark.cc` (and all other necessary files), generating executable `bench-bin`.
 The purpose of this executable is benchmarking the performance of the `WFF` protocol via simulations (the results of the benchmarks are written to [`.csv`](https://en.wikipedia.org/wiki/Comma-separated_values) files).
@@ -39,7 +40,7 @@ In all configurations, the stake distribution is always the constant distributio
 Since for all the configurations the stake distribution is always the constant stake distribution, the parameters `1000000 20` are ignored, as they represent the ratio between the stake of the heaviest party(ies) and the lightest party(ies) (for more information on the stake distributions, refer to our [paper](https://eprint.iacr.org/2022/608)).
 
 **Parameter Description**
-- `[kout-bin|hybrid-bin]`: Indicates which protocol to simulate; `kout-bin` simulates the `WFF` protocol presented in the [paper](https://eprint.iacr.org/2022/608), whereas `hybrid-bin` simulates a variant of `WFF` where parties who did not (yet) get the message query other parties for incoming messages.
+- `[kout-bin|hybrid-bin]`: Indicates which protocol to simulate; `kout-bin` simulates the `WFF` protocol presented in our paper [Practical Provably Secure Flooding for Blockchains](https://eprint.iacr.org/2022/608), whereas `hybrid-bin` simulates a variant of `WFF` where parties who did not (yet) get the message query other parties for incoming messages.
 - `<#runs>`: The number of runs to make for each possible configuration.
 - `<tests (9 bits)>`: Each bit indicates whether to benchmark the protocol against a certain stake distribution (see below for a list of what each bit means).
 - `<corrupt_parties>`: If set to `0` parties are not corrupted; if set to `1` parties are corrupted in a random fashion; if set to `2` heavy parties are corrupted first; if set to `3` light parties are corrupted first.
@@ -77,4 +78,4 @@ An alternative way for running the simulator is by simply running the benchmarks
 3. Run `./bench-bin` to run the benchmarks (beware, depending on the parameters defined in `benchmark.cc`, running the benchmarks may take a ==very long time==).
 4. The benchmark results will be stored inside the `results` folder.\
 
-[^1]: One can actually replicate the results given in our [paper](https://eprint.iacr.org/2022/608) by running `bench-bin`. However, beware replicating our results takes a significant amount of computing time (up to a day on a high end desktop processor [high end with respect to year 2022]).
+[^1]: One can replicate the results given in our [paper](https://eprint.iacr.org/2022/608) by running `bench-bin`. However, beware replicating our results takes a significant amount of computing time (up to a day on a high end desktop processor [high end with respect to year 2022]).
