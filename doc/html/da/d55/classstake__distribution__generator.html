@@ -9,10 +9,15 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('da/d55/classstake__distribution__generator.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,11 +97,12 @@ $(function() {
  <a href="../../da/d55/classstake__distribution__generator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../">generate_stake_distribution.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for stake_distribution_generator:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d6f/classstake__distribution__generator__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for stake_distribution_generator:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d6f/classstake__distribution__generator__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -90,21 +112,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5c65ab784b15f01894e7130cc0bb661"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661">constant_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> s=100)</td></tr>
 <tr class="memdesc:af5c65ab784b15f01894e7130cc0bb661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a constant stake distribution with the given parameters.  <a href="../../da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661">More...</a><br /></td></tr>
 <tr class="separator:af5c65ab784b15f01894e7130cc0bb661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0adac7b42eefa5f4ba734955f104030d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a0adac7b42eefa5f4ba734955f104030d">few_fat_thin_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double rich_poor_ratio, size_t nr_rich)</td></tr>
-<tr class="memdesc:a0adac7b42eefa5f4ba734955f104030d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few fat stake distribution with the given parameters, and where the sender is the thinnest/poorest party.  <a href="../../da/d55/classstake__distribution__generator.html#a0adac7b42eefa5f4ba734955f104030d">More...</a><br /></td></tr>
-<tr class="separator:a0adac7b42eefa5f4ba734955f104030d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cd5971c4b30a302ace9153acde41598"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a4cd5971c4b30a302ace9153acde41598">few_fat_fat_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double rich_poor_ratio, size_t nr_rich)</td></tr>
-<tr class="memdesc:a4cd5971c4b30a302ace9153acde41598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few fat stake distribution with the given parameters, and where the sender is the fattest/richest party.  <a href="../../da/d55/classstake__distribution__generator.html#a4cd5971c4b30a302ace9153acde41598">More...</a><br /></td></tr>
-<tr class="separator:a4cd5971c4b30a302ace9153acde41598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb11a0731fa642877492417f211a10c1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#afb11a0731fa642877492417f211a10c1">exponential_thinnest_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double richest_poorest_ratio)</td></tr>
-<tr class="memdesc:afb11a0731fa642877492417f211a10c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the thinnest/poorest party.  <a href="../../da/d55/classstake__distribution__generator.html#afb11a0731fa642877492417f211a10c1">More...</a><br /></td></tr>
-<tr class="separator:afb11a0731fa642877492417f211a10c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6c4913d46b461e23e4c59c75c4f99c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a7f6c4913d46b461e23e4c59c75c4f99c">exponential_median_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double richest_poorest_ratio)</td></tr>
-<tr class="memdesc:a7f6c4913d46b461e23e4c59c75c4f99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the party with the median wealth/weight.  <a href="../../da/d55/classstake__distribution__generator.html#a7f6c4913d46b461e23e4c59c75c4f99c">More...</a><br /></td></tr>
-<tr class="separator:a7f6c4913d46b461e23e4c59c75c4f99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c9f7952feefe35ca261e18fa89e5677"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a5c9f7952feefe35ca261e18fa89e5677">exponential_fattest_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double richest_poorest_ratio)</td></tr>
-<tr class="memdesc:a5c9f7952feefe35ca261e18fa89e5677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the fattest/richest party.  <a href="../../da/d55/classstake__distribution__generator.html#a5c9f7952feefe35ca261e18fa89e5677">More...</a><br /></td></tr>
-<tr class="separator:a5c9f7952feefe35ca261e18fa89e5677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8a24681627c5acb7c5162cb8e75181"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#abb8a24681627c5acb7c5162cb8e75181">few_heavy_light_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heavy_light_ratio, size_t nr_heavy)</td></tr>
+<tr class="memdesc:abb8a24681627c5acb7c5162cb8e75181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few heavy stake distribution with the given parameters, and where the sender is the lightest party.  <a href="../../da/d55/classstake__distribution__generator.html#abb8a24681627c5acb7c5162cb8e75181">More...</a><br /></td></tr>
+<tr class="separator:abb8a24681627c5acb7c5162cb8e75181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe7ac745502142170a455e778fb8f02"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#aabe7ac745502142170a455e778fb8f02">few_heavy_heavy_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heavy_light_ratio, size_t nr_heavy)</td></tr>
+<tr class="memdesc:aabe7ac745502142170a455e778fb8f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few heavy stake distribution with the given parameters, and where the sender is the heaviest party.  <a href="../../da/d55/classstake__distribution__generator.html#aabe7ac745502142170a455e778fb8f02">More...</a><br /></td></tr>
+<tr class="separator:aabe7ac745502142170a455e778fb8f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13516e17aa69d2c5bc08f27ca46a0e18"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a13516e17aa69d2c5bc08f27ca46a0e18">exponential_lightest_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heaviest_lightest_ratio)</td></tr>
+<tr class="memdesc:a13516e17aa69d2c5bc08f27ca46a0e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the lightest party.  <a href="../../da/d55/classstake__distribution__generator.html#a13516e17aa69d2c5bc08f27ca46a0e18">More...</a><br /></td></tr>
+<tr class="separator:a13516e17aa69d2c5bc08f27ca46a0e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea9a4e1e4ae36b4363cc6d1895ccddd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a0ea9a4e1e4ae36b4363cc6d1895ccddd">exponential_median_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heaviest_lightest_ratio)</td></tr>
+<tr class="memdesc:a0ea9a4e1e4ae36b4363cc6d1895ccddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the party with the median wealth/weight.  <a href="../../da/d55/classstake__distribution__generator.html#a0ea9a4e1e4ae36b4363cc6d1895ccddd">More...</a><br /></td></tr>
+<tr class="separator:a0ea9a4e1e4ae36b4363cc6d1895ccddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9491cb9cab713369ec6bfc8571e6d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a7d9491cb9cab713369ec6bfc8571e6d2">exponential_heaviest_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heaviest_lightest_ratio)</td></tr>
+<tr class="memdesc:a7d9491cb9cab713369ec6bfc8571e6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters, and where the sender is the heaviest party.  <a href="../../da/d55/classstake__distribution__generator.html#a7d9491cb9cab713369ec6bfc8571e6d2">More...</a><br /></td></tr>
+<tr class="separator:a7d9491cb9cab713369ec6bfc8571e6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea2cb646581cf3bae6388cb3f712ef3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a7ea2cb646581cf3bae6388cb3f712ef3">sample_uniform_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> lower_bound=0, <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> upper_bound=1000000)</td></tr>
 <tr class="memdesc:a7ea2cb646581cf3bae6388cb3f712ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a stake distribution with the given number of parties, where the stake of each party is picked according to a uniform distribution with parameters &lt;parameter lower_bound&gt; and &lt;parameter upper_bound&gt;, and where the sender is a random party.  <a href="../../da/d55/classstake__distribution__generator.html#a7ea2cb646581cf3bae6388cb3f712ef3">More...</a><br /></td></tr>
 <tr class="separator:a7ea2cb646581cf3bae6388cb3f712ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,12 +145,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af69400d382d46f4451eaf189beb999da"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#af69400d382d46f4451eaf189beb999da">few_fat_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double rich_poor_ratio, size_t nr_rich)</td></tr>
-<tr class="memdesc:af69400d382d46f4451eaf189beb999da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few fat stake distribution with the given parameters.  <a href="../../da/d55/classstake__distribution__generator.html#af69400d382d46f4451eaf189beb999da">More...</a><br /></td></tr>
-<tr class="separator:af69400d382d46f4451eaf189beb999da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee65e2ff184ede5da7550b9dc04b424"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#adee65e2ff184ede5da7550b9dc04b424">exponential_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double richest_poorest_ratio)</td></tr>
-<tr class="memdesc:adee65e2ff184ede5da7550b9dc04b424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters.  <a href="../../da/d55/classstake__distribution__generator.html#adee65e2ff184ede5da7550b9dc04b424">More...</a><br /></td></tr>
-<tr class="separator:adee65e2ff184ede5da7550b9dc04b424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab28c3e08050c17996b286e586ea6b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a2ab28c3e08050c17996b286e586ea6b3">few_heavy_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heavy_light_ratio, size_t nr_heavy)</td></tr>
+<tr class="memdesc:a2ab28c3e08050c17996b286e586ea6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a few heavy stake distribution with the given parameters.  <a href="../../da/d55/classstake__distribution__generator.html#a2ab28c3e08050c17996b286e586ea6b3">More...</a><br /></td></tr>
+<tr class="separator:a2ab28c3e08050c17996b286e586ea6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279245440e8ff85d949bf79678d06835"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d55/classstake__distribution__generator.html#a279245440e8ff85d949bf79678d06835">exponential_stake</a> (<a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> nr_parties, double heaviest_lightest_ratio)</td></tr>
+<tr class="memdesc:a279245440e8ff85d949bf79678d06835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an exponential stake distribution with the given parameters.  <a href="../../da/d55/classstake__distribution__generator.html#a279245440e8ff85d949bf79678d06835">More...</a><br /></td></tr>
+<tr class="separator:a279245440e8ff85d949bf79678d06835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -197,11 +219,12 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a3bc8bc85a9a0696fa5e28a160084cf52_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a3bc8bc85a9a0696fa5e28a160084cf52_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -243,23 +266,24 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>the stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_af5c65ab784b15f01894e7130cc0bb661_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_af5c65ab784b15f01894e7130cc0bb661_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a5c9f7952feefe35ca261e18fa89e5677" name="a5c9f7952feefe35ca261e18fa89e5677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c9f7952feefe35ca261e18fa89e5677">&#9670;&nbsp;</a></span>exponential_fattest_stake()</h2>
+<a id="a7d9491cb9cab713369ec6bfc8571e6d2" name="a7d9491cb9cab713369ec6bfc8571e6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9491cb9cab713369ec6bfc8571e6d2">&#9670;&nbsp;</a></span>exponential_heaviest_stake()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::exponential_fattest_stake </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::exponential_heaviest_stake </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
           <td class="paramname"><em>nr_parties</em>, </td>
@@ -268,7 +292,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>richest_poorest_ratio</em>&#160;</td>
+          <td class="paramname"><em>heaviest_lightest_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -278,28 +302,76 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Generates an exponential stake distribution with the given parameters, and where the sender is the fattest/richest party. </p>
+<p>Generates an exponential stake distribution with the given parameters, and where the sender is the heaviest party. </p>
 <p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a5c9f7952feefe35ca261e18fa89e5677_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a7d9491cb9cab713369ec6bfc8571e6d2_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a7f6c4913d46b461e23e4c59c75c4f99c" name="a7f6c4913d46b461e23e4c59c75c4f99c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f6c4913d46b461e23e4c59c75c4f99c">&#9670;&nbsp;</a></span>exponential_median_stake()</h2>
+<a id="a13516e17aa69d2c5bc08f27ca46a0e18" name="a13516e17aa69d2c5bc08f27ca46a0e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13516e17aa69d2c5bc08f27ca46a0e18">&#9670;&nbsp;</a></span>exponential_lightest_stake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::exponential_lightest_stake </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
+          <td class="paramname"><em>nr_parties</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>heaviest_lightest_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates an exponential stake distribution with the given parameters, and where the sender is the lightest party. </p>
+<p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">the</td><td>number of parties. </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a13516e17aa69d2c5bc08f27ca46a0e18_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0ea9a4e1e4ae36b4363cc6d1895ccddd" name="a0ea9a4e1e4ae36b4363cc6d1895ccddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea9a4e1e4ae36b4363cc6d1895ccddd">&#9670;&nbsp;</a></span>exponential_median_stake()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +386,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>richest_poorest_ratio</em>&#160;</td>
+          <td class="paramname"><em>heaviest_lightest_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -328,24 +400,25 @@ Here is the caller graph for this function:</div>
 <p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a7f6c4913d46b461e23e4c59c75c4f99c_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a0ea9a4e1e4ae36b4363cc6d1895ccddd_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="adee65e2ff184ede5da7550b9dc04b424" name="adee65e2ff184ede5da7550b9dc04b424"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee65e2ff184ede5da7550b9dc04b424">&#9670;&nbsp;</a></span>exponential_stake()</h2>
+<a id="a279245440e8ff85d949bf79678d06835" name="a279245440e8ff85d949bf79678d06835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279245440e8ff85d949bf79678d06835">&#9670;&nbsp;</a></span>exponential_stake()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +436,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>richest_poorest_ratio</em>&#160;</td>
+          <td class="paramname"><em>heaviest_lightest_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -382,7 +455,7 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
   </table>
   </dd>
 </dl>
@@ -390,14 +463,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="afb11a0731fa642877492417f211a10c1" name="afb11a0731fa642877492417f211a10c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb11a0731fa642877492417f211a10c1">&#9670;&nbsp;</a></span>exponential_thinnest_stake()</h2>
+<a id="aabe7ac745502142170a455e778fb8f02" name="aabe7ac745502142170a455e778fb8f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe7ac745502142170a455e778fb8f02">&#9670;&nbsp;</a></span>few_heavy_heavy_stake()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::exponential_thinnest_stake </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_heavy_heavy_stake </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
           <td class="paramname"><em>nr_parties</em>, </td>
@@ -406,59 +479,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>richest_poorest_ratio</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generates an exponential stake distribution with the given parameters, and where the sender is the thinnest/poorest party. </p>
-<p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
-
-<p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_afb11a0731fa642877492417f211a10c1_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a4cd5971c4b30a302ace9153acde41598" name="a4cd5971c4b30a302ace9153acde41598"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cd5971c4b30a302ace9153acde41598">&#9670;&nbsp;</a></span>few_fat_fat_stake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_fat_fat_stake </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
-          <td class="paramname"><em>nr_parties</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rich_poor_ratio</em>, </td>
+          <td class="paramname"><em>heavy_light_ratio</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nr_rich</em>&#160;</td>
+          <td class="paramname"><em>nr_heavy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -468,29 +495,84 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Generates a few fat stake distribution with the given parameters, and where the sender is the fattest/richest party. </p>
+<p>Generates a few heavy stake distribution with the given parameters, and where the sender is the heaviest party. </p>
 <p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
-    <tr><td class="paramname">the</td><td>number of rich parties. </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>number of heavy parties. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a4cd5971c4b30a302ace9153acde41598_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_aabe7ac745502142170a455e778fb8f02_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="af69400d382d46f4451eaf189beb999da" name="af69400d382d46f4451eaf189beb999da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69400d382d46f4451eaf189beb999da">&#9670;&nbsp;</a></span>few_fat_stake()</h2>
+<a id="abb8a24681627c5acb7c5162cb8e75181" name="abb8a24681627c5acb7c5162cb8e75181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8a24681627c5acb7c5162cb8e75181">&#9670;&nbsp;</a></span>few_heavy_light_stake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_heavy_light_stake </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
+          <td class="paramname"><em>nr_parties</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>heavy_light_ratio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nr_heavy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a few heavy stake distribution with the given parameters, and where the sender is the lightest party. </p>
+<p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">the</td><td>number of parties. </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>number of heavy parties. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_abb8a24681627c5acb7c5162cb8e75181_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a2ab28c3e08050c17996b286e586ea6b3" name="a2ab28c3e08050c17996b286e586ea6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab28c3e08050c17996b286e586ea6b3">&#9670;&nbsp;</a></span>few_heavy_stake()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -499,7 +581,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_fat_stake </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_heavy_stake </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
           <td class="paramname"><em>nr_parties</em>, </td>
@@ -508,13 +590,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rich_poor_ratio</em>, </td>
+          <td class="paramname"><em>heavy_light_ratio</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nr_rich</em>&#160;</td>
+          <td class="paramname"><em>nr_heavy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -529,69 +611,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Generates a few fat stake distribution with the given parameters. </p>
+<p>Generates a few heavy stake distribution with the given parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
-    <tr><td class="paramname">the</td><td>number of rich parties. </td></tr>
+    <tr><td class="paramname">the</td><td>ratio between the stake of the heaviest and lightest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>number of heavy parties. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
-
-</div>
-</div>
-<a id="a0adac7b42eefa5f4ba734955f104030d" name="a0adac7b42eefa5f4ba734955f104030d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0adac7b42eefa5f4ba734955f104030d">&#9670;&nbsp;</a></span>few_fat_thin_stake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> &gt; stake_distribution_generator::few_fat_thin_stake </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td>
-          <td class="paramname"><em>nr_parties</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rich_poor_ratio</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nr_rich</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generates a few fat stake distribution with the given parameters, and where the sender is the thinnest/poorest party. </p>
-<p >By convention, the sender is the first party in the vector output by this method. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>ratio between the stake of the richest and poorest party(ies). </td></tr>
-    <tr><td class="paramname">the</td><td>number of rich parties. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
-
-<p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a0adac7b42eefa5f4ba734955f104030d_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
 
 </div>
 </div>
@@ -669,11 +698,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_aa118b134d691fb6392ec512bd3c01fa8_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_aa118b134d691fb6392ec512bd3c01fa8_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -715,11 +745,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_ae268154266dd8211b2d0aa95572b174e_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_ae268154266dd8211b2d0aa95572b174e_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -768,11 +799,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding stake distribution. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../#l00014">generate_stake_distribution()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a7ea2cb646581cf3bae6388cb3f712ef3_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d55/classstake__distribution__generator_a7ea2cb646581cf3bae6388cb3f712ef3_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -828,12 +860,16 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="../../">generate_stake_distribution.h</a></li>
+<li>/home/guilhermemtr/Dropbox/workspace/ETH-Zurich/Projects/Weighted-Flooding-Simulator/include/<a class="el" href="../../">generate_stake_distribution.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/d55/classstake__distribution__generator.html">stake_distribution_generator</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

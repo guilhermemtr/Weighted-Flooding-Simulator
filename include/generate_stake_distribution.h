@@ -22,27 +22,29 @@ class stake_distribution_generator
 {
     protected:
   //!< variables used to get randomness
-  std::random_device         rd; //!< random device
-  std::default_random_engine re; //!< default random engine
+  std::random_device         rd;    //!< random device
+  std::default_random_engine re;    //!< default random engine
 
   /**
-   * Generates a few fat stake distribution with the given parameters.
+   * Generates a few heavy stake distribution with the given parameters.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
-   * @param the number of rich parties.
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
+   * @param the number of heavy parties.
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  few_fat_stake (party_t nr_parties, double rich_poor_ratio, size_t nr_rich);
+  few_heavy_stake (party_t nr_parties,
+                   double  heavy_light_ratio,
+                   size_t  nr_heavy);
 
   /**
    * Generates an exponential stake distribution with the given parameters.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  exponential_stake (party_t nr_parties, double richest_poorest_ratio);
+  exponential_stake (party_t nr_parties, double heaviest_lightest_ratio);
 
     public:
   stake_distribution_generator ();
@@ -58,65 +60,67 @@ class stake_distribution_generator
   constant_stake (party_t nr_parties, stake_t s = 100);
 
   /**
-   * Generates a few fat stake distribution with the given parameters, and where
-   * the sender is the thinnest/poorest party. By convention, the sender is the
+   * Generates a few heavy stake distribution with the given parameters, and
+   * where the sender is the lightest party. By convention, the sender is the
    * first party in the vector output by this method.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
-   * @param the number of rich parties.
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
+   * @param the number of heavy parties.
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  few_fat_thin_stake (party_t nr_parties,
-                      double  rich_poor_ratio,
-                      size_t  nr_rich);
+  few_heavy_light_stake (party_t nr_parties,
+                         double  heavy_light_ratio,
+                         size_t  nr_heavy);
 
   /**
-   * Generates a few fat stake distribution with the given parameters, and where
-   * the sender is the fattest/richest party. By convention, the sender is the
+   * Generates a few heavy stake distribution with the given parameters, and
+   * where the sender is the heaviest party. By convention, the sender is the
    * first party in the vector output by this method.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
-   * @param the number of rich parties.
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
+   * @param the number of heavy parties.
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  few_fat_fat_stake (party_t nr_parties,
-                     double  rich_poor_ratio,
-                     size_t  nr_rich);
+  few_heavy_heavy_stake (party_t nr_parties,
+                         double  heavy_light_ratio,
+                         size_t  nr_heavy);
 
   /**
-   * Generates an exponential stake distribution with the given parameters, and where
-   * the sender is the thinnest/poorest party. By convention, the sender is the
+   * Generates an exponential stake distribution with the given parameters, and
+   * where the sender is the lightest party. By convention, the sender is the
    * first party in the vector output by this method.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  exponential_thinnest_stake (party_t nr_parties, double richest_poorest_ratio);
+  exponential_lightest_stake (party_t nr_parties,
+                              double  heaviest_lightest_ratio);
 
   /**
-   * Generates an exponential stake distribution with the given parameters, and where
-   * the sender is the party with the median wealth/weight. By convention, the
-   * sender is the first party in the vector output by this method.
+   * Generates an exponential stake distribution with the given parameters, and
+   * where the sender is the party with the median wealth/weight. By convention,
+   * the sender is the first party in the vector output by this method.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  exponential_median_stake (party_t nr_parties, double richest_poorest_ratio);
+  exponential_median_stake (party_t nr_parties, double heaviest_lightest_ratio);
 
   /**
-   * Generates an exponential stake distribution with the given parameters, and where
-   * the sender is the fattest/richest party. By convention, the sender is the
+   * Generates an exponential stake distribution with the given parameters, and
+   * where the sender is the heaviest party. By convention, the sender is the
    * first party in the vector output by this method.
    * @param the number of parties.
-   * @param the ratio between the stake of the richest and poorest party(ies).
+   * @param the ratio between the stake of the heaviest and lightest party(ies).
    * @return the corresponding stake distribution.
    */
   std::vector<stake_t>
-  exponential_fattest_stake (party_t nr_parties, double richest_poorest_ratio);
+  exponential_heaviest_stake (party_t nr_parties,
+                              double  heaviest_lightest_ratio);
 
 
 
@@ -163,7 +167,8 @@ class stake_distribution_generator
   sample_exponential_stake (party_t nr_parties, double lambda = 0.001);
 
   /**
-   * Adds, for each party in the stake distribution, <parameter v> additional stake.
+   * Adds, for each party in the stake distribution, <parameter v> additional
+   * stake.
    * @param the stake distribution.
    * @param the additional stake to be added to each party.
    */
@@ -171,7 +176,8 @@ class stake_distribution_generator
   add_to_stake_distribution (std::vector<stake_t> &stakes, stake_t v);
 
   /**
-   * Multiplies the stake of each party in the stake distribution by a factor <parameter factor>.
+   * Multiplies the stake of each party in the stake distribution by a factor
+   * <parameter factor>.
    * @param the stake distribution.
    * @param the multiplicative factor.
    */

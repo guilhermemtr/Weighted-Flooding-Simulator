@@ -9,10 +9,15 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -48,6 +53,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -92,14 +113,15 @@ $(function() {
 
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>base_path&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a69229897870807b29208ea9b08f9e241">benchmark.cc</a></li>
 <li>begin&#160;:&#160;<a class="el" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a62818538c4d7aa5301fa38b8eedf1c91a6e2739552f337cfb632f5afc4a10892b">corruptions_stake_protocol_simulator.h</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
-<li>CORR_POOR_FIRST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a610f5f9eddf60cacb3168e3bf1687491">read_args.h</a></li>
+<li>CORR_HEAVY_FIRST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a8d8dd062fc745e51e91e13bc857fa68a">read_args.h</a></li>
+<li>CORR_LIGHT_FIRST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a5c901f8fd6a9e2da5042981113b96b35">read_args.h</a></li>
 <li>CORR_RAND&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3">read_args.h</a></li>
-<li>CORR_RICH_FIRST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a10099c8d45446b1142928924f3f2923b">read_args.h</a></li>
 <li>CORR_TYPES&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a14c47d44c6631e893b453751a3461329">read_args.h</a></li>
 <li>corrupt_parties_by_stake()&#160;:&#160;<a class="el" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corruptions_stake_protocol_simulator.h</a></li>
 <li>corruption_t&#160;:&#160;<a class="el" href="d9/d49/types_8h.html#ab7662475b458e14534004c28ee68aebb">types.h</a></li>
@@ -113,7 +135,7 @@ $(function() {
 <li>default_corruptions&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#ae914e5607c43bf56f8dcc04ac58d2ce7">benchmark.cc</a></li>
 <li>default_dist_types&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a18eb8c733d819fb7c9c1af7d61384895">benchmark.cc</a></li>
 <li>default_dists_exp&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#aec7f33d186f01afbdc3f6f60bb186cd1">benchmark.cc</a></li>
-<li>default_dists_ff&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a779514d2d3f2919bd53878735dcddd43">benchmark.cc</a></li>
+<li>default_dists_fh&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#afc9733bc03a239d6cb30b2fc95fbc842">benchmark.cc</a></li>
 <li>default_dists_unif&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a56713f028364e59c385e602f189ffe15">benchmark.cc</a></li>
 <li>default_max_factor&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a7653812cf821cd6d87b72ff38ed39226">benchmark.cc</a></li>
 <li>default_min_factor&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a1f7094f6fd94d4555c155caa8372a1c7">benchmark.cc</a></li>
@@ -122,11 +144,11 @@ $(function() {
 <li>default_simulator_constructor&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#aa6d91deb8db78767457c9841ea999faf">benchmark.cc</a></li>
 <li>default_total_messages_calculator&#160;:&#160;<a class="el" href="d5/d37/benchmark_8cc.html#a01899997655721fea68898124961f019">benchmark.cc</a></li>
 <li>DET_CONST_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a23858f91d0a8d9511f744532e903fd50">read_args.h</a></li>
-<li>DET_EXP_FAT_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#ad6004b5996171ba06a9e54f26dae22e2">read_args.h</a></li>
+<li>DET_EXP_HEAVY_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a09139ba66c1cb90d2891f76ff524a223">read_args.h</a></li>
+<li>DET_EXP_LIGHT_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a77e4ba1fdc417be67c56164f047d05c4">read_args.h</a></li>
 <li>DET_EXP_MEDN_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#af6e0cc51561c30ecdeb804889971d16a">read_args.h</a></li>
-<li>DET_EXP_THIN_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#aeca7078ed65b8e3a4f00180fd7380f17">read_args.h</a></li>
-<li>DET_FF_FAT_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#ac43d86c906b6eb49b04f478fb6c40a0a">read_args.h</a></li>
-<li>DET_FF_THIN_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#abe3b3c7241737a002e9cbd83652ccb1b">read_args.h</a></li>
+<li>DET_FH_HEAVY_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a0d5322986f7c790dce112725385d08ca">read_args.h</a></li>
+<li>DET_FH_LIGHT_DIST&#160;:&#160;<a class="el" href="d1/dde/read__args_8h.html#a719713fdc7f7f87166f78fc91a55894d">read_args.h</a></li>
 </ul>
 
 
@@ -191,7 +213,7 @@ $(function() {
 <li>round_t&#160;:&#160;<a class="el" href="d9/d49/types_8h.html#a4f4e83773e5110174ea5b38137e1a6f6">types.h</a></li>
 <li>ROUND_T_MAX&#160;:&#160;<a class="el" href="d9/d49/types_8h.html#a19c1ce9401ce3a01d6ccf232f08ad1bf">types.h</a></li>
 <li>run_command_parameters()&#160;:&#160;<a class="el" href="df/d31/main__utils_8cc.html#a8f4afe28d9c87b5957823f96ebe7dd48">main_utils.cc</a>, <a class="el" href="d0/d8b/main__utils_8h.html#a8f4afe28d9c87b5957823f96ebe7dd48">main_utils.h</a></li>
-<li>run_tests()&#160;:&#160;<a class="el" href="df/d31/main__utils_8cc.html#a0444e24a736cc8cfe957ba539ff8e797">main_utils.cc</a>, <a class="el" href="d0/d8b/main__utils_8h.html#af2d36ae7089940a56b91b8191110db06">main_utils.h</a></li>
+<li>run_tests()&#160;:&#160;<a class="el" href="df/d31/main__utils_8cc.html#ad944ce1f7580051626a657c82264ac05">main_utils.cc</a>, <a class="el" href="d0/d8b/main__utils_8h.html#af2d36ae7089940a56b91b8191110db06">main_utils.h</a></li>
 </ul>
 
 
@@ -220,9 +242,12 @@ $(function() {
 <li>write_stake_distribution_file()&#160;:&#160;<a class="el" href="db/dd2/io__stake__distribution_8cc.html#a78a2ff5f824adf1541b6eb5465ab05c9">io_stake_distribution.cc</a>, <a class="el" href="da/d3f/io__stake__distribution_8h.html#ac3e90bbf147f4fb27315efb01f7b7dd6">io_stake_distribution.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

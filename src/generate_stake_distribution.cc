@@ -14,20 +14,20 @@ stake_distribution_generator::constant_stake (party_t nr_parties, stake_t s)
 }
 
 std::vector<stake_t>
-stake_distribution_generator::few_fat_stake (party_t nr_parties,
-                                             double  rich_poor_ratio,
-                                             size_t  nr_rich)
+stake_distribution_generator::few_heavy_stake (party_t nr_parties,
+                                               double  heavy_light_ratio,
+                                               size_t  nr_heavy)
 {
   std::vector<stake_t> stakes (nr_parties, 1);
 
-  if (nr_rich >= nr_parties)
+  if (nr_heavy >= nr_parties)
   {
-    nr_rich = nr_parties;
+    nr_heavy = nr_parties;
   }
 
-  for (party_t i = 0; i < nr_rich; i++)
+  for (party_t i = 0; i < nr_heavy; i++)
   {
-    stakes[i] = rich_poor_ratio;
+    stakes[i] = heavy_light_ratio;
   }
 
   return stakes;
@@ -35,13 +35,13 @@ stake_distribution_generator::few_fat_stake (party_t nr_parties,
 
 std::vector<stake_t>
 stake_distribution_generator::exponential_stake (party_t nr_parties,
-                                                 double  richest_poorest_ratio)
+                                                 double  heaviest_lightest_ratio)
 {
-  // stake of poorest party set to large value so that using integers does not
+  // stake of lightest party set to large value so that using integers does not
   // become a problem.
   std::vector<stake_t> stakes (nr_parties, 1000000);
 
-  double r = pow (richest_poorest_ratio, (1.0 / ((double) nr_parties - 1.0)));
+  double r = pow (heaviest_lightest_ratio, (1.0 / ((double) nr_parties - 1.0)));
 
   for (party_t i = 1; i < nr_parties; i++)
   {
@@ -51,39 +51,39 @@ stake_distribution_generator::exponential_stake (party_t nr_parties,
 }
 
 std::vector<stake_t>
-stake_distribution_generator::few_fat_thin_stake (party_t nr_parties,
-                                                  double  rich_poor_ratio,
-                                                  size_t  nr_rich)
+stake_distribution_generator::few_heavy_light_stake (party_t nr_parties,
+                                                     double  heavy_light_ratio,
+                                                     size_t  nr_heavy)
 {
   std::vector<stake_t> stakes =
-    few_fat_stake (nr_parties, rich_poor_ratio, nr_rich);
-  stake_t rich_stake     = stakes[0];
+    few_heavy_stake (nr_parties, heavy_light_ratio, nr_heavy);
+  stake_t heavy_stake     = stakes[0];
   stakes[0]              = stakes[nr_parties - 1];
-  stakes[nr_parties - 1] = rich_stake;
+  stakes[nr_parties - 1] = heavy_stake;
   return stakes;
 }
 
 std::vector<stake_t>
-stake_distribution_generator::few_fat_fat_stake (party_t nr_parties,
-                                                 double  rich_poor_ratio,
-                                                 size_t  nr_rich)
+stake_distribution_generator::few_heavy_heavy_stake (party_t nr_parties,
+                                                     double  heavy_light_ratio,
+                                                     size_t  nr_heavy)
 {
-  return few_fat_stake (nr_parties, rich_poor_ratio, nr_rich);
+  return few_heavy_stake (nr_parties, heavy_light_ratio, nr_heavy);
 }
 
 std::vector<stake_t>
-stake_distribution_generator::exponential_thinnest_stake (
-  party_t nr_parties, double richest_poorest_ratio)
+stake_distribution_generator::exponential_lightest_stake (
+  party_t nr_parties, double heaviest_lightest_ratio)
 {
-  return exponential_stake (nr_parties, richest_poorest_ratio);
+  return exponential_stake (nr_parties, heaviest_lightest_ratio);
 }
 
 std::vector<stake_t>
 stake_distribution_generator::exponential_median_stake (
-  party_t nr_parties, double richest_poorest_ratio)
+  party_t nr_parties, double heaviest_lightest_ratio)
 {
   std::vector<stake_t> stakes =
-    exponential_stake (nr_parties, richest_poorest_ratio);
+    exponential_stake (nr_parties, heaviest_lightest_ratio);
 
   stake_t median_stake   = stakes[nr_parties / 2];
   stakes[nr_parties / 2] = stakes[0];
@@ -92,15 +92,15 @@ stake_distribution_generator::exponential_median_stake (
 }
 
 std::vector<stake_t>
-stake_distribution_generator::exponential_fattest_stake (
-  party_t nr_parties, double richest_poorest_ratio)
+stake_distribution_generator::exponential_heaviest_stake (
+  party_t nr_parties, double heaviest_lightest_ratio)
 {
   std::vector<stake_t> stakes =
-    exponential_stake (nr_parties, richest_poorest_ratio);
+    exponential_stake (nr_parties, heaviest_lightest_ratio);
 
-  stake_t rich_stake     = stakes[nr_parties - 1];
+  stake_t heavy_stake     = stakes[nr_parties - 1];
   stakes[nr_parties - 1] = stakes[0];
-  stakes[0]              = rich_stake;
+  stakes[0]              = heavy_stake;
   return stakes;
 }
 

@@ -9,10 +9,15 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d6/da9/structsimulation__parameters__t.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -74,11 +95,12 @@ $(function() {
  <a href="../../d6/da9/structsimulation__parameters__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../">read_args.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for simulation_parameters_t:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5f/structsimulation__parameters__t__coll__graph.svg" width="306" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for simulation_parameters_t:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5f/structsimulation__parameters__t__coll__graph.svg" width="306" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -101,12 +123,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae95b7af7d4fb9d22bca818cfca9d9c32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">max_nr_parties</a></td></tr>
 <tr class="memdesc:ae95b7af7d4fb9d22bca818cfca9d9c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum number of parties  <a href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">More...</a><br /></td></tr>
 <tr class="separator:ae95b7af7d4fb9d22bca818cfca9d9c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3904d6cef15f3d37cf0489724a790c01"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#a3904d6cef15f3d37cf0489724a790c01">ratio_rich_poor</a></td></tr>
-<tr class="memdesc:a3904d6cef15f3d37cf0489724a790c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">ratio between richest party(ies) and poorest party(ies).  <a href="../../d6/da9/structsimulation__parameters__t.html#a3904d6cef15f3d37cf0489724a790c01">More...</a><br /></td></tr>
-<tr class="separator:a3904d6cef15f3d37cf0489724a790c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2628d617cd8dd2f718d5d03370a729a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#aa2628d617cd8dd2f718d5d03370a729a">nr_rich_parties</a></td></tr>
-<tr class="memdesc:aa2628d617cd8dd2f718d5d03370a729a"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of rich parties (only relevant for the few fat stake distribution  <a href="../../d6/da9/structsimulation__parameters__t.html#aa2628d617cd8dd2f718d5d03370a729a">More...</a><br /></td></tr>
-<tr class="separator:aa2628d617cd8dd2f718d5d03370a729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34e2f0f87671a072156a0ece56c6027"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027">ratio_heavy_light</a></td></tr>
+<tr class="memdesc:ad34e2f0f87671a072156a0ece56c6027"><td class="mdescLeft">&#160;</td><td class="mdescRight">ratio between heavyest party(ies) and lightest party(ies).  <a href="../../d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027">More...</a><br /></td></tr>
+<tr class="separator:ad34e2f0f87671a072156a0ece56c6027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed27c61b82ee2ed89aa73ee6e45ed5f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4">nr_heavy_parties</a></td></tr>
+<tr class="memdesc:aed27c61b82ee2ed89aa73ee6e45ed5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of heavy parties (only relevant for the few heavy stake distribution  <a href="../../d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4">More...</a><br /></td></tr>
+<tr class="separator:aed27c61b82ee2ed89aa73ee6e45ed5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab94e4551c8b53adde258d914058af61b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">to_show</a></td></tr>
 <tr class="memdesc:ab94e4551c8b53adde258d914058af61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the flags that indicate what information to display when running the simulator  <a href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">More...</a><br /></td></tr>
 <tr class="separator:ab94e4551c8b53adde258d914058af61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +157,7 @@ Public Attributes</h2></td></tr>
 
 <p>how parties should be corrupted </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -153,7 +175,7 @@ Public Attributes</h2></td></tr>
 
 <p>upper bound on corruption fraction </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -171,7 +193,7 @@ Public Attributes</h2></td></tr>
 
 <p>the maximum factor to test </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -189,7 +211,7 @@ Public Attributes</h2></td></tr>
 
 <p>maximum number of parties </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -208,7 +230,7 @@ Public Attributes</h2></td></tr>
 <p>The minimum and maximum factors to test: The simulator is run for a factor starting at factor = min_factor, up to factor &lt;= max_factor, with increments of 1. </p>
 <p >the minimum factor to test </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -227,43 +249,43 @@ Public Attributes</h2></td></tr>
 <p>The parameters below are only relevant for the generation of the stake distributions. </p>
 <p >The simulator is run with (2^i) * min_nr_parties, for i from 0 up to the largest value for which (2^i) * min_nr_parties &lt;= max_nr_parties minimum number of parties </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
-<a id="aa2628d617cd8dd2f718d5d03370a729a" name="aa2628d617cd8dd2f718d5d03370a729a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2628d617cd8dd2f718d5d03370a729a">&#9670;&nbsp;</a></span>nr_rich_parties</h2>
+<a id="aed27c61b82ee2ed89aa73ee6e45ed5f4" name="aed27c61b82ee2ed89aa73ee6e45ed5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed27c61b82ee2ed89aa73ee6e45ed5f4">&#9670;&nbsp;</a></span>nr_heavy_parties</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> simulation_parameters_t::nr_rich_parties</td>
+          <td class="memname"><a class="el" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> simulation_parameters_t::nr_heavy_parties</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>number of rich parties (only relevant for the few fat stake distribution </p>
+<p>number of heavy parties (only relevant for the few heavy stake distribution </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
-<a id="a3904d6cef15f3d37cf0489724a790c01" name="a3904d6cef15f3d37cf0489724a790c01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3904d6cef15f3d37cf0489724a790c01">&#9670;&nbsp;</a></span>ratio_rich_poor</h2>
+<a id="ad34e2f0f87671a072156a0ece56c6027" name="ad34e2f0f87671a072156a0ece56c6027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad34e2f0f87671a072156a0ece56c6027">&#9670;&nbsp;</a></span>ratio_heavy_light</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double simulation_parameters_t::ratio_rich_poor</td>
+          <td class="memname">double simulation_parameters_t::ratio_heavy_light</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>ratio between richest party(ies) and poorest party(ies). </p>
+<p>ratio between heavyest party(ies) and lightest party(ies). </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -281,7 +303,7 @@ Public Attributes</h2></td></tr>
 
 <p>number of runs to make </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +321,7 @@ Public Attributes</h2></td></tr>
 
 <p>which tests to run </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
@@ -317,17 +339,21 @@ Public Attributes</h2></td></tr>
 
 <p>the flags that indicate what information to display when running the simulator </p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>utils/<a class="el" href="../../">read_args.h</a></li>
+<li>/home/guilhermemtr/Dropbox/workspace/ETH-Zurich/Projects/Weighted-Flooding-Simulator/utils/<a class="el" href="../../">read_args.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d6/da9/structsimulation__parameters__t.html">simulation_parameters_t</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

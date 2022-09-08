@@ -1,13 +1,13 @@
-<map id="include/generate_stake_distribution.h" name="include/generate_stake_distribution.h">
-<area shape="rect" id="node1" title=" " alt="" coords="197,5,517,35"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,83,97,112"/>
-<area shape="rect" id="node3" title=" " alt="" coords="122,83,191,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="215,83,282,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="436,160,509,189"/>
-<area shape="rect" id="node6" title=" " alt="" coords="357,83,431,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="455,83,541,112"/>
-<area shape="rect" id="node8" title=" " alt="" coords="565,83,663,112"/>
-<area shape="rect" id="node9" href="$d9/d49/types_8h.html" title=" " alt="" coords="687,83,767,112"/>
-<area shape="rect" id="node10" title=" " alt="" coords="636,160,717,189"/>
-<area shape="rect" id="node11" title=" " alt="" coords="741,160,815,189"/>
+<map id="/home/guilhermemtr/Dropbox/workspace/ETH&#45;Zurich/Projects/Weighted&#45;Flooding&#45;Simulator/include/generate_stake_distribution.h" name="/home/guilhermemtr/Dropbox/workspace/ETH&#45;Zurich/Projects/Weighted&#45;Flooding&#45;Simulator/include/generate_stake_distribution.h">
+<area shape="rect" id="node1" title=" " alt="" coords="153,5,561,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,117,97,147"/>
+<area shape="rect" id="node3" title=" " alt="" coords="122,117,191,147"/>
+<area shape="rect" id="node4" title=" " alt="" coords="215,117,282,147"/>
+<area shape="rect" id="node5" title=" " alt="" coords="436,195,509,224"/>
+<area shape="rect" id="node6" title=" " alt="" coords="357,117,431,147"/>
+<area shape="rect" id="node7" title=" " alt="" coords="455,117,541,147"/>
+<area shape="rect" id="node8" title=" " alt="" coords="565,117,663,147"/>
+<area shape="rect" id="node9" href="$d9/d49/types_8h.html" title=" " alt="" coords="687,117,767,147"/>
+<area shape="rect" id="node10" title=" " alt="" coords="636,195,717,224"/>
+<area shape="rect" id="node11" title=" " alt="" coords="741,195,815,224"/>
 </map>

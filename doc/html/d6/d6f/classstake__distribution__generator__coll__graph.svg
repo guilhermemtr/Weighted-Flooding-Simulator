@@ -68,21 +68,21 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="8" y="-449.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ stake_distribution_generator()</text>
 <text text-anchor="start" x="8" y="-436.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; constant</text>
 <text text-anchor="start" x="8" y="-423.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, stake_t s=100)</text>
-<text text-anchor="start" x="8" y="-410.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; few_fat_thin</text>
-<text text-anchor="start" x="8" y="-397.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, double rich</text>
-<text text-anchor="start" x="8" y="-384.9" font-family="Helvetica,sans-Serif" font-size="12.00">_poor_ratio, size_t nr_rich)</text>
-<text text-anchor="start" x="8" y="-371.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; few_fat_fat</text>
-<text text-anchor="start" x="8" y="-358.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, double</text>
-<text text-anchor="start" x="8" y="-345.9" font-family="Helvetica,sans-Serif" font-size="12.00"> rich_poor_ratio, size_t nr_rich)</text>
+<text text-anchor="start" x="8" y="-410.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; few_heavy</text>
+<text text-anchor="start" x="8" y="-397.9" font-family="Helvetica,sans-Serif" font-size="12.00">_light_stake(party_t nr_parties,</text>
+<text text-anchor="start" x="8" y="-384.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double heavy_light_ratio, size_t nr_heavy)</text>
+<text text-anchor="start" x="8" y="-371.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; few_heavy</text>
+<text text-anchor="start" x="8" y="-358.9" font-family="Helvetica,sans-Serif" font-size="12.00">_heavy_stake(party_t nr_parties,</text>
+<text text-anchor="start" x="8" y="-345.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double heavy_light_ratio, size_t nr_heavy)</text>
 <text text-anchor="start" x="8" y="-332.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; exponential</text>
-<text text-anchor="start" x="8" y="-319.9" font-family="Helvetica,sans-Serif" font-size="12.00">_thinnest_stake(party_t nr_parties,</text>
-<text text-anchor="start" x="8" y="-306.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double richest_poorest_ratio)</text>
+<text text-anchor="start" x="8" y="-319.9" font-family="Helvetica,sans-Serif" font-size="12.00">_lightest_stake(party_t nr_parties,</text>
+<text text-anchor="start" x="8" y="-306.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double heaviest_lightest_ratio)</text>
 <text text-anchor="start" x="8" y="-293.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; exponential</text>
 <text text-anchor="start" x="8" y="-280.9" font-family="Helvetica,sans-Serif" font-size="12.00">_median_stake(party_t nr_parties,</text>
-<text text-anchor="start" x="8" y="-267.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double richest_poorest_ratio)</text>
+<text text-anchor="start" x="8" y="-267.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double heaviest_lightest_ratio)</text>
 <text text-anchor="start" x="8" y="-254.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; exponential</text>
-<text text-anchor="start" x="8" y="-241.9" font-family="Helvetica,sans-Serif" font-size="12.00">_fattest_stake(party_t nr_parties,</text>
-<text text-anchor="start" x="8" y="-228.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double richest_poorest_ratio)</text>
+<text text-anchor="start" x="8" y="-241.9" font-family="Helvetica,sans-Serif" font-size="12.00">_heaviest_stake(party_t nr_parties,</text>
+<text text-anchor="start" x="8" y="-228.9" font-family="Helvetica,sans-Serif" font-size="12.00"> double heaviest_lightest_ratio)</text>
 <text text-anchor="start" x="8" y="-215.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ std::vector&lt; stake_t &gt; sample_uniform</text>
 <text text-anchor="start" x="8" y="-202.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, stake_t lower</text>
 <text text-anchor="start" x="8" y="-189.9" font-family="Helvetica,sans-Serif" font-size="12.00">_bound=0, stake_t upper_bound=1000000)</text>
@@ -94,12 +94,12 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="8" y="-111.9" font-family="Helvetica,sans-Serif" font-size="12.00">::vector&lt; stake_t &gt; &amp;stakes, stake_t v)</text>
 <text text-anchor="start" x="8" y="-98.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ void mult_stake_distribution(std</text>
 <text text-anchor="start" x="8" y="-85.9" font-family="Helvetica,sans-Serif" font-size="12.00">::vector&lt; stake_t &gt; &amp;stakes, double factor)</text>
-<text text-anchor="start" x="8" y="-72.9" font-family="Helvetica,sans-Serif" font-size="12.00"># std::vector&lt; stake_t &gt; few_fat_stake</text>
-<text text-anchor="start" x="8" y="-59.9" font-family="Helvetica,sans-Serif" font-size="12.00">(party_t nr_parties, double rich_poor</text>
-<text text-anchor="start" x="8" y="-46.9" font-family="Helvetica,sans-Serif" font-size="12.00">_ratio, size_t nr_rich)</text>
+<text text-anchor="start" x="8" y="-72.9" font-family="Helvetica,sans-Serif" font-size="12.00"># std::vector&lt; stake_t &gt; few_heavy</text>
+<text text-anchor="start" x="8" y="-59.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, double</text>
+<text text-anchor="start" x="8" y="-46.9" font-family="Helvetica,sans-Serif" font-size="12.00"> heavy_light_ratio, size_t nr_heavy)</text>
 <text text-anchor="start" x="8" y="-33.9" font-family="Helvetica,sans-Serif" font-size="12.00"># std::vector&lt; stake_t &gt; exponential</text>
 <text text-anchor="start" x="8" y="-20.9" font-family="Helvetica,sans-Serif" font-size="12.00">_stake(party_t nr_parties, double</text>
-<text text-anchor="start" x="8" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00"> richest_poorest_ratio)</text>
+<text text-anchor="start" x="8" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00"> heaviest_lightest_ratio)</text>
 </a>
 </g>
 </g>

@@ -82,10 +82,10 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a5c9f7952feefe35ca261e18fa89e5677" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the fa...">
+<g id="a_node5"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a7d9491cb9cab713369ec6bfc8571e6d2" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the he...">
 <polygon fill="white" stroke="black" points="303,-371.5 303,-405.5 567,-405.5 567,-371.5 303,-371.5"/>
 <text text-anchor="start" x="311" y="-391.9" font-family="Helvetica,sans-Serif" font-size="12.00">stake_distribution_generator::exponential</text>
-<text text-anchor="middle" x="435" y="-378.9" font-family="Helvetica,sans-Serif" font-size="12.00">_fattest_stake</text>
+<text text-anchor="middle" x="435" y="-378.9" font-family="Helvetica,sans-Serif" font-size="12.00">_heaviest_stake</text>
 </a>
 </g>
 </g>
@@ -98,10 +98,10 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a7f6c4913d46b461e23e4c59c75c4f99c" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the pa...">
+<g id="a_node6"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a13516e17aa69d2c5bc08f27ca46a0e18" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the li...">
 <polygon fill="white" stroke="black" points="303,-318.5 303,-352.5 567,-352.5 567,-318.5 303,-318.5"/>
 <text text-anchor="start" x="311" y="-338.9" font-family="Helvetica,sans-Serif" font-size="12.00">stake_distribution_generator::exponential</text>
-<text text-anchor="middle" x="435" y="-325.9" font-family="Helvetica,sans-Serif" font-size="12.00">_median_stake</text>
+<text text-anchor="middle" x="435" y="-325.9" font-family="Helvetica,sans-Serif" font-size="12.00">_lightest_stake</text>
 </a>
 </g>
 </g>
@@ -114,10 +114,10 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../da/d55/classstake__distribution__generator.html#afb11a0731fa642877492417f211a10c1" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the th...">
+<g id="a_node7"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a0ea9a4e1e4ae36b4363cc6d1895ccddd" target="_top" xlink:title="Generates an exponential stake distribution with the given parameters, and where the sender is the pa...">
 <polygon fill="white" stroke="black" points="303,-265.5 303,-299.5 567,-299.5 567,-265.5 303,-265.5"/>
 <text text-anchor="start" x="311" y="-285.9" font-family="Helvetica,sans-Serif" font-size="12.00">stake_distribution_generator::exponential</text>
-<text text-anchor="middle" x="435" y="-272.9" font-family="Helvetica,sans-Serif" font-size="12.00">_thinnest_stake</text>
+<text text-anchor="middle" x="435" y="-272.9" font-family="Helvetica,sans-Serif" font-size="12.00">_median_stake</text>
 </a>
 </g>
 </g>
@@ -130,10 +130,10 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a4cd5971c4b30a302ace9153acde41598" target="_top" xlink:title="Generates a few fat stake distribution with the given parameters, and where the sender is the fattest...">
+<g id="a_node8"><a xlink:href="../../da/d55/classstake__distribution__generator.html#aabe7ac745502142170a455e778fb8f02" target="_top" xlink:title="Generates a few heavy stake distribution with the given parameters, and where the sender is the heavi...">
 <polygon fill="white" stroke="black" points="327,-212.5 327,-246.5 543,-246.5 543,-212.5 327,-212.5"/>
 <text text-anchor="start" x="335" y="-232.9" font-family="Helvetica,sans-Serif" font-size="12.00">stake_distribution_generator::few</text>
-<text text-anchor="middle" x="435" y="-219.9" font-family="Helvetica,sans-Serif" font-size="12.00">_fat_fat_stake</text>
+<text text-anchor="middle" x="435" y="-219.9" font-family="Helvetica,sans-Serif" font-size="12.00">_heavy_heavy_stake</text>
 </a>
 </g>
 </g>
@@ -146,10 +146,10 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../da/d55/classstake__distribution__generator.html#a0adac7b42eefa5f4ba734955f104030d" target="_top" xlink:title="Generates a few fat stake distribution with the given parameters, and where the sender is the thinnes...">
+<g id="a_node9"><a xlink:href="../../da/d55/classstake__distribution__generator.html#abb8a24681627c5acb7c5162cb8e75181" target="_top" xlink:title="Generates a few heavy stake distribution with the given parameters, and where the sender is the light...">
 <polygon fill="white" stroke="black" points="327,-159.5 327,-193.5 543,-193.5 543,-159.5 327,-159.5"/>
 <text text-anchor="start" x="335" y="-179.9" font-family="Helvetica,sans-Serif" font-size="12.00">stake_distribution_generator::few</text>
-<text text-anchor="middle" x="435" y="-166.9" font-family="Helvetica,sans-Serif" font-size="12.00">_fat_thin_stake</text>
+<text text-anchor="middle" x="435" y="-166.9" font-family="Helvetica,sans-Serif" font-size="12.00">_heavy_light_stake</text>
 </a>
 </g>
 </g>

@@ -95,10 +95,10 @@ std::set<size_t>                          default_nr_parties_tests = {1024};
 std::set<std::pair<corruption_t, double>> default_corruptions      = {
        std::make_pair (CORR_RAND,
                   0.5),    // corrupt at random, up to half of the total stake
-       std::make_pair (CORR_RICH_FIRST,
-                  0.5),    // corrupt rich first, up to half of the total stake
-       std::make_pair (CORR_POOR_FIRST,
-                  0.5)    // corrupt poor first, up to half of the total stake
+       std::make_pair (CORR_HEAVY_FIRST,
+                  0.5),    // corrupt heavy first, up to half of the total stake
+       std::make_pair (CORR_LIGHT_FIRST,
+                  0.5)    // corrupt light first, up to half of the total stake
 };
 
 /************************************************************
@@ -113,26 +113,26 @@ std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_unif = {
   std::make_tuple (DET_CONST_DIST, 0.0, 0)    // uniform stake dist
 };
 
-// default few fat stake distributions
-std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_ff = {
+// default few heavy stake distributions
+std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_fh = {
   std::make_tuple (
-    DET_FF_THIN_DIST, 1000000.0, 10),                 // few fat dist, thin snd
-  std::make_tuple (DET_FF_FAT_DIST, 1000000.0, 10)    // few fat dist, fat snd
+    DET_FH_LIGHT_DIST, 1000000.0, 10),                 // few heavy dist, light snd
+  std::make_tuple (DET_FH_HEAVY_DIST, 1000000.0, 10)    // few heavy dist, heavy snd
 };
 
 // default exponential stake distributions
 std::set<std::tuple<unsigned int, double, unsigned int>> default_dists_exp = {
   std::make_tuple (
-    DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
+    DET_EXP_LIGHT_DIST, 1000000.0, 0),    // exp dist, lightnest snd
   std::make_tuple (DET_EXP_MEDN_DIST, 1000000.0, 0),    // exp dist, median snd
-  std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)      // exp dist, fattest snd
+  std::make_tuple (DET_EXP_HEAVY_DIST, 1000000.0, 0)      // exp dist, heaviest snd
 };
 
 // default sets of stake distributions
 std::set<std::pair<std::set<std::tuple<unsigned int, double, unsigned int>>,
                    std::string>>
   default_dist_types = {std::make_pair (default_dists_unif, "unif"),
-                        std::make_pair (default_dists_ff, "ff"),
+                        std::make_pair (default_dists_fh, "fh"),
                         std::make_pair (default_dists_exp, "exp")};
 
 /**
@@ -439,37 +439,37 @@ plot_graph_5 ()
   size_t max_factor = 200;
 
   std::set<std::pair<corruption_t, double>> corruptions = {
-    std::make_pair (CORR_POOR_FIRST, 0.5)};
+    std::make_pair (CORR_LIGHT_FIRST, 0.5)};
 
   std::set<std::tuple<unsigned int, double, unsigned int>> one_dists_exp = {
-    std::make_tuple (DET_EXP_THIN_DIST, 1.0, 0),    // exp dist, thinnest snd
+    std::make_tuple (DET_EXP_LIGHT_DIST, 1.0, 0),    // exp dist, lightest snd
     std::make_tuple (DET_EXP_MEDN_DIST, 1.0, 0),    // exp dist, median snd
-    std::make_tuple (DET_EXP_FAT_DIST, 1.0, 0)      // exp dist, fattest snd
+    std::make_tuple (DET_EXP_HEAVY_DIST, 1.0, 0)      // exp dist, heaviest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> thousand_dists_exp =
     {
       std::make_tuple (
-        DET_EXP_THIN_DIST, 1000.0, 0),    // exp dist, thinnest snd
+        DET_EXP_LIGHT_DIST, 1000.0, 0),    // exp dist, light nest snd
       std::make_tuple (DET_EXP_MEDN_DIST, 1000.0, 0),    // exp dist, median snd
-      std::make_tuple (DET_EXP_FAT_DIST, 1000.0, 0)    // exp dist, fattest snd
+      std::make_tuple (DET_EXP_HEAVY_DIST, 1000.0, 0)    // exp dist, heaviest snd
     };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> million_dists_exp = {
     std::make_tuple (
-      DET_EXP_THIN_DIST, 1000000.0, 0),    // exp dist, thinnest snd
+      DET_EXP_LIGHT_DIST, 1000000.0, 0),    // exp dist, light nest snd
     std::make_tuple (
       DET_EXP_MEDN_DIST, 1000000.0, 0),                 // exp dist, median snd
-    std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)    // exp dist, fattest snd
+    std::make_tuple (DET_EXP_HEAVY_DIST, 1000000.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> billion_dists_exp = {
     std::make_tuple (
-      DET_EXP_THIN_DIST, 1000000000.0, 0),    // exp dist, thinnest snd
+      DET_EXP_LIGHT_DIST, 1000000000.0, 0),    // exp dist, lightest snd
     std::make_tuple (
       DET_EXP_MEDN_DIST, 1000000000.0, 0),    // exp dist, median snd
     std::make_tuple (
-      DET_EXP_FAT_DIST, 1000000000.0, 0)    // exp dist, fattest snd
+      DET_EXP_HEAVY_DIST, 1000000000.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::pair<std::set<std::tuple<unsigned int, double, unsigned int>>,
@@ -563,31 +563,31 @@ plot_graph_6 ()
     std::make_tuple (DET_CONST_DIST, 0.0, 0)    // uniform dist
   };
 
-  std::set<std::tuple<unsigned int, double, unsigned int>> dists_ff = {
-    std::make_tuple (DET_FF_FAT_DIST, 1000000.0, 10)    // few fat dist, fat snd
+  std::set<std::tuple<unsigned int, double, unsigned int>> dists_fh = {
+    std::make_tuple (DET_FH_HEAVY_DIST, 1000000.0, 10)    // few heavy dist, heavy snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_exp_1 = {
-    std::make_tuple (DET_EXP_FAT_DIST, 1.0, 0)    // exp dist, fattest snd
+    std::make_tuple (DET_EXP_HEAVY_DIST, 1.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_exp_k = {
-    std::make_tuple (DET_EXP_FAT_DIST, 1000.0, 0)    // exp dist, fattest snd
+    std::make_tuple (DET_EXP_HEAVY_DIST, 1000.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_exp_m = {
-    std::make_tuple (DET_EXP_FAT_DIST, 1000000.0, 0)    // exp dist, fattest snd
+    std::make_tuple (DET_EXP_HEAVY_DIST, 1000000.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::tuple<unsigned int, double, unsigned int>> dists_exp_b = {
     std::make_tuple (
-      DET_EXP_FAT_DIST, 1000000000.0, 0)    // exp dist, fattest snd
+      DET_EXP_HEAVY_DIST, 1000000000.0, 0)    // exp dist, heaviest snd
   };
 
   std::set<std::pair<std::set<std::tuple<unsigned int, double, unsigned int>>,
                      std::string>>
     dist_types = {std::make_pair (dists_unif, "unif"),
-                  std::make_pair (dists_ff, "ff"),
+                  std::make_pair (dists_fh, "fh"),
                   std::make_pair (dists_exp_1, "exp_1"),
                   std::make_pair (dists_exp_k, "exp_k"),
                   std::make_pair (dists_exp_m, "exp_m"),

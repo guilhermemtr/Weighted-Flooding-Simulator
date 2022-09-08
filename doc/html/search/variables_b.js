@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['sample_5fdomain_0',['sample_domain',['../de/d66/classk__out__protocol__simulator.html#a086dab9865a615820abe3ee8fb89052d',1,'k_out_protocol_simulator']]],
-  ['seeds_1',['seeds',['../d8/de8/classrandom__generator.html#a2c6c74ebed5d1ef0d2c47995426a0e8c',1,'random_generator']]],
-  ['send_5fprob_2',['send_prob',['../df/d1d/classsend__protocol__simulator.html#a556b096d9ed87007fc54e710624f1da6',1,'send_protocol_simulator']]],
-  ['stake_5findependent_5fsimulator_5fconstructor_3',['stake_independent_simulator_constructor',['../d5/d37/benchmark_8cc.html#a8aff910be009b5349b53daa1e0b866fa',1,'benchmark.cc']]],
-  ['stake_5findependent_5ftotal_5fmessages_5fcalculator_4',['stake_independent_total_messages_calculator',['../d5/d37/benchmark_8cc.html#adee3e916b0a8cfc5d4f317f2e7b6e9a9',1,'benchmark.cc']]],
-  ['stakes_5',['stakes',['../df/dcc/classcorruptions__stake__protocol__simulator.html#ad6d51f965ff2734535ce90e92eaef884',1,'corruptions_stake_protocol_simulator']]]
+  ['ratio_5fheavy_5flight_0',['ratio_heavy_light',['../d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027',1,'simulation_parameters_t']]],
+  ['rd_1',['rd',['../da/d55/classstake__distribution__generator.html#abc2bdf5f37655be114c3377b7acf355b',1,'stake_distribution_generator']]],
+  ['re_2',['re',['../da/d55/classstake__distribution__generator.html#a212b9cb8b1e44386156b67e069e76e9d',1,'stake_distribution_generator::re()'],['../de/d66/classk__out__protocol__simulator.html#a1467f8607c8c6ae3090cab7e88c78152',1,'k_out_protocol_simulator::re()'],['../d8/de8/classrandom__generator.html#ac96cbfbbdadd99bcc325995e24910d39',1,'random_generator::re()'],['../d2/d21/classreceiver__protocol__simulator.html#a1d355c0dfa36de2f240feaf3cd68a83f',1,'receiver_protocol_simulator::re()'],['../df/d1d/classsend__protocol__simulator.html#a440a5ecf7bce72a2e8493b6fe0303956',1,'send_protocol_simulator::re()']]],
+  ['requesters_3',['requesters',['../d6/d8a/classabstract__receive__protocol__simulator.html#a21abfffe6121138d52b24eadf06e02b2',1,'abstract_receive_protocol_simulator']]],
+  ['runs_4',['runs',['../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8',1,'simulation_parameters_t']]]
 ];

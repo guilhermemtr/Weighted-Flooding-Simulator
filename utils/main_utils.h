@@ -33,9 +33,9 @@ init ();
  * Generates a stake distribution.
  * Flags should only have a single bit set to 1.
  * @param the number of parties.
- * @param the stake ratio between the poorest party(ies) and the richest
+ * @param the stake ratio between the lightest party(ies) and the heaviest
  * party(ies).
- * @param the number of rich parties.
+ * @param the number of heavy parties.
  * @param the flags for generating the stake distribution.
  * @return the stake distribution.
  */
@@ -71,7 +71,7 @@ show_distribution_info (unsigned int flags, unsigned int to_show);
  * Shows the data from a run.
  * @param the number of correct runs.
  * @param the number of runs.
- * @param the factor between the poorest and richest party(ies).
+ * @param the factor between the lightest and heaviest party(ies).
  * @param flag indicating whether to show a histogram of how many parties got
  * the message per round.
  * @param the histogram of which parties got the message per round.
@@ -91,8 +91,8 @@ show_run_data (double                    correct_runs,
  * @param corruption strategy.
  * @param corruption threshold.
  * @param multiplicative factor for how many parties to target.
- * @param ratio between stake of richest and poorest party(ies).
- * @param number of richest parties.
+ * @param ratio between stake of heaviest and lightest party(ies).
+ * @param number of heavy parties.
  * @param constructor for the protocol simulator to be used.
  * @param function that extracts data from a set of runs (with the same
  * parameters).

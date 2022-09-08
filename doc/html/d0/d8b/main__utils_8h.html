@@ -5,14 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Weighted Flooding Simulator: utils/main_utils.h File Reference</title>
+<title>Weighted Flooding Simulator: /home/guilhermemtr/Dropbox/workspace/ETH-Zurich/Projects/Weighted-Flooding-Simulator/utils/main_utils.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d0/d8b/main__utils_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,11 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -90,17 +107,19 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../">read_args.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../">parallel_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../">random_utils.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for main_utils.h:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d35/main__utils_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for main_utils.h:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d35/main__utils_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dcc/main__utils_8h__dep__incl.svg" width="611" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/dcc/main__utils_8h__dep__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
@@ -172,8 +191,8 @@ Functions</h2></td></tr>
 <p >Flags should only have a single bit set to 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of parties. </td></tr>
-    <tr><td class="paramname">the</td><td>stake ratio between the poorest party(ies) and the richest party(ies). </td></tr>
-    <tr><td class="paramname">the</td><td>number of rich parties. </td></tr>
+    <tr><td class="paramname">the</td><td>stake ratio between the lightest party(ies) and the heaviest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>number of heavy parties. </td></tr>
     <tr><td class="paramname">the</td><td>flags for generating the stake distribution. </td></tr>
   </table>
   </dd>
@@ -253,7 +272,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  151</span>        });</div>
 <div class="line"><span class="lineno">  152</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a10099c8d45446b1142928924f3f2923b">CORR_RICH_FIRST</a>:    <span class="comment">// corrupt rich first</span></div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a8d8dd062fc745e51e91e13bc857fa68a">CORR_HEAVY_FIRST</a>:    <span class="comment">// corrupt heavy first</span></div>
 <div class="line"><span class="lineno">  155</span>      corruptions = <a class="code hl_function" href="../../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corrupt_parties_by_stake</a> (</div>
 <div class="line"><span class="lineno">  156</span>        stakes,</div>
 <div class="line"><span class="lineno">  157</span>        honest,</div>
@@ -268,7 +287,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  166</span>        });</div>
 <div class="line"><span class="lineno">  167</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a610f5f9eddf60cacb3168e3bf1687491">CORR_POOR_FIRST</a>:    <span class="comment">// corrupt poor first</span></div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a5c901f8fd6a9e2da5042981113b96b35">CORR_LIGHT_FIRST</a>:    <span class="comment">// corrupt light first</span></div>
 <div class="line"><span class="lineno">  170</span>      corruptions = <a class="code hl_function" href="../../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corrupt_parties_by_stake</a> (</div>
 <div class="line"><span class="lineno">  171</span>        stakes,</div>
 <div class="line"><span class="lineno">  172</span>        honest,</div>
@@ -326,30 +345,32 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  224</span>}</div>
 <div class="ttc" id="acorruptions__stake__protocol__simulator_8h_html_a0d8920b86a4be8609c9322366f4e65aa"><div class="ttname"><a href="../../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corrupt_parties_by_stake</a></div><div class="ttdeci">std::vector&lt; corruption_t &gt; corrupt_parties_by_stake(std::vector&lt; stake_t &gt; stakes, std::set&lt; party_t &gt; honest, double max, std::function&lt; void(std::vector&lt; std::pair&lt; party_t, stake_t &gt; &gt; &amp;)&gt; sort)</div><div class="ttdoc">Outputs a vector of corruption flags for the given stake distribution, and taking into account the pa...</div></div>
 <div class="ttc" id="arandom__utils_8h_html_a1a5ba40472fce10bb1af5db44829b97b"><div class="ttname"><a href="../../d6/d74/random__utils_8h.html#a1a5ba40472fce10bb1af5db44829b97b">get_random_generator</a></div><div class="ttdeci">std::mt19937_64 * get_random_generator()</div><div class="ttdoc">Generates a new random generator with a fresh seed.</div></div>
-<div class="ttc" id="aread__args_8h_html_a0d026ad35bcf855be09ecdd5d7f94bc3"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3">CORR_RAND</a></div><div class="ttdeci">#define CORR_RAND</div><div class="ttdef"><b>Definition:</b> read_args.h:30</div></div>
-<div class="ttc" id="aread__args_8h_html_a10099c8d45446b1142928924f3f2923b"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a10099c8d45446b1142928924f3f2923b">CORR_RICH_FIRST</a></div><div class="ttdeci">#define CORR_RICH_FIRST</div><div class="ttdef"><b>Definition:</b> read_args.h:31</div></div>
-<div class="ttc" id="aread__args_8h_html_a610f5f9eddf60cacb3168e3bf1687491"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a610f5f9eddf60cacb3168e3bf1687491">CORR_POOR_FIRST</a></div><div class="ttdeci">#define CORR_POOR_FIRST</div><div class="ttdef"><b>Definition:</b> read_args.h:32</div></div>
-<div class="ttc" id="aread__args_8h_html_ad145ca448e147deea4a9998dece81591"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#ad145ca448e147deea4a9998dece81591">NO_CORR</a></div><div class="ttdeci">#define NO_CORR</div><div class="ttdef"><b>Definition:</b> read_args.h:29</div></div>
+<div class="ttc" id="aread__args_8h_html_a0d026ad35bcf855be09ecdd5d7f94bc3"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3">CORR_RAND</a></div><div class="ttdeci">#define CORR_RAND</div><div class="ttdef"><b>Definition:</b> read_args.h:38</div></div>
+<div class="ttc" id="aread__args_8h_html_a5c901f8fd6a9e2da5042981113b96b35"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a5c901f8fd6a9e2da5042981113b96b35">CORR_LIGHT_FIRST</a></div><div class="ttdeci">#define CORR_LIGHT_FIRST</div><div class="ttdef"><b>Definition:</b> read_args.h:40</div></div>
+<div class="ttc" id="aread__args_8h_html_a8d8dd062fc745e51e91e13bc857fa68a"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a8d8dd062fc745e51e91e13bc857fa68a">CORR_HEAVY_FIRST</a></div><div class="ttdeci">#define CORR_HEAVY_FIRST</div><div class="ttdef"><b>Definition:</b> read_args.h:39</div></div>
+<div class="ttc" id="aread__args_8h_html_ad145ca448e147deea4a9998dece81591"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#ad145ca448e147deea4a9998dece81591">NO_CORR</a></div><div class="ttdeci">#define NO_CORR</div><div class="ttdef"><b>Definition:</b> read_args.h:37</div></div>
 <div class="ttc" id="atypes_8h_html_a9d08d501a63aaa3f54930ebf35037298"><div class="ttname"><a href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a></div><div class="ttdeci">unsigned long int stake_t</div><div class="ttdef"><b>Definition:</b> types.h:14</div></div>
 <div class="ttc" id="ayal__log_8h_html_a2ba8ef212269f3b316ba6a1a7d7d968d"><div class="ttname"><a href="../../d0/d70/yal__log_8h.html#a2ba8ef212269f3b316ba6a1a7d7d968d">__yal_logging</a></div><div class="ttdeci">#define __yal_logging(lvl)</div><div class="ttdef"><b>Definition:</b> yal_log.h:46</div></div>
 <div class="ttc" id="ayal__log_8h_html_a870278a657e74435d62684501c208d39"><div class="ttname"><a href="../../d0/d70/yal__log_8h.html#a870278a657e74435d62684501c208d39">__YAL_DBG</a></div><div class="ttdeci">#define __YAL_DBG</div><div class="ttdef"><b>Definition:</b> yal_log.h:33</div></div>
 <div class="ttc" id="ayal__log_8h_html_aa1a44fc89acffe0e9ceb68840e2516b9"><div class="ttname"><a href="../../d0/d70/yal__log_8h.html#aa1a44fc89acffe0e9ceb68840e2516b9">__yal_log</a></div><div class="ttdeci">#define __yal_log(...)</div><div class="ttdef"><b>Definition:</b> yal_log.h:47</div></div>
 <div class="ttc" id="ayal__log_8h_html_aa60136c17617acba656334cdac4db9f6"><div class="ttname"><a href="../../d0/d70/yal__log_8h.html#aa60136c17617acba656334cdac4db9f6">__YAL_INFO</a></div><div class="ttdeci">#define __YAL_INFO</div><div class="ttdef"><b>Definition:</b> yal_log.h:34</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../#l00033">__YAL_DBG</a>, <a class="el" href="../../#l00034">__YAL_INFO</a>, <a class="el" href="../../#l00047">__yal_log</a>, <a class="el" href="../../#l00046">__yal_logging</a>, <a class="el" href="../../#l00032">CORR_POOR_FIRST</a>, <a class="el" href="../../#l00030">CORR_RAND</a>, <a class="el" href="../../#l00031">CORR_RICH_FIRST</a>, <a class="el" href="../../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corrupt_parties_by_stake()</a>, <a class="el" href="../../d6/d74/random__utils_8h.html#a1a5ba40472fce10bb1af5db44829b97b">get_random_generator()</a>, and <a class="el" href="../../#l00029">NO_CORR</a>.</p>
+<p class="reference">References <a class="el" href="../../#l00033">__YAL_DBG</a>, <a class="el" href="../../#l00034">__YAL_INFO</a>, <a class="el" href="../../#l00047">__yal_log</a>, <a class="el" href="../../#l00046">__yal_logging</a>, <a class="el" href="../../#l00039">CORR_HEAVY_FIRST</a>, <a class="el" href="../../#l00040">CORR_LIGHT_FIRST</a>, <a class="el" href="../../#l00038">CORR_RAND</a>, <a class="el" href="../../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa">corrupt_parties_by_stake()</a>, <a class="el" href="../../d6/d74/random__utils_8h.html#a1a5ba40472fce10bb1af5db44829b97b">get_random_generator()</a>, and <a class="el" href="../../#l00037">NO_CORR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00298">run_tests()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a17e1a5d2f144555f81b2bed8a6ca7cd4_cgraph.svg" width="475" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<p class="reference">Referenced by <a class="el" href="../../#l00296">run_tests()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a17e1a5d2f144555f81b2bed8a6ca7cd4_cgraph.svg" width="475" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a17e1a5d2f144555f81b2bed8a6ca7cd4_icgraph.svg" width="350" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a17e1a5d2f144555f81b2bed8a6ca7cd4_icgraph.svg" width="350" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -381,18 +402,20 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../#l00015">__yal_init_logger</a>, <a class="el" href="../../#l00026">__yal_set_lvl_err</a>, and <a class="el" href="../../d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2">init_random_utils()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00637">main()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a02fd73d861ef2e4aabb38c0c9ff82947_cgraph.svg" width="263" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<p class="reference">Referenced by <a class="el" href="../../#l00648">main()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a02fd73d861ef2e4aabb38c0c9ff82947_cgraph.svg" width="263" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a02fd73d861ef2e4aabb38c0c9ff82947_icgraph.svg" width="168" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a02fd73d861ef2e4aabb38c0c9ff82947_icgraph.svg" width="168" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -434,124 +457,126 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  394</span>{</div>
-<div class="line"><span class="lineno">  395</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#a34c71704af1fc97ea705596fb80946ca">__yal_init_logger</a> ();</div>
-<div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#a87103a740d52e7f53735ab475524d9ad">__yal_set_lvl_info</a> ();</div>
-<div class="line"><span class="lineno">  397</span> </div>
-<div class="line"><span class="lineno">  398</span>  <a class="code hl_struct" href="../../d6/da9/structsimulation__parameters__t.html">simulation_parameters_t</a> params;</div>
-<div class="line"><span class="lineno">  399</span>  <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  400</span>  {</div>
-<div class="line"><span class="lineno">  401</span>    params = <a class="code hl_function" href="../../d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b">read_parameters</a> (argc, argv);</div>
-<div class="line"><span class="lineno">  402</span>  } <span class="keywordflow">catch</span> (std::string &amp;e)</div>
-<div class="line"><span class="lineno">  403</span>  {</div>
-<div class="line"><span class="lineno">  404</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Something went wrong while reading command line parameters: &quot;</span></div>
-<div class="line"><span class="lineno">  405</span>              &lt;&lt; e &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  406</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  407</span>  }</div>
-<div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span>  <span class="comment">//#ifdef __YAL_ON</span></div>
-<div class="line"><span class="lineno">  410</span>  <a class="code hl_function" href="../../d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4">print_parameters</a> (params);</div>
-<div class="line"><span class="lineno">  411</span>  <span class="comment">//#endif    // __YAL_ON</span></div>
+<div class="fragment"><div class="line"><span class="lineno">  392</span>{</div>
+<div class="line"><span class="lineno">  393</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#a34c71704af1fc97ea705596fb80946ca">__yal_init_logger</a> ();</div>
+<div class="line"><span class="lineno">  394</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#a87103a740d52e7f53735ab475524d9ad">__yal_set_lvl_info</a> ();</div>
+<div class="line"><span class="lineno">  395</span> </div>
+<div class="line"><span class="lineno">  396</span>  <a class="code hl_struct" href="../../d6/da9/structsimulation__parameters__t.html">simulation_parameters_t</a> params;</div>
+<div class="line"><span class="lineno">  397</span>  <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  398</span>  {</div>
+<div class="line"><span class="lineno">  399</span>    params = <a class="code hl_function" href="../../d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b">read_parameters</a> (argc, argv);</div>
+<div class="line"><span class="lineno">  400</span>  } <span class="keywordflow">catch</span> (std::string &amp;e)</div>
+<div class="line"><span class="lineno">  401</span>  {</div>
+<div class="line"><span class="lineno">  402</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Something went wrong while reading command line parameters: &quot;</span></div>
+<div class="line"><span class="lineno">  403</span>              &lt;&lt; e &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  404</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  405</span>  }</div>
+<div class="line"><span class="lineno">  406</span> </div>
+<div class="line"><span class="lineno">  407</span>  <span class="comment">//#ifdef __YAL_ON</span></div>
+<div class="line"><span class="lineno">  408</span>  <a class="code hl_function" href="../../d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4">print_parameters</a> (params);</div>
+<div class="line"><span class="lineno">  409</span>  <span class="comment">//#endif    // __YAL_ON</span></div>
+<div class="line"><span class="lineno">  410</span> </div>
+<div class="line"><span class="lineno">  411</span>  <a class="code hl_function" href="../../d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2">init_random_utils</a> ();</div>
 <div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>  <a class="code hl_function" href="../../d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2">init_random_utils</a> ();</div>
+<div class="line"><span class="lineno">  413</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> to_show = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">to_show</a>;</div>
 <div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> to_show = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">to_show</a>;</div>
-<div class="line"><span class="lineno">  416</span> </div>
-<div class="line"><span class="lineno">  417</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> n = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464">min_nr_parties</a>; n &lt;= params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">max_nr_parties</a>; n *= 2)</div>
-<div class="line"><span class="lineno">  418</span>  {</div>
-<div class="line"><span class="lineno">  419</span>    <span class="keywordflow">if</span> ((to_show &amp; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a8109191f903863feb2813754155d8b4c">SHOW_NR_PARTIES</a>))</div>
-<div class="line"><span class="lineno">  420</span>    {</div>
-<div class="line"><span class="lineno">  421</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Running for &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; parties&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  422</span>    }</div>
-<div class="line"><span class="lineno">  423</span> </div>
-<div class="line"><span class="lineno">  424</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tc = 1; tc &lt;= (1 &lt;&lt; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#aa21c996aadce8ae75772cbc3b8793842">TEST_TYPES</a>); tc *= 2)</div>
-<div class="line"><span class="lineno">  425</span>    {</div>
-<div class="line"><span class="lineno">  426</span>      <span class="keywordflow">if</span> ((to_show &amp; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a0104c40024a5f5b6c257ac14351aae2a">SHOW_TEST</a>) &amp;&amp; (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>))</div>
-<div class="line"><span class="lineno">  427</span>      {</div>
-<div class="line"><span class="lineno">  428</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;test &quot;</span> &lt;&lt; std::bitset&lt;TEST_TYPES&gt; (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>)</div>
-<div class="line"><span class="lineno">  429</span>                  &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  430</span>      }</div>
-<div class="line"><span class="lineno">  431</span> </div>
-<div class="line"><span class="lineno">  432</span>      <span class="keywordflow">if</span> (!(tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>))</div>
-<div class="line"><span class="lineno">  433</span>      {</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  435</span>      }</div>
+<div class="line"><span class="lineno">  415</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> n = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464">min_nr_parties</a>; n &lt;= params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">max_nr_parties</a>; n *= 2)</div>
+<div class="line"><span class="lineno">  416</span>  {</div>
+<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">if</span> ((to_show &amp; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a8109191f903863feb2813754155d8b4c">SHOW_NR_PARTIES</a>))</div>
+<div class="line"><span class="lineno">  418</span>    {</div>
+<div class="line"><span class="lineno">  419</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Running for &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; parties&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  420</span>    }</div>
+<div class="line"><span class="lineno">  421</span> </div>
+<div class="line"><span class="lineno">  422</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tc = 1; tc &lt;= (1 &lt;&lt; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#aa21c996aadce8ae75772cbc3b8793842">TEST_TYPES</a>); tc *= 2)</div>
+<div class="line"><span class="lineno">  423</span>    {</div>
+<div class="line"><span class="lineno">  424</span>      <span class="keywordflow">if</span> ((to_show &amp; <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a0104c40024a5f5b6c257ac14351aae2a">SHOW_TEST</a>) &amp;&amp; (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>))</div>
+<div class="line"><span class="lineno">  425</span>      {</div>
+<div class="line"><span class="lineno">  426</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;test &quot;</span> &lt;&lt; std::bitset&lt;TEST_TYPES&gt; (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>)</div>
+<div class="line"><span class="lineno">  427</span>                  &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  428</span>      }</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>      <span class="keywordflow">if</span> (!(tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>))</div>
+<div class="line"><span class="lineno">  431</span>      {</div>
+<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  433</span>      }</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>      <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a4a5dbbd7c40fe6e2edd8785be992bca6">show_distribution_info</a> (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>, to_show);</div>
 <div class="line"><span class="lineno">  436</span> </div>
-<div class="line"><span class="lineno">  437</span>      <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a4a5dbbd7c40fe6e2edd8785be992bca6">show_distribution_info</a> (tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>, to_show);</div>
-<div class="line"><span class="lineno">  438</span> </div>
-<div class="line"><span class="lineno">  439</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> factor = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8">min_factor</a>; factor &lt;= params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd">max_factor</a>;</div>
-<div class="line"><span class="lineno">  440</span>           factor++)</div>
-<div class="line"><span class="lineno">  441</span>      {</div>
-<div class="line"><span class="lineno">  442</span>        std::vector&lt;std::pair&lt;bool, round_t&gt;&gt; results =</div>
-<div class="line"><span class="lineno">  443</span>          run_tests&lt;std::pair&lt;bool, round_t&gt;&gt; (</div>
-<div class="line"><span class="lineno">  444</span>            n,</div>
-<div class="line"><span class="lineno">  445</span>            tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>,</div>
-<div class="line"><span class="lineno">  446</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>,</div>
-<div class="line"><span class="lineno">  447</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84">corruption_strategy</a>,</div>
-<div class="line"><span class="lineno">  448</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9">corruption_threshold</a>,</div>
-<div class="line"><span class="lineno">  449</span>            factor,</div>
-<div class="line"><span class="lineno">  450</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a3904d6cef15f3d37cf0489724a790c01">ratio_rich_poor</a>,</div>
-<div class="line"><span class="lineno">  451</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aa2628d617cd8dd2f718d5d03370a729a">nr_rich_parties</a>,</div>
-<div class="line"><span class="lineno">  452</span>            simulator_constructor,</div>
-<div class="line"><span class="lineno">  453</span>            [&amp;] (<a class="code hl_class" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html">corruptions_stake_protocol_simulator</a> *sim) {</div>
-<div class="line"><span class="lineno">  454</span>              <span class="keywordflow">return</span> std::make_pair&lt;bool, round_t&gt; (</div>
-<div class="line"><span class="lineno">  455</span>                sim-&gt;protocol_simulator::all_got_msg (),</div>
-<div class="line"><span class="lineno">  456</span>                sim-&gt;protocol_simulator::get_latency ());</div>
-<div class="line"><span class="lineno">  457</span>            });</div>
+<div class="line"><span class="lineno">  437</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> factor = params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8">min_factor</a>; factor &lt;= params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd">max_factor</a>;</div>
+<div class="line"><span class="lineno">  438</span>           factor++)</div>
+<div class="line"><span class="lineno">  439</span>      {</div>
+<div class="line"><span class="lineno">  440</span>        std::vector&lt;std::pair&lt;bool, round_t&gt;&gt; results =</div>
+<div class="line"><span class="lineno">  441</span>          run_tests&lt;std::pair&lt;bool, round_t&gt;&gt; (</div>
+<div class="line"><span class="lineno">  442</span>            n,</div>
+<div class="line"><span class="lineno">  443</span>            tc &amp; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">tests</a>,</div>
+<div class="line"><span class="lineno">  444</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>,</div>
+<div class="line"><span class="lineno">  445</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84">corruption_strategy</a>,</div>
+<div class="line"><span class="lineno">  446</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9">corruption_threshold</a>,</div>
+<div class="line"><span class="lineno">  447</span>            factor,</div>
+<div class="line"><span class="lineno">  448</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027">ratio_heavy_light</a>,</div>
+<div class="line"><span class="lineno">  449</span>            params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4">nr_heavy_parties</a>,</div>
+<div class="line"><span class="lineno">  450</span>            simulator_constructor,</div>
+<div class="line"><span class="lineno">  451</span>            [&amp;] (<a class="code hl_class" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html">corruptions_stake_protocol_simulator</a> *sim) {</div>
+<div class="line"><span class="lineno">  452</span>              <span class="keywordflow">return</span> std::make_pair (</div>
+<div class="line"><span class="lineno">  453</span>                sim-&gt;protocol_simulator::all_got_msg (),</div>
+<div class="line"><span class="lineno">  454</span>                sim-&gt;protocol_simulator::get_latency ());</div>
+<div class="line"><span class="lineno">  455</span>            });</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>        <span class="keywordtype">double</span> correct_runs = 0;</div>
 <div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>        <span class="keywordtype">double</span> correct_runs = 0;</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>; i++)</div>
-<div class="line"><span class="lineno">  462</span>        {</div>
-<div class="line"><span class="lineno">  463</span>          <span class="keywordflow">if</span> (std::get&lt;0&gt; (results[i]))</div>
-<div class="line"><span class="lineno">  464</span>          {</div>
-<div class="line"><span class="lineno">  465</span>            correct_runs++;</div>
-<div class="line"><span class="lineno">  466</span>          }</div>
-<div class="line"><span class="lineno">  467</span>        }</div>
-<div class="line"><span class="lineno">  468</span> </div>
-<div class="line"><span class="lineno">  469</span>        <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#ad1b6cbe8df7ce0708db2a999eabbc1f4">show_run_data</a> (</div>
-<div class="line"><span class="lineno">  470</span>          prot_name, correct_runs, params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>, factor, params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">to_show</a>);</div>
-<div class="line"><span class="lineno">  471</span>      }</div>
-<div class="line"><span class="lineno">  472</span>    }</div>
-<div class="line"><span class="lineno">  473</span>  }</div>
-<div class="line"><span class="lineno">  474</span>}</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>; i++)</div>
+<div class="line"><span class="lineno">  460</span>        {</div>
+<div class="line"><span class="lineno">  461</span>          <span class="keywordflow">if</span> (std::get&lt;0&gt; (results[i]))</div>
+<div class="line"><span class="lineno">  462</span>          {</div>
+<div class="line"><span class="lineno">  463</span>            correct_runs++;</div>
+<div class="line"><span class="lineno">  464</span>          }</div>
+<div class="line"><span class="lineno">  465</span>        }</div>
+<div class="line"><span class="lineno">  466</span> </div>
+<div class="line"><span class="lineno">  467</span>        <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#ad1b6cbe8df7ce0708db2a999eabbc1f4">show_run_data</a> (</div>
+<div class="line"><span class="lineno">  468</span>          prot_name, correct_runs, params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">runs</a>, factor, params.<a class="code hl_variable" href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">to_show</a>);</div>
+<div class="line"><span class="lineno">  469</span>      }</div>
+<div class="line"><span class="lineno">  470</span>    }</div>
+<div class="line"><span class="lineno">  471</span>  }</div>
+<div class="line"><span class="lineno">  472</span>}</div>
 <div class="ttc" id="aclasscorruptions__stake__protocol__simulator_html"><div class="ttname"><a href="../../df/dcc/classcorruptions__stake__protocol__simulator.html">corruptions_stake_protocol_simulator</a></div><div class="ttdoc">Abstract class for protocol simulators with stake and corruptions.</div><div class="ttdef"><b>Definition:</b> corruptions_stake_protocol_simulator.h:36</div></div>
 <div class="ttc" id="amain__utils_8cc_html_a4a5dbbd7c40fe6e2edd8785be992bca6"><div class="ttname"><a href="../../df/d31/main__utils_8cc.html#a4a5dbbd7c40fe6e2edd8785be992bca6">show_distribution_info</a></div><div class="ttdeci">void show_distribution_info(unsigned int flags, unsigned int to_show)</div><div class="ttdoc">Prints the distribution name for a given set of flags (which represent a distribution).</div><div class="ttdef"><b>Definition:</b> main_utils.cc:227</div></div>
 <div class="ttc" id="amain__utils_8cc_html_ad1b6cbe8df7ce0708db2a999eabbc1f4"><div class="ttname"><a href="../../df/d31/main__utils_8cc.html#ad1b6cbe8df7ce0708db2a999eabbc1f4">show_run_data</a></div><div class="ttdeci">void show_run_data(std::string prot_name, double correct_runs, double runs, size_t factor, unsigned int to_show)</div><div class="ttdef"><b>Definition:</b> main_utils.cc:267</div></div>
-<div class="ttc" id="aread__args_8h_html_a0104c40024a5f5b6c257ac14351aae2a"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0104c40024a5f5b6c257ac14351aae2a">SHOW_TEST</a></div><div class="ttdeci">#define SHOW_TEST</div><div class="ttdef"><b>Definition:</b> read_args.h:44</div></div>
+<div class="ttc" id="aread__args_8h_html_a0104c40024a5f5b6c257ac14351aae2a"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0104c40024a5f5b6c257ac14351aae2a">SHOW_TEST</a></div><div class="ttdeci">#define SHOW_TEST</div><div class="ttdef"><b>Definition:</b> read_args.h:52</div></div>
 <div class="ttc" id="aread__args_8h_html_a2531e6fc200c8f6d56040f8e8c9d9a4b"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b">read_parameters</a></div><div class="ttdeci">simulation_parameters_t read_parameters(int argc, char **argv)</div><div class="ttdoc">Reads the input parameters.</div></div>
 <div class="ttc" id="aread__args_8h_html_a4d15e274f5db9e703aab8c9e3cecf8f4"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4">print_parameters</a></div><div class="ttdeci">void print_parameters(simulation_parameters_t params)</div><div class="ttdoc">Prints the parameters for the run.</div></div>
-<div class="ttc" id="aread__args_8h_html_a8109191f903863feb2813754155d8b4c"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a8109191f903863feb2813754155d8b4c">SHOW_NR_PARTIES</a></div><div class="ttdeci">#define SHOW_NR_PARTIES</div><div class="ttdef"><b>Definition:</b> read_args.h:43</div></div>
-<div class="ttc" id="aread__args_8h_html_aa21c996aadce8ae75772cbc3b8793842"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#aa21c996aadce8ae75772cbc3b8793842">TEST_TYPES</a></div><div class="ttdeci">#define TEST_TYPES</div><div class="ttdef"><b>Definition:</b> read_args.h:25</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html">simulation_parameters_t</a></div><div class="ttdoc">Structure that contains all the relevant information for running the simulator for a fixed protocol.</div><div class="ttdef"><b>Definition:</b> read_args.h:64</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a2ae6803a691d1a6016e75ae392c635fd"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd">simulation_parameters_t::max_factor</a></div><div class="ttdeci">size_t max_factor</div><div class="ttdoc">the maximum factor to test</div><div class="ttdef"><b>Definition:</b> read_args.h:93</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a3904d6cef15f3d37cf0489724a790c01"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a3904d6cef15f3d37cf0489724a790c01">simulation_parameters_t::ratio_rich_poor</a></div><div class="ttdeci">double ratio_rich_poor</div><div class="ttdoc">ratio between richest party(ies) and poorest party(ies).</div><div class="ttdef"><b>Definition:</b> read_args.h:80</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a5dc13eb28e84fa10f8f0915695b45d84"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84">simulation_parameters_t::corruption_strategy</a></div><div class="ttdeci">corruption_t corruption_strategy</div><div class="ttdoc">how parties should be corrupted</div><div class="ttdef"><b>Definition:</b> read_args.h:69</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a6803bd6f89e0122c7b3bf50af64714b2"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">simulation_parameters_t::tests</a></div><div class="ttdeci">unsigned int tests</div><div class="ttdoc">which tests to run</div><div class="ttdef"><b>Definition:</b> read_args.h:67</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a91db0e2c4b47594b830de790fedbc5c8"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8">simulation_parameters_t::min_factor</a></div><div class="ttdeci">size_t min_factor</div><div class="ttdoc">The minimum and maximum factors to test: The simulator is run for a factor starting at factor = min_f...</div><div class="ttdef"><b>Definition:</b> read_args.h:92</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_a9e47a83011545a35009a8ab6cdb5b464"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464">simulation_parameters_t::min_nr_parties</a></div><div class="ttdeci">party_t min_nr_parties</div><div class="ttdoc">The parameters below are only relevant for the generation of the stake distributions.</div><div class="ttdef"><b>Definition:</b> read_args.h:77</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_aa2628d617cd8dd2f718d5d03370a729a"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#aa2628d617cd8dd2f718d5d03370a729a">simulation_parameters_t::nr_rich_parties</a></div><div class="ttdeci">party_t nr_rich_parties</div><div class="ttdoc">number of rich parties (only relevant for the few fat stake distribution</div><div class="ttdef"><b>Definition:</b> read_args.h:81</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_ab94e4551c8b53adde258d914058af61b"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">simulation_parameters_t::to_show</a></div><div class="ttdeci">unsigned int to_show</div><div class="ttdoc">the flags that indicate what information to display when running the simulator</div><div class="ttdef"><b>Definition:</b> read_args.h:84</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_adfb6968457c5d2ea65a110ec34eb32a9"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9">simulation_parameters_t::corruption_threshold</a></div><div class="ttdeci">double corruption_threshold</div><div class="ttdoc">upper bound on corruption fraction</div><div class="ttdef"><b>Definition:</b> read_args.h:70</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_ae95b7af7d4fb9d22bca818cfca9d9c32"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">simulation_parameters_t::max_nr_parties</a></div><div class="ttdeci">party_t max_nr_parties</div><div class="ttdoc">maximum number of parties</div><div class="ttdef"><b>Definition:</b> read_args.h:78</div></div>
-<div class="ttc" id="astructsimulation__parameters__t_html_aebd105f6d3a3a3a9635becb627eda0e8"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">simulation_parameters_t::runs</a></div><div class="ttdeci">counter_t runs</div><div class="ttdoc">number of runs to make</div><div class="ttdef"><b>Definition:</b> read_args.h:65</div></div>
+<div class="ttc" id="aread__args_8h_html_a8109191f903863feb2813754155d8b4c"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a8109191f903863feb2813754155d8b4c">SHOW_NR_PARTIES</a></div><div class="ttdeci">#define SHOW_NR_PARTIES</div><div class="ttdef"><b>Definition:</b> read_args.h:51</div></div>
+<div class="ttc" id="aread__args_8h_html_aa21c996aadce8ae75772cbc3b8793842"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#aa21c996aadce8ae75772cbc3b8793842">TEST_TYPES</a></div><div class="ttdeci">#define TEST_TYPES</div><div class="ttdef"><b>Definition:</b> read_args.h:33</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html">simulation_parameters_t</a></div><div class="ttdoc">Structure that contains all the relevant information for running the simulator for a fixed protocol.</div><div class="ttdef"><b>Definition:</b> read_args.h:72</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_a2ae6803a691d1a6016e75ae392c635fd"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd">simulation_parameters_t::max_factor</a></div><div class="ttdeci">size_t max_factor</div><div class="ttdoc">the maximum factor to test</div><div class="ttdef"><b>Definition:</b> read_args.h:103</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_a5dc13eb28e84fa10f8f0915695b45d84"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84">simulation_parameters_t::corruption_strategy</a></div><div class="ttdeci">corruption_t corruption_strategy</div><div class="ttdoc">how parties should be corrupted</div><div class="ttdef"><b>Definition:</b> read_args.h:77</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_a6803bd6f89e0122c7b3bf50af64714b2"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2">simulation_parameters_t::tests</a></div><div class="ttdeci">unsigned int tests</div><div class="ttdoc">which tests to run</div><div class="ttdef"><b>Definition:</b> read_args.h:75</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_a91db0e2c4b47594b830de790fedbc5c8"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8">simulation_parameters_t::min_factor</a></div><div class="ttdeci">size_t min_factor</div><div class="ttdoc">The minimum and maximum factors to test: The simulator is run for a factor starting at factor = min_f...</div><div class="ttdef"><b>Definition:</b> read_args.h:102</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_a9e47a83011545a35009a8ab6cdb5b464"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464">simulation_parameters_t::min_nr_parties</a></div><div class="ttdeci">party_t min_nr_parties</div><div class="ttdoc">The parameters below are only relevant for the generation of the stake distributions.</div><div class="ttdef"><b>Definition:</b> read_args.h:86</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_ab94e4551c8b53adde258d914058af61b"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b">simulation_parameters_t::to_show</a></div><div class="ttdeci">unsigned int to_show</div><div class="ttdoc">the flags that indicate what information to display when running the simulator</div><div class="ttdef"><b>Definition:</b> read_args.h:94</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_ad34e2f0f87671a072156a0ece56c6027"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027">simulation_parameters_t::ratio_heavy_light</a></div><div class="ttdeci">double ratio_heavy_light</div><div class="ttdoc">ratio between heavyest party(ies) and lightest party(ies).</div><div class="ttdef"><b>Definition:</b> read_args.h:89</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_adfb6968457c5d2ea65a110ec34eb32a9"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9">simulation_parameters_t::corruption_threshold</a></div><div class="ttdeci">double corruption_threshold</div><div class="ttdoc">upper bound on corruption fraction</div><div class="ttdef"><b>Definition:</b> read_args.h:78</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_ae95b7af7d4fb9d22bca818cfca9d9c32"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32">simulation_parameters_t::max_nr_parties</a></div><div class="ttdeci">party_t max_nr_parties</div><div class="ttdoc">maximum number of parties</div><div class="ttdef"><b>Definition:</b> read_args.h:87</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_aebd105f6d3a3a3a9635becb627eda0e8"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8">simulation_parameters_t::runs</a></div><div class="ttdeci">counter_t runs</div><div class="ttdoc">number of runs to make</div><div class="ttdef"><b>Definition:</b> read_args.h:73</div></div>
+<div class="ttc" id="astructsimulation__parameters__t_html_aed27c61b82ee2ed89aa73ee6e45ed5f4"><div class="ttname"><a href="../../d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4">simulation_parameters_t::nr_heavy_parties</a></div><div class="ttdeci">party_t nr_heavy_parties</div><div class="ttdoc">number of heavy parties (only relevant for the few heavy stake distribution</div><div class="ttdef"><b>Definition:</b> read_args.h:91</div></div>
 <div class="ttc" id="atypes_8h_html_a82187f179e537bebf2170deb85c3d6a8"><div class="ttname"><a href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a></div><div class="ttdeci">std::size_t party_t</div><div class="ttdef"><b>Definition:</b> types.h:10</div></div>
 <div class="ttc" id="ayal__log_8h_html_a87103a740d52e7f53735ab475524d9ad"><div class="ttname"><a href="../../d0/d70/yal__log_8h.html#a87103a740d52e7f53735ab475524d9ad">__yal_set_lvl_info</a></div><div class="ttdeci">#define __yal_set_lvl_info()</div><div class="ttdef"><b>Definition:</b> yal_log.h:29</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../#l00015">__yal_init_logger</a>, <a class="el" href="../../#l00029">__yal_set_lvl_info</a>, <a class="el" href="../../#l00069">simulation_parameters_t::corruption_strategy</a>, <a class="el" href="../../#l00070">simulation_parameters_t::corruption_threshold</a>, <a class="el" href="../../d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2">init_random_utils()</a>, <a class="el" href="../../#l00093">simulation_parameters_t::max_factor</a>, <a class="el" href="../../#l00078">simulation_parameters_t::max_nr_parties</a>, <a class="el" href="../../#l00092">simulation_parameters_t::min_factor</a>, <a class="el" href="../../#l00077">simulation_parameters_t::min_nr_parties</a>, <a class="el" href="../../#l00081">simulation_parameters_t::nr_rich_parties</a>, <a class="el" href="../../d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4">print_parameters()</a>, <a class="el" href="../../#l00080">simulation_parameters_t::ratio_rich_poor</a>, <a class="el" href="../../d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b">read_parameters()</a>, <a class="el" href="../../#l00065">simulation_parameters_t::runs</a>, <a class="el" href="../../#l00227">show_distribution_info()</a>, <a class="el" href="../../#l00043">SHOW_NR_PARTIES</a>, <a class="el" href="../../#l00267">show_run_data()</a>, <a class="el" href="../../#l00044">SHOW_TEST</a>, <a class="el" href="../../#l00025">TEST_TYPES</a>, <a class="el" href="../../#l00067">simulation_parameters_t::tests</a>, and <a class="el" href="../../#l00084">simulation_parameters_t::to_show</a>.</p>
+<p class="reference">References <a class="el" href="../../#l00015">__yal_init_logger</a>, <a class="el" href="../../#l00029">__yal_set_lvl_info</a>, <a class="el" href="../../#l00077">simulation_parameters_t::corruption_strategy</a>, <a class="el" href="../../#l00078">simulation_parameters_t::corruption_threshold</a>, <a class="el" href="../../d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2">init_random_utils()</a>, <a class="el" href="../../#l00103">simulation_parameters_t::max_factor</a>, <a class="el" href="../../#l00087">simulation_parameters_t::max_nr_parties</a>, <a class="el" href="../../#l00102">simulation_parameters_t::min_factor</a>, <a class="el" href="../../#l00086">simulation_parameters_t::min_nr_parties</a>, <a class="el" href="../../#l00091">simulation_parameters_t::nr_heavy_parties</a>, <a class="el" href="../../d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4">print_parameters()</a>, <a class="el" href="../../#l00089">simulation_parameters_t::ratio_heavy_light</a>, <a class="el" href="../../d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b">read_parameters()</a>, <a class="el" href="../../#l00073">simulation_parameters_t::runs</a>, <a class="el" href="../../#l00227">show_distribution_info()</a>, <a class="el" href="../../#l00051">SHOW_NR_PARTIES</a>, <a class="el" href="../../#l00267">show_run_data()</a>, <a class="el" href="../../#l00052">SHOW_TEST</a>, <a class="el" href="../../#l00033">TEST_TYPES</a>, <a class="el" href="../../#l00075">simulation_parameters_t::tests</a>, and <a class="el" href="../../#l00094">simulation_parameters_t::to_show</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00004">main()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a8f4afe28d9c87b5957823f96ebe7dd48_cgraph.svg" width="498" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<p class="reference">Referenced by <a class="el" href="../../#l00005">main()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a8f4afe28d9c87b5957823f96ebe7dd48_cgraph.svg" width="498" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a8f4afe28d9c87b5957823f96ebe7dd48_icgraph.svg" width="362" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a8f4afe28d9c87b5957823f96ebe7dd48_icgraph.svg" width="362" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -641,77 +666,77 @@ template&lt;typename T &gt; </div>
     <tr><td class="paramname">corruption</td><td>strategy. </td></tr>
     <tr><td class="paramname">corruption</td><td>threshold. </td></tr>
     <tr><td class="paramname">multiplicative</td><td>factor for how many parties to target. </td></tr>
-    <tr><td class="paramname">ratio</td><td>between stake of richest and poorest party(ies). </td></tr>
-    <tr><td class="paramname">number</td><td>of richest parties. </td></tr>
+    <tr><td class="paramname">ratio</td><td>between stake of heaviest and lightest party(ies). </td></tr>
+    <tr><td class="paramname">number</td><td>of heavy parties. </td></tr>
     <tr><td class="paramname">constructor</td><td>for the protocol simulator to be used. </td></tr>
     <tr><td class="paramname">function</td><td>that extracts data from a set of runs (with the same parameters). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a vector with the data from the tests run. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  309</span>{</div>
-<div class="line"><span class="lineno">  310</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#aa1a44fc89acffe0e9ceb68840e2516b9">__yal_log</a> (<a class="code hl_define" href="../../d0/d70/yal__log_8h.html#aa60136c17617acba656334cdac4db9f6">__YAL_INFO</a>,</div>
-<div class="line"><span class="lineno">  311</span>             <span class="stringliteral">&quot;&lt;main_utils.cc:run_tests(%lu,%s,%lu,%lu,%lf,%lu,%lf,%lu)&gt;\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  312</span>             n,</div>
-<div class="line"><span class="lineno">  313</span>             (std::bitset&lt;TEST_TYPES&gt; (flags)).to_string ().c_str (),</div>
-<div class="line"><span class="lineno">  314</span>             runs,</div>
-<div class="line"><span class="lineno">  315</span>             corruption_strategy,</div>
-<div class="line"><span class="lineno">  316</span>             corruption_threshold,</div>
-<div class="line"><span class="lineno">  317</span>             factor,</div>
-<div class="line"><span class="lineno">  318</span>             rich_poor_ratio,</div>
-<div class="line"><span class="lineno">  319</span>             nr_rich);</div>
-<div class="line"><span class="lineno">  320</span> </div>
-<div class="line"><span class="lineno">  321</span>  <span class="keywordflow">if</span> (!flags)</div>
-<div class="line"><span class="lineno">  322</span>  {</div>
-<div class="line"><span class="lineno">  323</span>    std::string up = <span class="stringliteral">&quot;&lt;main_utils.cc:run_tests&gt;: No flags were set&quot;</span>;</div>
-<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">throw</span> up;</div>
-<div class="line"><span class="lineno">  325</span>  }</div>
-<div class="line"><span class="lineno">  326</span> </div>
-<div class="line"><span class="lineno">  327</span>  std::vector&lt;stake_t&gt; stakes =</div>
-<div class="line"><span class="lineno">  328</span>    <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a3201d4e5bc0eff5d7dd5c0993b5aaa34">generate_stake_distribution</a> (n, rich_poor_ratio, nr_rich, flags);</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>  <a class="code hl_typedef" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> total_stake = 0;</div>
-<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  332</span>  {</div>
-<div class="line"><span class="lineno">  333</span>    total_stake += stakes[i];</div>
-<div class="line"><span class="lineno">  334</span>  }</div>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>{</div>
+<div class="line"><span class="lineno">  308</span>  <a class="code hl_define" href="../../d0/d70/yal__log_8h.html#aa1a44fc89acffe0e9ceb68840e2516b9">__yal_log</a> (<a class="code hl_define" href="../../d0/d70/yal__log_8h.html#aa60136c17617acba656334cdac4db9f6">__YAL_INFO</a>,</div>
+<div class="line"><span class="lineno">  309</span>             <span class="stringliteral">&quot;&lt;main_utils.cc:run_tests(%lu,%s,%lu,%lu,%lf,%lu,%lf,%lu)&gt;\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  310</span>             n,</div>
+<div class="line"><span class="lineno">  311</span>             (std::bitset&lt;TEST_TYPES&gt; (flags)).to_string ().c_str (),</div>
+<div class="line"><span class="lineno">  312</span>             runs,</div>
+<div class="line"><span class="lineno">  313</span>             corruption_strategy,</div>
+<div class="line"><span class="lineno">  314</span>             corruption_threshold,</div>
+<div class="line"><span class="lineno">  315</span>             factor,</div>
+<div class="line"><span class="lineno">  316</span>             heavy_light_ratio,</div>
+<div class="line"><span class="lineno">  317</span>             nr_heavy);</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>  <span class="keywordflow">if</span> (!flags)</div>
+<div class="line"><span class="lineno">  320</span>  {</div>
+<div class="line"><span class="lineno">  321</span>    std::string up = <span class="stringliteral">&quot;&lt;main_utils.cc:run_tests&gt;: No flags were set&quot;</span>;</div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">throw</span> up;</div>
+<div class="line"><span class="lineno">  323</span>  }</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>  std::vector&lt;stake_t&gt; stakes =</div>
+<div class="line"><span class="lineno">  326</span>    <a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a3201d4e5bc0eff5d7dd5c0993b5aaa34">generate_stake_distribution</a> (n, heavy_light_ratio, nr_heavy, flags);</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>  <a class="code hl_typedef" href="../../d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298">stake_t</a> total_stake = 0;</div>
+<div class="line"><span class="lineno">  329</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  330</span>  {</div>
+<div class="line"><span class="lineno">  331</span>    total_stake += stakes[i];</div>
+<div class="line"><span class="lineno">  332</span>  }</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>  <a class="code hl_typedef" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> sender = 0;</div>
 <div class="line"><span class="lineno">  335</span> </div>
-<div class="line"><span class="lineno">  336</span>  <a class="code hl_typedef" href="../../d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8">party_t</a> sender = 0;</div>
+<div class="line"><span class="lineno">  336</span>  std::vector&lt;T&gt; run_data (runs);</div>
 <div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>  std::vector&lt;T&gt; run_data (runs);</div>
-<div class="line"><span class="lineno">  339</span> </div>
-<div class="line"><span class="lineno">  340</span>  <span class="comment">// run each test of a series in parallel</span></div>
-<div class="line"><span class="lineno">  341</span><span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><span class="lineno">  342</span><span class="preprocessor">#pragma omp parallel for</span></div>
-<div class="line"><span class="lineno">  343</span><span class="preprocessor">#endif    </span><span class="comment">// _OPENMP</span></div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d9/d49/types_8h.html#afd03de299b5a99fd58a54cdc55cc04fe">counter_t</a> c = 0; c &lt; runs; c++)</div>
-<div class="line"><span class="lineno">  346</span>  {</div>
-<div class="line"><span class="lineno">  347</span>    <a class="code hl_class" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html">corruptions_stake_protocol_simulator</a> *sim =</div>
-<div class="line"><span class="lineno">  348</span>      simulator_constructor (stakes, total_stake, factor);</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>    <span class="comment">// Compute corrupted parties for each run, so that for non-deterministic</span></div>
-<div class="line"><span class="lineno">  351</span>    <span class="comment">// corruption strategies the set of corrupted parties varies from run to run</span></div>
-<div class="line"><span class="lineno">  352</span>    sim-&gt;<a class="code hl_function" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f">corrupt_parties</a> (<a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a17e1a5d2f144555f81b2bed8a6ca7cd4">get_corrupted_parties</a> (</div>
-<div class="line"><span class="lineno">  353</span>      stakes, {sender}, corruption_strategy, corruption_threshold));</div>
+<div class="line"><span class="lineno">  338</span>  <span class="comment">// run each test of a series in parallel</span></div>
+<div class="line"><span class="lineno">  339</span><span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><span class="lineno">  340</span><span class="preprocessor">#pragma omp parallel for</span></div>
+<div class="line"><span class="lineno">  341</span><span class="preprocessor">#endif    </span><span class="comment">// _OPENMP</span></div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d9/d49/types_8h.html#afd03de299b5a99fd58a54cdc55cc04fe">counter_t</a> c = 0; c &lt; runs; c++)</div>
+<div class="line"><span class="lineno">  344</span>  {</div>
+<div class="line"><span class="lineno">  345</span>    <a class="code hl_class" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html">corruptions_stake_protocol_simulator</a> *sim =</div>
+<div class="line"><span class="lineno">  346</span>      simulator_constructor (stakes, total_stake, factor);</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>    <span class="comment">// Compute corrupted parties for each run, so that for non-deterministic</span></div>
+<div class="line"><span class="lineno">  349</span>    <span class="comment">// corruption strategies the set of corrupted parties varies from run to run</span></div>
+<div class="line"><span class="lineno">  350</span>    sim-&gt;<a class="code hl_function" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f">corrupt_parties</a> (<a class="code hl_function" href="../../df/d31/main__utils_8cc.html#a17e1a5d2f144555f81b2bed8a6ca7cd4">get_corrupted_parties</a> (</div>
+<div class="line"><span class="lineno">  351</span>      stakes, {sender}, corruption_strategy, corruption_threshold));</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>    sim-&gt;<a class="code hl_function" href="../../da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1">set_sender</a> (sender);</div>
 <div class="line"><span class="lineno">  354</span> </div>
-<div class="line"><span class="lineno">  355</span>    sim-&gt;<a class="code hl_function" href="../../da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1">set_sender</a> (sender);</div>
-<div class="line"><span class="lineno">  356</span> </div>
-<div class="line"><span class="lineno">  357</span>    <span class="comment">// this is the computationally heavy part</span></div>
-<div class="line"><span class="lineno">  358</span>    sim-&gt;<a class="code hl_function" href="../../da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc">execute_protocol</a> ();</div>
-<div class="line"><span class="lineno">  359</span> </div>
-<div class="line"><span class="lineno">  360</span><span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><span class="lineno">  361</span><span class="preprocessor">#pragma omp critical</span></div>
-<div class="line"><span class="lineno">  362</span><span class="preprocessor">#endif    </span><span class="comment">// _OPENMP</span></div>
-<div class="line"><span class="lineno">  363</span>    {</div>
-<div class="line"><span class="lineno">  364</span>      run_data[c] = get_data (sim);</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>    <span class="keyword">delete</span> sim;</div>
-<div class="line"><span class="lineno">  368</span>  }</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>  <span class="keywordflow">return</span> run_data;</div>
-<div class="line"><span class="lineno">  371</span>}</div>
+<div class="line"><span class="lineno">  355</span>    <span class="comment">// this is the computationally heavy part</span></div>
+<div class="line"><span class="lineno">  356</span>    sim-&gt;<a class="code hl_function" href="../../da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc">execute_protocol</a> ();</div>
+<div class="line"><span class="lineno">  357</span> </div>
+<div class="line"><span class="lineno">  358</span><span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><span class="lineno">  359</span><span class="preprocessor">#pragma omp critical</span></div>
+<div class="line"><span class="lineno">  360</span><span class="preprocessor">#endif    </span><span class="comment">// _OPENMP</span></div>
+<div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>      run_data[c] = get_data (sim);</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+<div class="line"><span class="lineno">  364</span> </div>
+<div class="line"><span class="lineno">  365</span>    <span class="keyword">delete</span> sim;</div>
+<div class="line"><span class="lineno">  366</span>  }</div>
+<div class="line"><span class="lineno">  367</span> </div>
+<div class="line"><span class="lineno">  368</span>  <span class="keywordflow">return</span> run_data;</div>
+<div class="line"><span class="lineno">  369</span>}</div>
 <div class="ttc" id="aclasscorruptions__stake__protocol__simulator_html_ac030d874258d12f52055090f009edf4f"><div class="ttname"><a href="../../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f">corruptions_stake_protocol_simulator::corrupt_parties</a></div><div class="ttdeci">void corrupt_parties(std::vector&lt; corruption_t &gt; corrupted)</div><div class="ttdoc">Sets the corruption flag of each party.</div></div>
 <div class="ttc" id="aclassprotocol__simulator_html_a27b719452a52d3a45bfbbcdd0e1364e1"><div class="ttname"><a href="../../da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1">protocol_simulator::set_sender</a></div><div class="ttdeci">virtual void set_sender(party_t sender)</div><div class="ttdoc">Sets a sender.</div></div>
 <div class="ttc" id="aclassprotocol__simulator_html_aa75378e2d279f5472917df08f0fe45fc"><div class="ttname"><a href="../../da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc">protocol_simulator::execute_protocol</a></div><div class="ttdeci">virtual bool execute_protocol(round_t bound=ROUND_T_MAX)</div><div class="ttdoc">Runs the protocol for up to bound rounds.</div></div>
@@ -720,11 +745,12 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="atypes_8h_html_afd03de299b5a99fd58a54cdc55cc04fe"><div class="ttname"><a href="../../d9/d49/types_8h.html#afd03de299b5a99fd58a54cdc55cc04fe">counter_t</a></div><div class="ttdeci">std::size_t counter_t</div><div class="ttdef"><b>Definition:</b> types.h:11</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../#l00034">__YAL_INFO</a>, <a class="el" href="../../#l00047">__yal_log</a>, <a class="el" href="../../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f">corruptions_stake_protocol_simulator::corrupt_parties()</a>, <a class="el" href="../../da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc">protocol_simulator::execute_protocol()</a>, <a class="el" href="../../#l00014">generate_stake_distribution()</a>, <a class="el" href="../../#l00127">get_corrupted_parties()</a>, and <a class="el" href="../../da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1">protocol_simulator::set_sender()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_af2d36ae7089940a56b91b8191110db06_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_af2d36ae7089940a56b91b8191110db06_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -768,31 +794,31 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  230</span>  {</div>
 <div class="line"><span class="lineno">  231</span>    <span class="keywordflow">switch</span> (flags)</div>
 <div class="line"><span class="lineno">  232</span>    {</div>
-<div class="line"><span class="lineno">  233</span>      <span class="keywordflow">case</span> 0b1:</div>
+<div class="line"><span class="lineno">  233</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a23858f91d0a8d9511f744532e903fd50">DET_CONST_DIST</a>:</div>
 <div class="line"><span class="lineno">  234</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Constant distribution&quot;</span>;</div>
 <div class="line"><span class="lineno">  235</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  236</span>      <span class="keywordflow">case</span> 0b10:</div>
-<div class="line"><span class="lineno">  237</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Few Fat distribution, thin sender&quot;</span>;</div>
+<div class="line"><span class="lineno">  236</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a719713fdc7f7f87166f78fc91a55894d">DET_FH_LIGHT_DIST</a>:</div>
+<div class="line"><span class="lineno">  237</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Few heavy distribution, light sender&quot;</span>;</div>
 <div class="line"><span class="lineno">  238</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  239</span>      <span class="keywordflow">case</span> 0b100:</div>
-<div class="line"><span class="lineno">  240</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Few Fat distribution, fat sender&quot;</span>;</div>
+<div class="line"><span class="lineno">  239</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a0d5322986f7c790dce112725385d08ca">DET_FH_HEAVY_DIST</a>:</div>
+<div class="line"><span class="lineno">  240</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Few heavy distribution, heavy sender&quot;</span>;</div>
 <div class="line"><span class="lineno">  241</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  242</span>      <span class="keywordflow">case</span> 0b1000:</div>
-<div class="line"><span class="lineno">  243</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Exponential distribution, thinnest sender&quot;</span>;</div>
+<div class="line"><span class="lineno">  242</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a77e4ba1fdc417be67c56164f047d05c4">DET_EXP_LIGHT_DIST</a>:</div>
+<div class="line"><span class="lineno">  243</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Exponential distribution, lightest sender&quot;</span>;</div>
 <div class="line"><span class="lineno">  244</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  245</span>      <span class="keywordflow">case</span> 0b10000:</div>
+<div class="line"><span class="lineno">  245</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#af6e0cc51561c30ecdeb804889971d16a">DET_EXP_MEDN_DIST</a>:</div>
 <div class="line"><span class="lineno">  246</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Exponential distribution, median sender&quot;</span>;</div>
 <div class="line"><span class="lineno">  247</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  248</span>      <span class="keywordflow">case</span> 0b100000:</div>
-<div class="line"><span class="lineno">  249</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Exponential distribution, fattest sender&quot;</span>;</div>
+<div class="line"><span class="lineno">  248</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a09139ba66c1cb90d2891f76ff524a223">DET_EXP_HEAVY_DIST</a>:</div>
+<div class="line"><span class="lineno">  249</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deterministic Exponential distribution, heaviest sender&quot;</span>;</div>
 <div class="line"><span class="lineno">  250</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  251</span>      <span class="keywordflow">case</span> (0b1 &lt;&lt; 16):</div>
+<div class="line"><span class="lineno">  251</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a94f39ba3e08874d0c8660a5f505f973f">RAND_EXP_RAND_SND_DIST</a>:</div>
 <div class="line"><span class="lineno">  252</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Random Exponential distribution&quot;</span>;</div>
 <div class="line"><span class="lineno">  253</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  254</span>      <span class="keywordflow">case</span> (0b10 &lt;&lt; 16):</div>
+<div class="line"><span class="lineno">  254</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a052b1f0ea227e348170e9763a4a3711e">RAND_UNIF_RAND_SND_DIST</a>:</div>
 <div class="line"><span class="lineno">  255</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Random Uniform distribution&quot;</span>;</div>
 <div class="line"><span class="lineno">  256</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  257</span>      <span class="keywordflow">case</span> (0b100 &lt;&lt; 16):</div>
+<div class="line"><span class="lineno">  257</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="../../d1/dde/read__args_8h.html#a0b0c83f7efead5d88d027589476794a5">RAND_GEOM_RAND_SND_DIST</a>:</div>
 <div class="line"><span class="lineno">  258</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Random Geometric distribution&quot;</span>;</div>
 <div class="line"><span class="lineno">  259</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  260</span>    }</div>
@@ -800,16 +826,26 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  262</span>    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  263</span>  }</div>
 <div class="line"><span class="lineno">  264</span>}</div>
-<div class="ttc" id="aread__args_8h_html_aee36e35001bde717eee93f748ff2608e"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#aee36e35001bde717eee93f748ff2608e">SHOW_DISTRIBUTION</a></div><div class="ttdeci">#define SHOW_DISTRIBUTION</div><div class="ttdef"><b>Definition:</b> read_args.h:40</div></div>
+<div class="ttc" id="aread__args_8h_html_a052b1f0ea227e348170e9763a4a3711e"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a052b1f0ea227e348170e9763a4a3711e">RAND_UNIF_RAND_SND_DIST</a></div><div class="ttdeci">#define RAND_UNIF_RAND_SND_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:28</div></div>
+<div class="ttc" id="aread__args_8h_html_a09139ba66c1cb90d2891f76ff524a223"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a09139ba66c1cb90d2891f76ff524a223">DET_EXP_HEAVY_DIST</a></div><div class="ttdeci">#define DET_EXP_HEAVY_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:24</div></div>
+<div class="ttc" id="aread__args_8h_html_a0b0c83f7efead5d88d027589476794a5"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0b0c83f7efead5d88d027589476794a5">RAND_GEOM_RAND_SND_DIST</a></div><div class="ttdeci">#define RAND_GEOM_RAND_SND_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:30</div></div>
+<div class="ttc" id="aread__args_8h_html_a0d5322986f7c790dce112725385d08ca"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a0d5322986f7c790dce112725385d08ca">DET_FH_HEAVY_DIST</a></div><div class="ttdeci">#define DET_FH_HEAVY_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:18</div></div>
+<div class="ttc" id="aread__args_8h_html_a23858f91d0a8d9511f744532e903fd50"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a23858f91d0a8d9511f744532e903fd50">DET_CONST_DIST</a></div><div class="ttdeci">#define DET_CONST_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:15</div></div>
+<div class="ttc" id="aread__args_8h_html_a719713fdc7f7f87166f78fc91a55894d"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a719713fdc7f7f87166f78fc91a55894d">DET_FH_LIGHT_DIST</a></div><div class="ttdeci">#define DET_FH_LIGHT_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:16</div></div>
+<div class="ttc" id="aread__args_8h_html_a77e4ba1fdc417be67c56164f047d05c4"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a77e4ba1fdc417be67c56164f047d05c4">DET_EXP_LIGHT_DIST</a></div><div class="ttdeci">#define DET_EXP_LIGHT_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:20</div></div>
+<div class="ttc" id="aread__args_8h_html_a94f39ba3e08874d0c8660a5f505f973f"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#a94f39ba3e08874d0c8660a5f505f973f">RAND_EXP_RAND_SND_DIST</a></div><div class="ttdeci">#define RAND_EXP_RAND_SND_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:26</div></div>
+<div class="ttc" id="aread__args_8h_html_aee36e35001bde717eee93f748ff2608e"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#aee36e35001bde717eee93f748ff2608e">SHOW_DISTRIBUTION</a></div><div class="ttdeci">#define SHOW_DISTRIBUTION</div><div class="ttdef"><b>Definition:</b> read_args.h:48</div></div>
+<div class="ttc" id="aread__args_8h_html_af6e0cc51561c30ecdeb804889971d16a"><div class="ttname"><a href="../../d1/dde/read__args_8h.html#af6e0cc51561c30ecdeb804889971d16a">DET_EXP_MEDN_DIST</a></div><div class="ttdeci">#define DET_EXP_MEDN_DIST</div><div class="ttdef"><b>Definition:</b> read_args.h:22</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../#l00040">SHOW_DISTRIBUTION</a>.</p>
+<p class="reference">References <a class="el" href="../../#l00015">DET_CONST_DIST</a>, <a class="el" href="../../#l00024">DET_EXP_HEAVY_DIST</a>, <a class="el" href="../../#l00020">DET_EXP_LIGHT_DIST</a>, <a class="el" href="../../#l00022">DET_EXP_MEDN_DIST</a>, <a class="el" href="../../#l00018">DET_FH_HEAVY_DIST</a>, <a class="el" href="../../#l00016">DET_FH_LIGHT_DIST</a>, <a class="el" href="../../#l00026">RAND_EXP_RAND_SND_DIST</a>, <a class="el" href="../../#l00030">RAND_GEOM_RAND_SND_DIST</a>, <a class="el" href="../../#l00028">RAND_UNIF_RAND_SND_DIST</a>, and <a class="el" href="../../#l00048">SHOW_DISTRIBUTION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../#l00388">run_command_parameters()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a4a5dbbd7c40fe6e2edd8785be992bca6_icgraph.svg" width="608" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<p class="reference">Referenced by <a class="el" href="../../#l00386">run_command_parameters()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8b/main__utils_8h_a4a5dbbd7c40fe6e2edd8785be992bca6_icgraph.svg" width="608" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -863,7 +899,7 @@ Here is the caller graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">the</td><td>number of correct runs. </td></tr>
     <tr><td class="paramname">the</td><td>number of runs. </td></tr>
-    <tr><td class="paramname">the</td><td>factor between the poorest and richest party(ies). </td></tr>
+    <tr><td class="paramname">the</td><td>factor between the lightest and heaviest party(ies). </td></tr>
     <tr><td class="paramname">flag</td><td>indicating whether to show a histogram of how many parties got the message per round. </td></tr>
     <tr><td class="paramname">the</td><td>histogram of which parties got the message per round. </td></tr>
   </table>
@@ -873,9 +909,13 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="../../d0/d8b/main__utils_8h.html">main_utils.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

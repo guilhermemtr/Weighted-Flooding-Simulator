@@ -33,22 +33,22 @@ generate_stake_distribution (party_t           n,
     stakes = sdgen.constant_stake (n, 1);
   }
 
-  // test few fat distribution, thin sender
-  if (flags & DET_FF_THIN_DIST)
+  // test few heavy distribution, light sender
+  if (flags & DET_FH_LIGHT_DIST)
   {
-    stakes = sdgen.few_fat_thin_stake (n, param1, param2);
+    stakes = sdgen.few_heavy_light_stake (n, param1, param2);
   }
 
-  // test few fat distribution, fat sender
-  if (flags & DET_FF_FAT_DIST)
+  // test few heavy distribution, heavy sender
+  if (flags & DET_FH_HEAVY_DIST)
   {
-    stakes = sdgen.few_fat_fat_stake (n, param1, param2);
+    stakes = sdgen.few_heavy_heavy_stake (n, param1, param2);
   }
 
-  // test exponential distribution, thinnest sender
-  if (flags & DET_EXP_THIN_DIST)
+  // test exponential distribution, lightest sender
+  if (flags & DET_EXP_LIGHT_DIST)
   {
-    stakes = sdgen.exponential_thinnest_stake (n, param1);
+    stakes = sdgen.exponential_lightest_stake (n, param1);
   }
 
   // test exponential distribution, median sender
@@ -57,10 +57,10 @@ generate_stake_distribution (party_t           n,
     stakes = sdgen.exponential_median_stake (n, param1);
   }
 
-  // test exponential distribution, thinnest sender
-  if (flags & DET_EXP_FAT_DIST)
+  // test exponential distribution, lightest sender
+  if (flags & DET_EXP_HEAVY_DIST)
   {
-    stakes = sdgen.exponential_fattest_stake (n, param1);
+    stakes = sdgen.exponential_heaviest_stake (n, param1);
   }
 
   // Random Distributions
@@ -151,7 +151,7 @@ get_corrupted_parties (std::vector<stake_t> stakes,
         });
       break;
 
-    case CORR_RICH_FIRST:    // corrupt rich first
+    case CORR_HEAVY_FIRST:    // corrupt heavy first
       corruptions = corrupt_parties_by_stake (
         stakes,
         honest,
@@ -166,7 +166,7 @@ get_corrupted_parties (std::vector<stake_t> stakes,
         });
       break;
 
-    case CORR_POOR_FIRST:    // corrupt poor first
+    case CORR_LIGHT_FIRST:    // corrupt light first
       corruptions = corrupt_parties_by_stake (
         stakes,
         honest,
@@ -233,20 +233,20 @@ show_distribution_info (unsigned int flags, unsigned int to_show)
       case DET_CONST_DIST:
         std::cout << "Deterministic Constant distribution";
         break;
-      case DET_FF_THIN_DIST:
-        std::cout << "Deterministic Few Fat distribution, thin sender";
+      case DET_FH_LIGHT_DIST:
+        std::cout << "Deterministic Few heavy distribution, light sender";
         break;
-      case DET_FF_FAT_DIST:
-        std::cout << "Deterministic Few Fat distribution, fat sender";
+      case DET_FH_HEAVY_DIST:
+        std::cout << "Deterministic Few heavy distribution, heavy sender";
         break;
-      case DET_EXP_THIN_DIST:
-        std::cout << "Deterministic Exponential distribution, thinnest sender";
+      case DET_EXP_LIGHT_DIST:
+        std::cout << "Deterministic Exponential distribution, lightest sender";
         break;
       case DET_EXP_MEDN_DIST:
         std::cout << "Deterministic Exponential distribution, median sender";
         break;
-      case DET_EXP_FAT_DIST:
-        std::cout << "Deterministic Exponential distribution, fattest sender";
+      case DET_EXP_HEAVY_DIST:
+        std::cout << "Deterministic Exponential distribution, heaviest sender";
         break;
       case RAND_EXP_RAND_SND_DIST:
         std::cout << "Random Exponential distribution";
@@ -299,8 +299,8 @@ run_tests (party_t           n,
            corruption_t      corruption_strategy,
            double            corruption_threshold,
            size_t            factor,
-           double            rich_poor_ratio,
-           long unsigned int nr_rich,
+           double            heavy_light_ratio,
+           long unsigned int nr_heavy,
            std::function<corruptions_stake_protocol_simulator *(
              std::vector<stake_t>, stake_t, size_t)> simulator_constructor,
            std::function<T (corruptions_stake_protocol_simulator *)> get_data)
@@ -313,8 +313,8 @@ run_tests (party_t           n,
              corruption_strategy,
              corruption_threshold,
              factor,
-             rich_poor_ratio,
-             nr_rich);
+             heavy_light_ratio,
+             nr_heavy);
 
   if (!flags)
   {
@@ -323,7 +323,7 @@ run_tests (party_t           n,
   }
 
   std::vector<stake_t> stakes =
-    generate_stake_distribution (n, rich_poor_ratio, nr_rich, flags);
+    generate_stake_distribution (n, heavy_light_ratio, nr_heavy, flags);
 
   stake_t total_stake = 0;
   for (size_t i = 0; i < n; i++)
@@ -375,8 +375,8 @@ run_tests (party_t           n,
            corruption_t      corruption_strategy,
            double            corruption_threshold,
            size_t            factor,
-           double            rich_poor_ratio,
-           long unsigned int nr_rich,
+           double            heavy_light_ratio,
+           long unsigned int nr_heavy,
            std::function<corruptions_stake_protocol_simulator *(
              std::vector<stake_t>, stake_t, size_t)>  simulator_constructor,
            std::function<std::pair<bool, round_t> (
@@ -445,8 +445,8 @@ run_command_parameters (
             params.corruption_strategy,
             params.corruption_threshold,
             factor,
-            params.ratio_rich_poor,
-            params.nr_rich_parties,
+            params.ratio_heavy_light,
+            params.nr_heavy_parties,
             simulator_constructor,
             [&] (corruptions_stake_protocol_simulator *sim) {
               return std::make_pair (

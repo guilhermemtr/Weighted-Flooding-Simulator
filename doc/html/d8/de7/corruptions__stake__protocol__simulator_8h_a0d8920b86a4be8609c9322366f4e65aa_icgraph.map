@@ -1,5 +1,5 @@
 <map id="corrupt_parties_by_stake" name="corrupt_parties_by_stake">
 <area shape="rect" id="node1" title="Outputs a vector of corruption flags for the given stake distribution, and taking into account the pa..." alt="" coords="392,5,612,35"/>
 <area shape="rect" id="node2" href="$df/d31/main__utils_8cc.html#a17e1a5d2f144555f81b2bed8a6ca7cd4" title="Generates a corruption set." alt="" coords="148,5,344,35"/>
-<area shape="rect" id="node3" href="$df/d31/main__utils_8cc.html#a0444e24a736cc8cfe957ba539ff8e797" title="Runs tests for a fixed set of parameters." alt="" coords="5,5,100,35"/>
+<area shape="rect" id="node3" href="$df/d31/main__utils_8cc.html#ad944ce1f7580051626a657c82264ac05" title="Runs tests for a fixed set of parameters." alt="" coords="5,5,100,35"/>
 </map>

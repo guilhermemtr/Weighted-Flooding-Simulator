@@ -1,9 +1,9 @@
 var searchData=
 [
   ['constant_5fstake_0',['constant_stake',['../da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661',1,'stake_distribution_generator']]],
-  ['corr_5fpoor_5ffirst_1',['CORR_POOR_FIRST',['../d1/dde/read__args_8h.html#a610f5f9eddf60cacb3168e3bf1687491',1,'read_args.h']]],
-  ['corr_5frand_2',['CORR_RAND',['../d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3',1,'read_args.h']]],
-  ['corr_5frich_5ffirst_3',['CORR_RICH_FIRST',['../d1/dde/read__args_8h.html#a10099c8d45446b1142928924f3f2923b',1,'read_args.h']]],
+  ['corr_5fheavy_5ffirst_1',['CORR_HEAVY_FIRST',['../d1/dde/read__args_8h.html#a8d8dd062fc745e51e91e13bc857fa68a',1,'read_args.h']]],
+  ['corr_5flight_5ffirst_2',['CORR_LIGHT_FIRST',['../d1/dde/read__args_8h.html#a5c901f8fd6a9e2da5042981113b96b35',1,'read_args.h']]],
+  ['corr_5frand_3',['CORR_RAND',['../d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3',1,'read_args.h']]],
   ['corr_5ftypes_4',['CORR_TYPES',['../d1/dde/read__args_8h.html#a14c47d44c6631e893b453751a3461329',1,'read_args.h']]],
   ['corrupt_5fparties_5',['corrupt_parties',['../df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f',1,'corruptions_stake_protocol_simulator']]],
   ['corrupt_5fparties_5fby_5fstake_6',['corrupt_parties_by_stake',['../d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa',1,'corruptions_stake_protocol_simulator.h']]],

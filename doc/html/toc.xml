@@ -1,0 +1,543 @@
+<toc label="Weighted Flooding Simulator" topic="index.html">
+  <topic label="Weighted-Flooding-Simulator" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html">
+    <topic label="Documentation" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md1"/>
+    <topic label="Building &amp; Running The Simulator" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md2">
+      <topic label="Building The Sources" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md3"/>
+      <topic label="Running The Simulator" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md4">
+        <topic label="Parameter Description: &lt;tt&gt;&lt;tests (9 bits)&gt;&lt;/tt&gt;" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md5"/>
+        <topic label="Parameter Description: &lt;tt&gt;&lt;to_show (5 bits)&gt;&lt;/tt&gt;" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md6"/>
+      </topic>
+      <topic label="Running The Benchmarks" href="d5/d96/md__home_guilhermemtr__dropbox_workspace__e_t_h__zurich__projects__weighted__flooding__simulator__r_e_a_d_m_e.html#autotoc_md7"/>
+    </topic>
+  </topic>
+  <topic label="Classes" href="annotated.html">
+    <topic label="Class List" href="annotated.html">
+      <topic label="__yal_logger_vars" href="d3/d47/struct____yal__logger__vars.html">
+        <topic label="dbg_lvl" href="d3/d47/struct____yal__logger__vars.html#a7855656a461e0c8b24184a1ba276d64f"/>
+        <topic label="output" href="d3/d47/struct____yal__logger__vars.html#a1ef87a6c693b9b22138e0ec6c7f24ae4"/>
+      </topic>
+      <topic label="abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html">
+        <topic label="abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html#a3b46d251f7e12c4071ea8c6b50ebb6f5"/>
+        <topic label="~abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html#abb3db351991008a043865413a1850ba7"/>
+        <topic label="get_request_targets" href="d6/d8a/classabstract__receive__protocol__simulator.html#a2370c93b9ed1fcb8bfdf9f62058517bb"/>
+        <topic label="handle_all_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#a69a572593919bc5fc58fd226917ac1b8"/>
+        <topic label="handle_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#abf3b71be21c5ef4e81a20d6e3cb03998"/>
+        <topic label="make_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#a3c15dca1afe6b22c81162226e78e9774"/>
+        <topic label="protocol_round" href="d6/d8a/classabstract__receive__protocol__simulator.html#adf5a0466e9eef38769f0874d2f5a2235"/>
+        <topic label="request" href="d6/d8a/classabstract__receive__protocol__simulator.html#a91586406cbd10cef155b8cdcc85a907f"/>
+        <topic label="requesters" href="d6/d8a/classabstract__receive__protocol__simulator.html#a21abfffe6121138d52b24eadf06e02b2"/>
+      </topic>
+      <topic label="abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html">
+        <topic label="abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html#a57dcb07681bda8383837351c18c0113f"/>
+        <topic label="~abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html#a95cd52c27d8634c2e623992ce8e36fe2"/>
+        <topic label="get_targets_to_send" href="da/d2c/classabstract__send__protocol__simulator.html#ac07182836bd062fc933c6ee121e38dd5"/>
+        <topic label="protocol_round" href="da/d2c/classabstract__send__protocol__simulator.html#aee41ecec6a67bd051ca9fb8205c505de"/>
+        <topic label="set_sender" href="da/d2c/classabstract__send__protocol__simulator.html#aa2fa31984a806379762373043a950cd2"/>
+        <topic label="forward" href="da/d2c/classabstract__send__protocol__simulator.html#a332e93e925765b277d9a312aad8ef4fb"/>
+        <topic label="to_send" href="da/d2c/classabstract__send__protocol__simulator.html#a8cf0d48105aa99e879cb298d09676236"/>
+      </topic>
+      <topic label="corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html">
+        <topic label="corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a14d846325031ff8c347af0eb5e25a85f"/>
+        <topic label="~corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html#adccbac90144987eca233835251962f1c"/>
+        <topic label="adversary" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a1d562064fce83ff2f9a4c10a037475b0"/>
+        <topic label="all_got_msg" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a449467e89c244361c42c436829f036b9"/>
+        <topic label="corrupt_parties" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f"/>
+        <topic label="get_corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a3646d45aef9d5a466a104576ab0dcd2c"/>
+        <topic label="get_latency" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ad066fd987dfceb49ac57eaf48abca38e"/>
+        <topic label="get_stakes" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a445b8b2a088664cac3486312e9bff441"/>
+        <topic label="get_total_stake" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ae67ba716dae2c5d267b9f0af0264f39a"/>
+        <topic label="is_corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a5169cad397e1d5b9b07b2564c2d0a8ce"/>
+        <topic label="owner_of" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a7720eec8efd57784339eb1652dabc4a5"/>
+        <topic label="protocol_round" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a94baf23cae4b9f50de77925fbcb28139"/>
+        <topic label="round" href="df/dcc/classcorruptions__stake__protocol__simulator.html#aba59185d2ec654dfbb848373a1ca0a23"/>
+        <topic label="corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ab4ddaf369777391dabd2a7f72016fbc0"/>
+        <topic label="stakes" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ad6d51f965ff2734535ce90e92eaef884"/>
+        <topic label="total_stake" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a61b347b79c123ab7c86811a08cc159d7"/>
+      </topic>
+      <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html">
+        <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html#ad8593f9e4d08ffe4481f3d77e1818fc9"/>
+        <topic label="~hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html#ae8a990294f15baf92fa9b2a7a5751b65"/>
+        <topic label="protocol_round" href="d7/d76/classhybrid__k__out__protocol__simulator.html#abaa9d46add9c22e10fc6b375a3a099ae"/>
+      </topic>
+      <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html">
+        <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html#ae7d38b3f0ca1bca37de105a0c72b7c24"/>
+        <topic label="~hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html#a3c106d7d75cc74df491009a0426e6633"/>
+        <topic label="protocol_round" href="d0/d86/classhybrid__protocol__simulator.html#aac86962eb805047b0ce80c8ec214ac3b"/>
+      </topic>
+      <topic label="k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html">
+        <topic label="k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html#a827496dd1e522deff5d24b8a3a043c50"/>
+        <topic label="~k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html#ac7980fc23b74071bb991da2358d86341"/>
+        <topic label="all_got_msg" href="de/d66/classk__out__protocol__simulator.html#a54bd1d1743874ab25e1b83b3ee1a713a"/>
+        <topic label="get_get_nr_targets" href="de/d66/classk__out__protocol__simulator.html#a7b4d653080a4d9994d7561fbb866312b"/>
+        <topic label="get_imitation_function" href="de/d66/classk__out__protocol__simulator.html#a7a104ae9ece4c36b9ae9e65bf83efd68"/>
+        <topic label="get_targets_to_send" href="de/d66/classk__out__protocol__simulator.html#a3c274d4b9089c31d5622ab330f83d488"/>
+        <topic label="get_nr_targets" href="de/d66/classk__out__protocol__simulator.html#a055b598ee2d4a81069baf3f9ebba5a8a"/>
+        <topic label="histogram" href="de/d66/classk__out__protocol__simulator.html#a90671dee21c088e360ba944dba000599"/>
+        <topic label="histogram_interval_size" href="de/d66/classk__out__protocol__simulator.html#a84e3fc8bdd845cbd9366cfaa0f5bf91c"/>
+        <topic label="imitation_function" href="de/d66/classk__out__protocol__simulator.html#a07e576972f42c28a6fa08eca1cb1f4f1"/>
+        <topic label="re" href="de/d66/classk__out__protocol__simulator.html#a1467f8607c8c6ae3090cab7e88c78152"/>
+        <topic label="sample_domain" href="de/d66/classk__out__protocol__simulator.html#a086dab9865a615820abe3ee8fb89052d"/>
+        <topic label="total_imitated_nodes" href="de/d66/classk__out__protocol__simulator.html#a11b0a9b59b0a4fe14c74cbec805e2590"/>
+      </topic>
+      <topic label="protocol_simulator" href="da/d73/classprotocol__simulator.html">
+        <topic label="protocol_simulator" href="da/d73/classprotocol__simulator.html#ac155584c8b2507f0b972126dd508e0b0"/>
+        <topic label="~protocol_simulator" href="da/d73/classprotocol__simulator.html#a363feeb25419969181b4ea0085c5bbfd"/>
+        <topic label="all_got_msg" href="da/d73/classprotocol__simulator.html#a0d8cf460e399ddf68f654a00170ad42c"/>
+        <topic label="execute_protocol" href="da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc"/>
+        <topic label="get_got_msg" href="da/d73/classprotocol__simulator.html#ab4196edb089e29a7bee4b6c51869357c"/>
+        <topic label="get_latency" href="da/d73/classprotocol__simulator.html#af9ddc132debbd0581acced12f95d8c30"/>
+        <topic label="get_nr_messages" href="da/d73/classprotocol__simulator.html#ae42518b61ffc08382f093dfedb2ef590"/>
+        <topic label="get_nr_messages_per_round" href="da/d73/classprotocol__simulator.html#abaef20a8dec4f3f342eec22f4823bb20"/>
+        <topic label="get_nr_parties" href="da/d73/classprotocol__simulator.html#a1a45b248f09cda8e9ca8c885d2775988"/>
+        <topic label="get_nr_parties" href="da/d73/classprotocol__simulator.html#a26d894710b5794e6a9c2f718255aed06"/>
+        <topic label="has_received" href="da/d73/classprotocol__simulator.html#ad041fc1c666e5ad97abfe5dc6ac6f67c"/>
+        <topic label="receive" href="da/d73/classprotocol__simulator.html#ae3658fade13d99f1ddae86e09f17a915"/>
+        <topic label="round" href="da/d73/classprotocol__simulator.html#a9749c6601179022d496c3b837d240159"/>
+        <topic label="set_sender" href="da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1"/>
+        <topic label="curr_round" href="da/d73/classprotocol__simulator.html#a195abb95c64b4cb553e48bac06eeeeef"/>
+        <topic label="got_msg" href="da/d73/classprotocol__simulator.html#aac30d57c9c2dba8294a8fd97717361dd"/>
+        <topic label="nr_messages" href="da/d73/classprotocol__simulator.html#aca9481cafbc75aec36ec4fc70360c463"/>
+        <topic label="nr_parties" href="da/d73/classprotocol__simulator.html#aa5d3c93bddd270e9eb467b0003555e96"/>
+      </topic>
+      <topic label="random_generator" href="d8/de8/classrandom__generator.html">
+        <topic label="random_generator" href="d8/de8/classrandom__generator.html#a1a7beb8bf7a6e2603bc68dbf7cd3aabc"/>
+        <topic label="~random_generator" href="d8/de8/classrandom__generator.html#aac22bfb94be1be4dca5aeef0edaed43b"/>
+        <topic label="get_random_engine" href="d8/de8/classrandom__generator.html#a3b27657e8762df45f7d22f9bcd728de1"/>
+        <topic label="mutex" href="d8/de8/classrandom__generator.html#ab28df7fb26f7f6d0eb98e58356aa3d70"/>
+        <topic label="re" href="d8/de8/classrandom__generator.html#ac96cbfbbdadd99bcc325995e24910d39"/>
+        <topic label="seeds" href="d8/de8/classrandom__generator.html#a2c6c74ebed5d1ef0d2c47995426a0e8c"/>
+      </topic>
+      <topic label="receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html">
+        <topic label="receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html#a368af89e03bcb1464571c8cf080f8a04"/>
+        <topic label="~receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html#a7c0277cf4a130417d0ca98dc2c5c4fe0"/>
+        <topic label="get_request_targets" href="d2/d21/classreceiver__protocol__simulator.html#a3fb6e4c133f9f96eae70f1e71fb4a609"/>
+        <topic label="handle_requests" href="d2/d21/classreceiver__protocol__simulator.html#a1fc46af49c70c2a1d3699d689c2f36bd"/>
+        <topic label="request" href="d2/d21/classreceiver__protocol__simulator.html#af7f39cb1e2e71c446d7f29e26914e1ef"/>
+        <topic label="get_nr_requests" href="d2/d21/classreceiver__protocol__simulator.html#ae63e55a5f39ee34823b1013dfd26b71e"/>
+        <topic label="get_nr_requests_to_handle" href="d2/d21/classreceiver__protocol__simulator.html#a45330ab702f71916c59cb8e5bc2cf4ef"/>
+        <topic label="re" href="d2/d21/classreceiver__protocol__simulator.html#a1d355c0dfa36de2f240feaf3cd68a83f"/>
+        <topic label="unif_coin" href="d2/d21/classreceiver__protocol__simulator.html#a45ded52a6e25d27cba90b81f20a4e961"/>
+      </topic>
+      <topic label="scoped_lock" href="d8/d0a/classscoped__lock.html">
+        <topic label="scoped_lock" href="d8/d0a/classscoped__lock.html#aecd3b5a6520d3ef2476faccbb7dc88c2"/>
+        <topic label="~scoped_lock" href="d8/d0a/classscoped__lock.html#a7506aa888be431b91c11d190b0771249"/>
+        <topic label="del_lock" href="d8/d0a/classscoped__lock.html#aef974c958ae625bfd67d722c05f4d0e7"/>
+        <topic label="init_lock" href="d8/d0a/classscoped__lock.html#ad6ed5a1d30946adfb453e68aca4bfe1c"/>
+        <topic label="l" href="d8/d0a/classscoped__lock.html#a66c55d1523cc10471397cb953fd7c7cd"/>
+      </topic>
+      <topic label="send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html">
+        <topic label="send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html#a5c904815cfa1f385ab5d2526bd0a90b3"/>
+        <topic label="~send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html#a3fc069271005f8bc6874b1259702d251"/>
+        <topic label="get_targets_to_send" href="df/d1d/classsend__protocol__simulator.html#a9957ed3fd1b162ce4eb992e2f229da9c"/>
+        <topic label="send" href="df/d1d/classsend__protocol__simulator.html#ac692877ced569151c4df5ecb4a71e7f8"/>
+        <topic label="re" href="df/d1d/classsend__protocol__simulator.html#a440a5ecf7bce72a2e8493b6fe0303956"/>
+        <topic label="send_prob" href="df/d1d/classsend__protocol__simulator.html#a556b096d9ed87007fc54e710624f1da6"/>
+        <topic label="unif" href="df/d1d/classsend__protocol__simulator.html#a1dd1301535738a09591965a005024ada"/>
+      </topic>
+      <topic label="simulation_parameters_t" href="d6/da9/structsimulation__parameters__t.html">
+        <topic label="corruption_strategy" href="d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84"/>
+        <topic label="corruption_threshold" href="d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9"/>
+        <topic label="max_factor" href="d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd"/>
+        <topic label="max_nr_parties" href="d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32"/>
+        <topic label="min_factor" href="d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8"/>
+        <topic label="min_nr_parties" href="d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464"/>
+        <topic label="nr_heavy_parties" href="d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4"/>
+        <topic label="ratio_heavy_light" href="d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027"/>
+        <topic label="runs" href="d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8"/>
+        <topic label="tests" href="d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2"/>
+        <topic label="to_show" href="d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b"/>
+      </topic>
+      <topic label="stake_distribution_generator" href="da/d55/classstake__distribution__generator.html">
+        <topic label="stake_distribution_generator" href="da/d55/classstake__distribution__generator.html#ad2d00f29822b4014bcab6a170570e48d"/>
+        <topic label="add_to_stake_distribution" href="da/d55/classstake__distribution__generator.html#a3bc8bc85a9a0696fa5e28a160084cf52"/>
+        <topic label="constant_stake" href="da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661"/>
+        <topic label="exponential_heaviest_stake" href="da/d55/classstake__distribution__generator.html#a7d9491cb9cab713369ec6bfc8571e6d2"/>
+        <topic label="exponential_lightest_stake" href="da/d55/classstake__distribution__generator.html#a13516e17aa69d2c5bc08f27ca46a0e18"/>
+        <topic label="exponential_median_stake" href="da/d55/classstake__distribution__generator.html#a0ea9a4e1e4ae36b4363cc6d1895ccddd"/>
+        <topic label="exponential_stake" href="da/d55/classstake__distribution__generator.html#a279245440e8ff85d949bf79678d06835"/>
+        <topic label="few_heavy_heavy_stake" href="da/d55/classstake__distribution__generator.html#aabe7ac745502142170a455e778fb8f02"/>
+        <topic label="few_heavy_light_stake" href="da/d55/classstake__distribution__generator.html#abb8a24681627c5acb7c5162cb8e75181"/>
+        <topic label="few_heavy_stake" href="da/d55/classstake__distribution__generator.html#a2ab28c3e08050c17996b286e586ea6b3"/>
+        <topic label="mult_stake_distribution" href="da/d55/classstake__distribution__generator.html#ad5c738c634d33b3f24164ed149ea3245"/>
+        <topic label="sample_exponential_stake" href="da/d55/classstake__distribution__generator.html#aa118b134d691fb6392ec512bd3c01fa8"/>
+        <topic label="sample_geometric_stake" href="da/d55/classstake__distribution__generator.html#ae268154266dd8211b2d0aa95572b174e"/>
+        <topic label="sample_uniform_stake" href="da/d55/classstake__distribution__generator.html#a7ea2cb646581cf3bae6388cb3f712ef3"/>
+        <topic label="rd" href="da/d55/classstake__distribution__generator.html#abc2bdf5f37655be114c3377b7acf355b"/>
+        <topic label="re" href="da/d55/classstake__distribution__generator.html#a212b9cb8b1e44386156b67e069e76e9d"/>
+      </topic>
+    </topic>
+    <topic label="Class Index" href="classes.html"/>
+    <topic label="Class Hierarchy" href="hierarchy.html">
+      <topic label="__yal_logger_vars" href="d3/d47/struct____yal__logger__vars.html"/>
+      <topic label="protocol_simulator" href="da/d73/classprotocol__simulator.html">
+        <topic label="corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html">
+          <topic label="abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html">
+            <topic label="receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html">
+              <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html"/>
+              <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html"/>
+            </topic>
+          </topic>
+          <topic label="abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html">
+            <topic label="k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html">
+              <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html"/>
+            </topic>
+            <topic label="send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html">
+              <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html"/>
+            </topic>
+          </topic>
+        </topic>
+      </topic>
+      <topic label="random_generator" href="d8/de8/classrandom__generator.html"/>
+      <topic label="scoped_lock" href="d8/d0a/classscoped__lock.html"/>
+      <topic label="simulation_parameters_t" href="d6/da9/structsimulation__parameters__t.html"/>
+      <topic label="stake_distribution_generator" href="da/d55/classstake__distribution__generator.html"/>
+    </topic>
+    <topic label="Class Members" href="functions.html">
+      <topic label="All" href="functions.html"/>
+      <topic label="Functions" href="functions_func.html"/>
+      <topic label="Variables" href="functions_vars.html"/>
+    </topic>
+  </topic>
+  <topic label="Files" href="files.html">
+    <topic label="File List" href="files.html">
+      <topic label="include" href="dir_d44c64559bbebec7f509842c48db8b23.html">
+        <topic label="abstract_receive_protocol_simulator.h" href="df/d52/abstract__receive__protocol__simulator_8h.html">
+          <topic label="abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html">
+            <topic label="abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html#a3b46d251f7e12c4071ea8c6b50ebb6f5"/>
+            <topic label="~abstract_receive_protocol_simulator" href="d6/d8a/classabstract__receive__protocol__simulator.html#abb3db351991008a043865413a1850ba7"/>
+            <topic label="get_request_targets" href="d6/d8a/classabstract__receive__protocol__simulator.html#a2370c93b9ed1fcb8bfdf9f62058517bb"/>
+            <topic label="handle_all_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#a69a572593919bc5fc58fd226917ac1b8"/>
+            <topic label="handle_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#abf3b71be21c5ef4e81a20d6e3cb03998"/>
+            <topic label="make_requests" href="d6/d8a/classabstract__receive__protocol__simulator.html#a3c15dca1afe6b22c81162226e78e9774"/>
+            <topic label="protocol_round" href="d6/d8a/classabstract__receive__protocol__simulator.html#adf5a0466e9eef38769f0874d2f5a2235"/>
+            <topic label="request" href="d6/d8a/classabstract__receive__protocol__simulator.html#a91586406cbd10cef155b8cdcc85a907f"/>
+            <topic label="requesters" href="d6/d8a/classabstract__receive__protocol__simulator.html#a21abfffe6121138d52b24eadf06e02b2"/>
+          </topic>
+          <topic label="__ABS_RCV_PROT__" href="df/d52/abstract__receive__protocol__simulator_8h.html#a56d7b17479abefe4398623eae984e365"/>
+        </topic>
+        <topic label="abstract_send_protocol_simulator.h" href="d9/d95/abstract__send__protocol__simulator_8h.html">
+          <topic label="abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html">
+            <topic label="abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html#a57dcb07681bda8383837351c18c0113f"/>
+            <topic label="~abstract_send_protocol_simulator" href="da/d2c/classabstract__send__protocol__simulator.html#a95cd52c27d8634c2e623992ce8e36fe2"/>
+            <topic label="get_targets_to_send" href="da/d2c/classabstract__send__protocol__simulator.html#ac07182836bd062fc933c6ee121e38dd5"/>
+            <topic label="protocol_round" href="da/d2c/classabstract__send__protocol__simulator.html#aee41ecec6a67bd051ca9fb8205c505de"/>
+            <topic label="set_sender" href="da/d2c/classabstract__send__protocol__simulator.html#aa2fa31984a806379762373043a950cd2"/>
+            <topic label="forward" href="da/d2c/classabstract__send__protocol__simulator.html#a332e93e925765b277d9a312aad8ef4fb"/>
+            <topic label="to_send" href="da/d2c/classabstract__send__protocol__simulator.html#a8cf0d48105aa99e879cb298d09676236"/>
+          </topic>
+        </topic>
+        <topic label="corruptions_stake_protocol_simulator.h" href="d8/de7/corruptions__stake__protocol__simulator_8h.html">
+          <topic label="corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html">
+            <topic label="corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a14d846325031ff8c347af0eb5e25a85f"/>
+            <topic label="~corruptions_stake_protocol_simulator" href="df/dcc/classcorruptions__stake__protocol__simulator.html#adccbac90144987eca233835251962f1c"/>
+            <topic label="adversary" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a1d562064fce83ff2f9a4c10a037475b0"/>
+            <topic label="all_got_msg" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a449467e89c244361c42c436829f036b9"/>
+            <topic label="corrupt_parties" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ac030d874258d12f52055090f009edf4f"/>
+            <topic label="get_corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a3646d45aef9d5a466a104576ab0dcd2c"/>
+            <topic label="get_latency" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ad066fd987dfceb49ac57eaf48abca38e"/>
+            <topic label="get_stakes" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a445b8b2a088664cac3486312e9bff441"/>
+            <topic label="get_total_stake" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ae67ba716dae2c5d267b9f0af0264f39a"/>
+            <topic label="is_corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a5169cad397e1d5b9b07b2564c2d0a8ce"/>
+            <topic label="owner_of" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a7720eec8efd57784339eb1652dabc4a5"/>
+            <topic label="protocol_round" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a94baf23cae4b9f50de77925fbcb28139"/>
+            <topic label="round" href="df/dcc/classcorruptions__stake__protocol__simulator.html#aba59185d2ec654dfbb848373a1ca0a23"/>
+            <topic label="corrupted" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ab4ddaf369777391dabd2a7f72016fbc0"/>
+            <topic label="stakes" href="df/dcc/classcorruptions__stake__protocol__simulator.html#ad6d51f965ff2734535ce90e92eaef884"/>
+            <topic label="total_stake" href="df/dcc/classcorruptions__stake__protocol__simulator.html#a61b347b79c123ab7c86811a08cc159d7"/>
+          </topic>
+          <topic label="adversary_phase" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a62818538c4d7aa5301fa38b8eedf1c91">
+            <topic label="begin" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a62818538c4d7aa5301fa38b8eedf1c91a6e2739552f337cfb632f5afc4a10892b"/>
+            <topic label="end" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a62818538c4d7aa5301fa38b8eedf1c91a80b1a820e533d7cf0e1715319339e6d0"/>
+          </topic>
+          <topic label="corrupt_parties_by_stake" href="d8/de7/corruptions__stake__protocol__simulator_8h.html#a0d8920b86a4be8609c9322366f4e65aa"/>
+        </topic>
+        <topic label="generate_stake_distribution.h" href="d3/d41/generate__stake__distribution_8h.html">
+          <topic label="stake_distribution_generator" href="da/d55/classstake__distribution__generator.html">
+            <topic label="stake_distribution_generator" href="da/d55/classstake__distribution__generator.html#ad2d00f29822b4014bcab6a170570e48d"/>
+            <topic label="add_to_stake_distribution" href="da/d55/classstake__distribution__generator.html#a3bc8bc85a9a0696fa5e28a160084cf52"/>
+            <topic label="constant_stake" href="da/d55/classstake__distribution__generator.html#af5c65ab784b15f01894e7130cc0bb661"/>
+            <topic label="exponential_heaviest_stake" href="da/d55/classstake__distribution__generator.html#a7d9491cb9cab713369ec6bfc8571e6d2"/>
+            <topic label="exponential_lightest_stake" href="da/d55/classstake__distribution__generator.html#a13516e17aa69d2c5bc08f27ca46a0e18"/>
+            <topic label="exponential_median_stake" href="da/d55/classstake__distribution__generator.html#a0ea9a4e1e4ae36b4363cc6d1895ccddd"/>
+            <topic label="exponential_stake" href="da/d55/classstake__distribution__generator.html#a279245440e8ff85d949bf79678d06835"/>
+            <topic label="few_heavy_heavy_stake" href="da/d55/classstake__distribution__generator.html#aabe7ac745502142170a455e778fb8f02"/>
+            <topic label="few_heavy_light_stake" href="da/d55/classstake__distribution__generator.html#abb8a24681627c5acb7c5162cb8e75181"/>
+            <topic label="few_heavy_stake" href="da/d55/classstake__distribution__generator.html#a2ab28c3e08050c17996b286e586ea6b3"/>
+            <topic label="mult_stake_distribution" href="da/d55/classstake__distribution__generator.html#ad5c738c634d33b3f24164ed149ea3245"/>
+            <topic label="sample_exponential_stake" href="da/d55/classstake__distribution__generator.html#aa118b134d691fb6392ec512bd3c01fa8"/>
+            <topic label="sample_geometric_stake" href="da/d55/classstake__distribution__generator.html#ae268154266dd8211b2d0aa95572b174e"/>
+            <topic label="sample_uniform_stake" href="da/d55/classstake__distribution__generator.html#a7ea2cb646581cf3bae6388cb3f712ef3"/>
+            <topic label="rd" href="da/d55/classstake__distribution__generator.html#abc2bdf5f37655be114c3377b7acf355b"/>
+            <topic label="re" href="da/d55/classstake__distribution__generator.html#a212b9cb8b1e44386156b67e069e76e9d"/>
+          </topic>
+        </topic>
+        <topic label="hybrid_k_out_protocol_simulator.h" href="dc/da4/hybrid__k__out__protocol__simulator_8h.html">
+          <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html">
+            <topic label="hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html#ad8593f9e4d08ffe4481f3d77e1818fc9"/>
+            <topic label="~hybrid_k_out_protocol_simulator" href="d7/d76/classhybrid__k__out__protocol__simulator.html#ae8a990294f15baf92fa9b2a7a5751b65"/>
+            <topic label="protocol_round" href="d7/d76/classhybrid__k__out__protocol__simulator.html#abaa9d46add9c22e10fc6b375a3a099ae"/>
+          </topic>
+          <topic label="__HYBRID_K_OUT_PROT__" href="dc/da4/hybrid__k__out__protocol__simulator_8h.html#af687cb3cdeba57cc56bffe38f25dd542"/>
+        </topic>
+        <topic label="hybrid_protocol_simulator.h" href="de/dc2/hybrid__protocol__simulator_8h.html">
+          <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html">
+            <topic label="hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html#ae7d38b3f0ca1bca37de105a0c72b7c24"/>
+            <topic label="~hybrid_protocol_simulator" href="d0/d86/classhybrid__protocol__simulator.html#a3c106d7d75cc74df491009a0426e6633"/>
+            <topic label="protocol_round" href="d0/d86/classhybrid__protocol__simulator.html#aac86962eb805047b0ce80c8ec214ac3b"/>
+          </topic>
+          <topic label="__HYBRID_PROT__" href="de/dc2/hybrid__protocol__simulator_8h.html#ad97fcd6cf09085f8c49bb3c9a145e4d7"/>
+        </topic>
+        <topic label="k_out_protocol_simulator.h" href="d8/d9d/k__out__protocol__simulator_8h.html">
+          <topic label="k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html">
+            <topic label="k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html#a827496dd1e522deff5d24b8a3a043c50"/>
+            <topic label="~k_out_protocol_simulator" href="de/d66/classk__out__protocol__simulator.html#ac7980fc23b74071bb991da2358d86341"/>
+            <topic label="all_got_msg" href="de/d66/classk__out__protocol__simulator.html#a54bd1d1743874ab25e1b83b3ee1a713a"/>
+            <topic label="get_get_nr_targets" href="de/d66/classk__out__protocol__simulator.html#a7b4d653080a4d9994d7561fbb866312b"/>
+            <topic label="get_imitation_function" href="de/d66/classk__out__protocol__simulator.html#a7a104ae9ece4c36b9ae9e65bf83efd68"/>
+            <topic label="get_targets_to_send" href="de/d66/classk__out__protocol__simulator.html#a3c274d4b9089c31d5622ab330f83d488"/>
+            <topic label="get_nr_targets" href="de/d66/classk__out__protocol__simulator.html#a055b598ee2d4a81069baf3f9ebba5a8a"/>
+            <topic label="histogram" href="de/d66/classk__out__protocol__simulator.html#a90671dee21c088e360ba944dba000599"/>
+            <topic label="histogram_interval_size" href="de/d66/classk__out__protocol__simulator.html#a84e3fc8bdd845cbd9366cfaa0f5bf91c"/>
+            <topic label="imitation_function" href="de/d66/classk__out__protocol__simulator.html#a07e576972f42c28a6fa08eca1cb1f4f1"/>
+            <topic label="re" href="de/d66/classk__out__protocol__simulator.html#a1467f8607c8c6ae3090cab7e88c78152"/>
+            <topic label="sample_domain" href="de/d66/classk__out__protocol__simulator.html#a086dab9865a615820abe3ee8fb89052d"/>
+            <topic label="total_imitated_nodes" href="de/d66/classk__out__protocol__simulator.html#a11b0a9b59b0a4fe14c74cbec805e2590"/>
+          </topic>
+        </topic>
+        <topic label="protocol_simulator.h" href="dc/d8d/protocol__simulator_8h.html">
+          <topic label="protocol_simulator" href="da/d73/classprotocol__simulator.html">
+            <topic label="protocol_simulator" href="da/d73/classprotocol__simulator.html#ac155584c8b2507f0b972126dd508e0b0"/>
+            <topic label="~protocol_simulator" href="da/d73/classprotocol__simulator.html#a363feeb25419969181b4ea0085c5bbfd"/>
+            <topic label="all_got_msg" href="da/d73/classprotocol__simulator.html#a0d8cf460e399ddf68f654a00170ad42c"/>
+            <topic label="execute_protocol" href="da/d73/classprotocol__simulator.html#aa75378e2d279f5472917df08f0fe45fc"/>
+            <topic label="get_got_msg" href="da/d73/classprotocol__simulator.html#ab4196edb089e29a7bee4b6c51869357c"/>
+            <topic label="get_latency" href="da/d73/classprotocol__simulator.html#af9ddc132debbd0581acced12f95d8c30"/>
+            <topic label="get_nr_messages" href="da/d73/classprotocol__simulator.html#ae42518b61ffc08382f093dfedb2ef590"/>
+            <topic label="get_nr_messages_per_round" href="da/d73/classprotocol__simulator.html#abaef20a8dec4f3f342eec22f4823bb20"/>
+            <topic label="get_nr_parties" href="da/d73/classprotocol__simulator.html#a1a45b248f09cda8e9ca8c885d2775988"/>
+            <topic label="get_nr_parties" href="da/d73/classprotocol__simulator.html#a26d894710b5794e6a9c2f718255aed06"/>
+            <topic label="has_received" href="da/d73/classprotocol__simulator.html#ad041fc1c666e5ad97abfe5dc6ac6f67c"/>
+            <topic label="receive" href="da/d73/classprotocol__simulator.html#ae3658fade13d99f1ddae86e09f17a915"/>
+            <topic label="round" href="da/d73/classprotocol__simulator.html#a9749c6601179022d496c3b837d240159"/>
+            <topic label="set_sender" href="da/d73/classprotocol__simulator.html#a27b719452a52d3a45bfbbcdd0e1364e1"/>
+            <topic label="curr_round" href="da/d73/classprotocol__simulator.html#a195abb95c64b4cb553e48bac06eeeeef"/>
+            <topic label="got_msg" href="da/d73/classprotocol__simulator.html#aac30d57c9c2dba8294a8fd97717361dd"/>
+            <topic label="nr_messages" href="da/d73/classprotocol__simulator.html#aca9481cafbc75aec36ec4fc70360c463"/>
+            <topic label="nr_parties" href="da/d73/classprotocol__simulator.html#aa5d3c93bddd270e9eb467b0003555e96"/>
+          </topic>
+        </topic>
+        <topic label="random_sampler.h" href="d7/d90/random__sampler_8h.html">
+          <topic label="sample" href="d7/d90/random__sampler_8h.html#ad429cd9ac9581d0745051cb17abfb4ac"/>
+        </topic>
+        <topic label="random_utils.h" href="d6/d74/random__utils_8h.html">
+          <topic label="random_generator" href="d8/de8/classrandom__generator.html">
+            <topic label="random_generator" href="d8/de8/classrandom__generator.html#a1a7beb8bf7a6e2603bc68dbf7cd3aabc"/>
+            <topic label="~random_generator" href="d8/de8/classrandom__generator.html#aac22bfb94be1be4dca5aeef0edaed43b"/>
+            <topic label="get_random_engine" href="d8/de8/classrandom__generator.html#a3b27657e8762df45f7d22f9bcd728de1"/>
+            <topic label="mutex" href="d8/de8/classrandom__generator.html#ab28df7fb26f7f6d0eb98e58356aa3d70"/>
+            <topic label="re" href="d8/de8/classrandom__generator.html#ac96cbfbbdadd99bcc325995e24910d39"/>
+            <topic label="seeds" href="d8/de8/classrandom__generator.html#a2c6c74ebed5d1ef0d2c47995426a0e8c"/>
+          </topic>
+          <topic label="get_random_generator" href="d6/d74/random__utils_8h.html#a1a5ba40472fce10bb1af5db44829b97b"/>
+          <topic label="init_random_utils" href="d6/d74/random__utils_8h.html#a1d7a32b3a4c548edb7d0a4f9d98345d2"/>
+        </topic>
+        <topic label="receiver_protocol_simulator.h" href="da/dd8/receiver__protocol__simulator_8h.html">
+          <topic label="receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html">
+            <topic label="receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html#a368af89e03bcb1464571c8cf080f8a04"/>
+            <topic label="~receiver_protocol_simulator" href="d2/d21/classreceiver__protocol__simulator.html#a7c0277cf4a130417d0ca98dc2c5c4fe0"/>
+            <topic label="get_request_targets" href="d2/d21/classreceiver__protocol__simulator.html#a3fb6e4c133f9f96eae70f1e71fb4a609"/>
+            <topic label="handle_requests" href="d2/d21/classreceiver__protocol__simulator.html#a1fc46af49c70c2a1d3699d689c2f36bd"/>
+            <topic label="request" href="d2/d21/classreceiver__protocol__simulator.html#af7f39cb1e2e71c446d7f29e26914e1ef"/>
+            <topic label="get_nr_requests" href="d2/d21/classreceiver__protocol__simulator.html#ae63e55a5f39ee34823b1013dfd26b71e"/>
+            <topic label="get_nr_requests_to_handle" href="d2/d21/classreceiver__protocol__simulator.html#a45330ab702f71916c59cb8e5bc2cf4ef"/>
+            <topic label="re" href="d2/d21/classreceiver__protocol__simulator.html#a1d355c0dfa36de2f240feaf3cd68a83f"/>
+            <topic label="unif_coin" href="d2/d21/classreceiver__protocol__simulator.html#a45ded52a6e25d27cba90b81f20a4e961"/>
+          </topic>
+        </topic>
+        <topic label="send_protocol_simulator.h" href="d5/d9b/send__protocol__simulator_8h.html">
+          <topic label="send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html">
+            <topic label="send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html#a5c904815cfa1f385ab5d2526bd0a90b3"/>
+            <topic label="~send_protocol_simulator" href="df/d1d/classsend__protocol__simulator.html#a3fc069271005f8bc6874b1259702d251"/>
+            <topic label="get_targets_to_send" href="df/d1d/classsend__protocol__simulator.html#a9957ed3fd1b162ce4eb992e2f229da9c"/>
+            <topic label="send" href="df/d1d/classsend__protocol__simulator.html#ac692877ced569151c4df5ecb4a71e7f8"/>
+            <topic label="re" href="df/d1d/classsend__protocol__simulator.html#a440a5ecf7bce72a2e8493b6fe0303956"/>
+            <topic label="send_prob" href="df/d1d/classsend__protocol__simulator.html#a556b096d9ed87007fc54e710624f1da6"/>
+            <topic label="unif" href="df/d1d/classsend__protocol__simulator.html#a1dd1301535738a09591965a005024ada"/>
+          </topic>
+        </topic>
+        <topic label="types.h" href="d9/d49/types_8h.html">
+          <topic label="CORRUPTION_T_MAX" href="d9/d49/types_8h.html#a8759b72bbce8bdea9d959faac9c6bc55"/>
+          <topic label="COUNTER_T_MAX" href="d9/d49/types_8h.html#a3b34c8649984cee742c66ebb2f3a60d5"/>
+          <topic label="PARTY_T_MAX" href="d9/d49/types_8h.html#a1e29b0301a102ede56a2ca5bb42eaebb"/>
+          <topic label="ROUND_T_MAX" href="d9/d49/types_8h.html#a19c1ce9401ce3a01d6ccf232f08ad1bf"/>
+          <topic label="STAKE_T_MAX" href="d9/d49/types_8h.html#aaa8fe6fa165264ba83e772896c7cd4c5"/>
+          <topic label="corruption_t" href="d9/d49/types_8h.html#ab7662475b458e14534004c28ee68aebb"/>
+          <topic label="counter_t" href="d9/d49/types_8h.html#afd03de299b5a99fd58a54cdc55cc04fe"/>
+          <topic label="party_t" href="d9/d49/types_8h.html#a82187f179e537bebf2170deb85c3d6a8"/>
+          <topic label="round_t" href="d9/d49/types_8h.html#a4f4e83773e5110174ea5b38137e1a6f6"/>
+          <topic label="stake_t" href="d9/d49/types_8h.html#a9d08d501a63aaa3f54930ebf35037298"/>
+        </topic>
+      </topic>
+      <topic label="src" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">
+        <topic label="abstract_receive_protocol_simulator.cc" href="de/d4e/abstract__receive__protocol__simulator_8cc.html"/>
+        <topic label="abstract_send_protocol_simulator.cc" href="db/d9d/abstract__send__protocol__simulator_8cc.html"/>
+        <topic label="corruptions_stake_protocol_simulator.cc" href="de/de3/corruptions__stake__protocol__simulator_8cc.html"/>
+        <topic label="generate_stake_distribution.cc" href="da/d88/generate__stake__distribution_8cc.html"/>
+        <topic label="hybrid_k_out_protocol_simulator.cc" href="da/d60/hybrid__k__out__protocol__simulator_8cc.html"/>
+        <topic label="hybrid_protocol_simulator.cc" href="df/dcd/hybrid__protocol__simulator_8cc.html"/>
+        <topic label="k_out_protocol_simulator.cc" href="dd/d36/k__out__protocol__simulator_8cc.html"/>
+        <topic label="protocol_simulator.cc" href="d5/d6a/protocol__simulator_8cc.html"/>
+        <topic label="random_sampler.cc" href="dd/d27/random__sampler_8cc.html"/>
+        <topic label="random_utils.cc" href="dc/dda/random__utils_8cc.html"/>
+        <topic label="receiver_protocol_simulator.cc" href="d8/db4/receiver__protocol__simulator_8cc.html"/>
+        <topic label="send_protocol_simulator.cc" href="d9/d76/send__protocol__simulator_8cc.html"/>
+      </topic>
+      <topic label="utils" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">
+        <topic label="io_stake_distribution.cc" href="db/dd2/io__stake__distribution_8cc.html">
+          <topic label="output_stake_distribution" href="db/dd2/io__stake__distribution_8cc.html#a61a25614e8ba7b65d34005ba3255900b"/>
+          <topic label="read_stake_distribution_file" href="db/dd2/io__stake__distribution_8cc.html#a783aee589f9c0386540a44d1bf27769f"/>
+          <topic label="write_stake_distribution_file" href="db/dd2/io__stake__distribution_8cc.html#a78a2ff5f824adf1541b6eb5465ab05c9"/>
+        </topic>
+        <topic label="io_stake_distribution.h" href="da/d3f/io__stake__distribution_8h.html">
+          <topic label="output_stake_distribution" href="da/d3f/io__stake__distribution_8h.html#ad9b83d1d75c17d23d3b787186da018a1"/>
+          <topic label="read_stake_distribution_file" href="da/d3f/io__stake__distribution_8h.html#a783aee589f9c0386540a44d1bf27769f"/>
+          <topic label="write_stake_distribution_file" href="da/d3f/io__stake__distribution_8h.html#ac3e90bbf147f4fb27315efb01f7b7dd6"/>
+        </topic>
+        <topic label="main_utils.cc" href="df/d31/main__utils_8cc.html">
+          <topic label="generate_stake_distribution" href="df/d31/main__utils_8cc.html#a3201d4e5bc0eff5d7dd5c0993b5aaa34"/>
+          <topic label="get_corrupted_parties" href="df/d31/main__utils_8cc.html#a17e1a5d2f144555f81b2bed8a6ca7cd4"/>
+          <topic label="init" href="df/d31/main__utils_8cc.html#a02fd73d861ef2e4aabb38c0c9ff82947"/>
+          <topic label="run_command_parameters" href="df/d31/main__utils_8cc.html#a8f4afe28d9c87b5957823f96ebe7dd48"/>
+          <topic label="run_tests" href="df/d31/main__utils_8cc.html#ab6eeb5057bbcd5d015f107a15ffd215b"/>
+          <topic label="run_tests" href="df/d31/main__utils_8cc.html#ad944ce1f7580051626a657c82264ac05"/>
+          <topic label="show_distribution_info" href="df/d31/main__utils_8cc.html#a4a5dbbd7c40fe6e2edd8785be992bca6"/>
+          <topic label="show_run_data" href="df/d31/main__utils_8cc.html#ad1b6cbe8df7ce0708db2a999eabbc1f4"/>
+        </topic>
+        <topic label="main_utils.h" href="d0/d8b/main__utils_8h.html">
+          <topic label="generate_stake_distribution" href="d0/d8b/main__utils_8h.html#a1874e788f772b77f57338abfa6a37baf"/>
+          <topic label="get_corrupted_parties" href="d0/d8b/main__utils_8h.html#a17e1a5d2f144555f81b2bed8a6ca7cd4"/>
+          <topic label="init" href="d0/d8b/main__utils_8h.html#a02fd73d861ef2e4aabb38c0c9ff82947"/>
+          <topic label="run_command_parameters" href="d0/d8b/main__utils_8h.html#a8f4afe28d9c87b5957823f96ebe7dd48"/>
+          <topic label="run_tests" href="d0/d8b/main__utils_8h.html#af2d36ae7089940a56b91b8191110db06"/>
+          <topic label="show_distribution_info" href="d0/d8b/main__utils_8h.html#a4a5dbbd7c40fe6e2edd8785be992bca6"/>
+          <topic label="show_run_data" href="d0/d8b/main__utils_8h.html#a5f30243e0a2524183974a11ae9019e04"/>
+        </topic>
+        <topic label="parallel_utils.h" href="d3/d7a/parallel__utils_8h.html">
+          <topic label="num_cpus" href="d3/d7a/parallel__utils_8h.html#a23e52f0b7ab0101f944293ed851bccf0"/>
+        </topic>
+        <topic label="read_args.cc" href="d7/d0c/read__args_8cc.html"/>
+        <topic label="read_args.h" href="d1/dde/read__args_8h.html">
+          <topic label="simulation_parameters_t" href="d6/da9/structsimulation__parameters__t.html">
+            <topic label="corruption_strategy" href="d6/da9/structsimulation__parameters__t.html#a5dc13eb28e84fa10f8f0915695b45d84"/>
+            <topic label="corruption_threshold" href="d6/da9/structsimulation__parameters__t.html#adfb6968457c5d2ea65a110ec34eb32a9"/>
+            <topic label="max_factor" href="d6/da9/structsimulation__parameters__t.html#a2ae6803a691d1a6016e75ae392c635fd"/>
+            <topic label="max_nr_parties" href="d6/da9/structsimulation__parameters__t.html#ae95b7af7d4fb9d22bca818cfca9d9c32"/>
+            <topic label="min_factor" href="d6/da9/structsimulation__parameters__t.html#a91db0e2c4b47594b830de790fedbc5c8"/>
+            <topic label="min_nr_parties" href="d6/da9/structsimulation__parameters__t.html#a9e47a83011545a35009a8ab6cdb5b464"/>
+            <topic label="nr_heavy_parties" href="d6/da9/structsimulation__parameters__t.html#aed27c61b82ee2ed89aa73ee6e45ed5f4"/>
+            <topic label="ratio_heavy_light" href="d6/da9/structsimulation__parameters__t.html#ad34e2f0f87671a072156a0ece56c6027"/>
+            <topic label="runs" href="d6/da9/structsimulation__parameters__t.html#aebd105f6d3a3a3a9635becb627eda0e8"/>
+            <topic label="tests" href="d6/da9/structsimulation__parameters__t.html#a6803bd6f89e0122c7b3bf50af64714b2"/>
+            <topic label="to_show" href="d6/da9/structsimulation__parameters__t.html#ab94e4551c8b53adde258d914058af61b"/>
+          </topic>
+          <topic label="CORR_HEAVY_FIRST" href="d1/dde/read__args_8h.html#a8d8dd062fc745e51e91e13bc857fa68a"/>
+          <topic label="CORR_LIGHT_FIRST" href="d1/dde/read__args_8h.html#a5c901f8fd6a9e2da5042981113b96b35"/>
+          <topic label="CORR_RAND" href="d1/dde/read__args_8h.html#a0d026ad35bcf855be09ecdd5d7f94bc3"/>
+          <topic label="CORR_TYPES" href="d1/dde/read__args_8h.html#a14c47d44c6631e893b453751a3461329"/>
+          <topic label="DET_CONST_DIST" href="d1/dde/read__args_8h.html#a23858f91d0a8d9511f744532e903fd50"/>
+          <topic label="DET_EXP_HEAVY_DIST" href="d1/dde/read__args_8h.html#a09139ba66c1cb90d2891f76ff524a223"/>
+          <topic label="DET_EXP_LIGHT_DIST" href="d1/dde/read__args_8h.html#a77e4ba1fdc417be67c56164f047d05c4"/>
+          <topic label="DET_EXP_MEDN_DIST" href="d1/dde/read__args_8h.html#af6e0cc51561c30ecdeb804889971d16a"/>
+          <topic label="DET_FH_HEAVY_DIST" href="d1/dde/read__args_8h.html#a0d5322986f7c790dce112725385d08ca"/>
+          <topic label="DET_FH_LIGHT_DIST" href="d1/dde/read__args_8h.html#a719713fdc7f7f87166f78fc91a55894d"/>
+          <topic label="NO_CORR" href="d1/dde/read__args_8h.html#ad145ca448e147deea4a9998dece81591"/>
+          <topic label="NR_ARGS" href="d1/dde/read__args_8h.html#a6ae2836c2ea2c48f87d9d732342dc643"/>
+          <topic label="NR_OUTPUTS_SHOW" href="d1/dde/read__args_8h.html#a057166f30e780dc0589aca41f33c4b28"/>
+          <topic label="RAND_EXP_RAND_SND_DIST" href="d1/dde/read__args_8h.html#a94f39ba3e08874d0c8660a5f505f973f"/>
+          <topic label="RAND_GEOM_RAND_SND_DIST" href="d1/dde/read__args_8h.html#a0b0c83f7efead5d88d027589476794a5"/>
+          <topic label="RAND_UNIF_RAND_SND_DIST" href="d1/dde/read__args_8h.html#a052b1f0ea227e348170e9763a4a3711e"/>
+          <topic label="SHOW_DISTRIBUTION" href="d1/dde/read__args_8h.html#aee36e35001bde717eee93f748ff2608e"/>
+          <topic label="SHOW_FACTOR" href="d1/dde/read__args_8h.html#af03b4cce66df27a2fe1136a6fccea518"/>
+          <topic label="SHOW_NR_PARTIES" href="d1/dde/read__args_8h.html#a8109191f903863feb2813754155d8b4c"/>
+          <topic label="SHOW_SUCCESS" href="d1/dde/read__args_8h.html#a962ecd6fdde1380971e6bcc50f37d462"/>
+          <topic label="SHOW_TEST" href="d1/dde/read__args_8h.html#a0104c40024a5f5b6c257ac14351aae2a"/>
+          <topic label="TEST_TYPES" href="d1/dde/read__args_8h.html#aa21c996aadce8ae75772cbc3b8793842"/>
+          <topic label="print_arguments" href="d1/dde/read__args_8h.html#ace53a789f43b8a145c21afdb23d2576b"/>
+          <topic label="print_parameters" href="d1/dde/read__args_8h.html#a4d15e274f5db9e703aab8c9e3cecf8f4"/>
+          <topic label="read_parameters" href="d1/dde/read__args_8h.html#a2531e6fc200c8f6d56040f8e8c9d9a4b"/>
+        </topic>
+        <topic label="scoped_lock.cc" href="dc/dab/scoped__lock_8cc.html"/>
+        <topic label="scoped_lock.h" href="da/d10/scoped__lock_8h.html">
+          <topic label="scoped_lock" href="d8/d0a/classscoped__lock.html">
+            <topic label="scoped_lock" href="d8/d0a/classscoped__lock.html#aecd3b5a6520d3ef2476faccbb7dc88c2"/>
+            <topic label="~scoped_lock" href="d8/d0a/classscoped__lock.html#a7506aa888be431b91c11d190b0771249"/>
+            <topic label="del_lock" href="d8/d0a/classscoped__lock.html#aef974c958ae625bfd67d722c05f4d0e7"/>
+            <topic label="init_lock" href="d8/d0a/classscoped__lock.html#ad6ed5a1d30946adfb453e68aca4bfe1c"/>
+            <topic label="l" href="d8/d0a/classscoped__lock.html#a66c55d1523cc10471397cb953fd7c7cd"/>
+          </topic>
+        </topic>
+        <topic label="yal_log.cc" href="d7/d36/yal__log_8cc.html"/>
+        <topic label="yal_log.h" href="d0/d70/yal__log_8h.html">
+          <topic label="__yal_logger_vars" href="d3/d47/struct____yal__logger__vars.html">
+            <topic label="dbg_lvl" href="d3/d47/struct____yal__logger__vars.html#a7855656a461e0c8b24184a1ba276d64f"/>
+            <topic label="output" href="d3/d47/struct____yal__logger__vars.html#a1ef87a6c693b9b22138e0ec6c7f24ae4"/>
+          </topic>
+          <topic label="__yal_close_log_file" href="d0/d70/yal__log_8h.html#a6cc7aed57553715c05b9b256d6ada7c1"/>
+          <topic label="__YAL_DBG" href="d0/d70/yal__log_8h.html#a870278a657e74435d62684501c208d39"/>
+          <topic label="__YAL_ERROR" href="d0/d70/yal__log_8h.html#aee0ed93d23266681a0f9d395572f05a8"/>
+          <topic label="__YAL_INFO" href="d0/d70/yal__log_8h.html#aa60136c17617acba656334cdac4db9f6"/>
+          <topic label="__yal_init_logger" href="d0/d70/yal__log_8h.html#a34c71704af1fc97ea705596fb80946ca"/>
+          <topic label="__yal_log" href="d0/d70/yal__log_8h.html#aa1a44fc89acffe0e9ceb68840e2516b9"/>
+          <topic label="__yal_logging" href="d0/d70/yal__log_8h.html#a2ba8ef212269f3b316ba6a1a7d7d968d"/>
+          <topic label="__yal_set_log_file" href="d0/d70/yal__log_8h.html#a73d40cd05c195c239e16041b42b2c250"/>
+          <topic label="__yal_set_lvl_dbg" href="d0/d70/yal__log_8h.html#a62a126ec06f1dadcc7c9221ed285cc29"/>
+          <topic label="__yal_set_lvl_err" href="d0/d70/yal__log_8h.html#abfd9b4aad3b35fcddff37a5eb46483d1"/>
+          <topic label="__yal_set_lvl_info" href="d0/d70/yal__log_8h.html#a87103a740d52e7f53735ab475524d9ad"/>
+          <topic label="__yal_set_lvl_warn" href="d0/d70/yal__log_8h.html#a522775dcf28a2a2f7e9450d1dc05a369"/>
+          <topic label="__yal_set_output" href="d0/d70/yal__log_8h.html#a01bcf2ce5265aa2ee4022f110f454411"/>
+          <topic label="__YAL_WARN" href="d0/d70/yal__log_8h.html#aa611c34e5375dee84278d5391c50af58"/>
+        </topic>
+      </topic>
+      <topic label="benchmark.cc" href="d5/d37/benchmark_8cc.html">
+        <topic label="get_maximum_latency" href="d5/d37/benchmark_8cc.html#a1eecf481f3eeba3cdddf26c208e5507a"/>
+        <topic label="get_minimum_success_prob" href="d5/d37/benchmark_8cc.html#a817b47edcb712257bae32a9b6ee1a23e"/>
+        <topic label="main" href="d5/d37/benchmark_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627"/>
+        <topic label="open_file_with_header" href="d5/d37/benchmark_8cc.html#a670aa533160fc691ac12b90080025dc4"/>
+        <topic label="plot" href="d5/d37/benchmark_8cc.html#aabb608c334e3f2d2f3b3d5520b56903c"/>
+        <topic label="plot_graph_1_3" href="d5/d37/benchmark_8cc.html#ad5f14834828d0d7a94cf4be286397e52"/>
+        <topic label="plot_graph_2_4" href="d5/d37/benchmark_8cc.html#a4e52a32ecd48cbcdcd7b1765d8a066b2"/>
+        <topic label="plot_graph_5" href="d5/d37/benchmark_8cc.html#acc954800ffa480f4eac9b6544883f1bc"/>
+        <topic label="plot_graph_6" href="d5/d37/benchmark_8cc.html#a36f3d599aaf7504a3874d775ed51dcd2"/>
+        <topic label="base_path" href="d5/d37/benchmark_8cc.html#a69229897870807b29208ea9b08f9e241"/>
+        <topic label="default_corruptions" href="d5/d37/benchmark_8cc.html#ae914e5607c43bf56f8dcc04ac58d2ce7"/>
+        <topic label="default_dist_types" href="d5/d37/benchmark_8cc.html#a18eb8c733d819fb7c9c1af7d61384895"/>
+        <topic label="default_dists_exp" href="d5/d37/benchmark_8cc.html#aec7f33d186f01afbdc3f6f60bb186cd1"/>
+        <topic label="default_dists_fh" href="d5/d37/benchmark_8cc.html#afc9733bc03a239d6cb30b2fc95fbc842"/>
+        <topic label="default_dists_unif" href="d5/d37/benchmark_8cc.html#a56713f028364e59c385e602f189ffe15"/>
+        <topic label="default_max_factor" href="d5/d37/benchmark_8cc.html#a7653812cf821cd6d87b72ff38ed39226"/>
+        <topic label="default_min_factor" href="d5/d37/benchmark_8cc.html#a1f7094f6fd94d4555c155caa8372a1c7"/>
+        <topic label="default_nr_parties_tests" href="d5/d37/benchmark_8cc.html#a2a0bd74e2b0a4f2b5a5b1be1177c24c5"/>
+        <topic label="default_runs" href="d5/d37/benchmark_8cc.html#af4e16b24bcccf8677cf5f793c04dec21"/>
+        <topic label="default_simulator_constructor" href="d5/d37/benchmark_8cc.html#aa6d91deb8db78767457c9841ea999faf"/>
+        <topic label="default_total_messages_calculator" href="d5/d37/benchmark_8cc.html#a01899997655721fea68898124961f019"/>
+        <topic label="stake_independent_simulator_constructor" href="d5/d37/benchmark_8cc.html#a8aff910be009b5349b53daa1e0b866fa"/>
+        <topic label="stake_independent_total_messages_calculator" href="d5/d37/benchmark_8cc.html#adee3e916b0a8cfc5d4f317f2e7b6e9a9"/>
+      </topic>
+      <topic label="hybrid_main.cc" href="dd/d96/hybrid__main_8cc.html">
+        <topic label="main" href="dd/d96/hybrid__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627"/>
+      </topic>
+      <topic label="main.cc" href="d9/d0f/main_8cc.html">
+        <topic label="main" href="d9/d0f/main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627"/>
+      </topic>
+    </topic>
+    <topic label="File Members" href="globals.html">
+      <topic label="All" href="globals.html"/>
+      <topic label="Functions" href="globals_func.html"/>
+      <topic label="Variables" href="globals_vars.html"/>
+      <topic label="Typedefs" href="globals_type.html"/>
+      <topic label="Enumerations" href="globals_enum.html"/>
+      <topic label="Enumerator" href="globals_eval.html"/>
+      <topic label="Macros" href="globals_defs.html"/>
+    </topic>
+  </topic>
+</toc>

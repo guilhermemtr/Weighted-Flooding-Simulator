@@ -7,25 +7,28 @@ print_arguments ()
 {
   std::string args =
     "<#runs> <tests> <corrupt_parties> <corruption_threshold in [0,1]> "
-    "<#min_parties> <#max_parties> <ratio_rich_poor> <#rich_parties> <to_show "
-    "(a to show everything)> <#min_factor> <#max_factor>";
+    "<#min_parties> <#max_parties> <ratio_heavy_light> <#heavy_parties> "
+    "<to_show "
+    "(a to show everylightg)> <#min_factor> <#max_factor>";
   std::cout << "Expecting arguments: " << args << std::endl;
 
   std::cout << "Possible test flags:" << std::endl;
   std::cout << std::bitset<TEST_TYPES> (DET_CONST_DIST) << "  -  "
             << "Deterministic Constant distribution" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (DET_FF_THIN_DIST) << "  -  "
-            << "Deterministic Few-Fat distribution, thin sender" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (DET_FF_FAT_DIST) << "  -  "
-            << "Deterministic Few-Fat distribution, fat sender" << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (DET_EXP_THIN_DIST) << "  -  "
-            << "Deterministic Exponential distribution, thinnest sender"
+  std::cout << std::bitset<TEST_TYPES> (DET_FH_LIGHT_DIST) << "  -  "
+            << "Deterministic Few-Heavy distribution, light sender"
+            << std::endl;
+  std::cout << std::bitset<TEST_TYPES> (DET_FH_HEAVY_DIST) << "  -  "
+            << "Deterministic Few-Heavy distribution, heavy sender"
+            << std::endl;
+  std::cout << std::bitset<TEST_TYPES> (DET_EXP_LIGHT_DIST) << "  -  "
+            << "Deterministic Exponential distribution, lightest sender"
             << std::endl;
   std::cout << std::bitset<TEST_TYPES> (DET_EXP_MEDN_DIST) << "  -  "
             << "Deterministic Exponential distribution, median sender"
             << std::endl;
-  std::cout << std::bitset<TEST_TYPES> (DET_EXP_FAT_DIST) << "  -  "
-            << "Deterministic Exponential distribution, fattest sender"
+  std::cout << std::bitset<TEST_TYPES> (DET_EXP_HEAVY_DIST) << "  -  "
+            << "Deterministic Exponential distribution, heaviest sender"
             << std::endl;
 
   std::cout << std::bitset<TEST_TYPES> (RAND_EXP_RAND_SND_DIST) << "  -  "
@@ -55,9 +58,9 @@ print_parameters (simulation_parameters_t params)
   std::cout << "Maximum number of parties: " << params.max_nr_parties
             << std::endl;
 
-  std::cout << "Ratio between rich and poor: " << params.ratio_rich_poor
+  std::cout << "Ratio between heavy and light: " << params.ratio_heavy_light
             << std::endl;
-  std::cout << "Number of rich parties: " << params.nr_rich_parties
+  std::cout << "Number of heavy parties: " << params.nr_heavy_parties
             << std::endl;
 
   std::cout << "Output flags: " << std::bitset<NR_OUTPUTS_SHOW> (params.to_show)
@@ -101,8 +104,8 @@ read_parameters (int argc, char **argv)
   std::string str_min_parties (argv[5]);
   std::string str_max_parties (argv[6]);
 
-  std::string str_ratio_rich_poor (argv[7]);
-  std::string str_nr_rich_parties (argv[8]);
+  std::string str_ratio_heavy_light (argv[7]);
+  std::string str_nr_heavy_parties (argv[8]);
 
   std::string str_to_show (argv[9]);
 
@@ -189,12 +192,12 @@ read_parameters (int argc, char **argv)
     std::cout << "std::out_of_range::what(): " << ex.what () << std::endl;
   }
 
-  // set the ratio_rich_poor
-  double ratio_rich_poor = 0.0;
+  // set the ratio_heavy_light
+  double ratio_heavy_light = 0.0;
 
   try
   {
-    ratio_rich_poor = std::stod (str_ratio_rich_poor.c_str ());
+    ratio_heavy_light = std::stod (str_ratio_heavy_light.c_str ());
   } catch (std::invalid_argument const &ex)
   {
     std::cout << "std::invalid_argument::what(): " << ex.what () << std::endl;
@@ -203,11 +206,11 @@ read_parameters (int argc, char **argv)
     std::cout << "std::out_of_range::what(): " << ex.what () << std::endl;
   }
 
-  party_t nr_rich_parties = 0;
+  party_t nr_heavy_parties = 0;
 
   try
   {
-    nr_rich_parties = std::stol (str_nr_rich_parties.c_str ());
+    nr_heavy_parties = std::stol (str_nr_heavy_parties.c_str ());
   } catch (std::invalid_argument const &ex)
   {
     std::cout << "std::invalid_argument::what(): " << ex.what () << std::endl;
@@ -224,7 +227,8 @@ read_parameters (int argc, char **argv)
     if (!str_to_show.compare (std::string ("a")))
     {
       // sets all show flags to 1
-      to_show = ~0; // SHOW_DISTRIBUTION | SHOW_FACTOR | SHOW_SUCCESS | SHOW_NR_PARTIES | SHOW_TEST;
+      to_show = ~0;    // SHOW_DISTRIBUTION | SHOW_FACTOR | SHOW_SUCCESS |
+                       // SHOW_NR_PARTIES | SHOW_TEST;
     } else
     {
       to_show = std::stoi (str_to_show.c_str (), nullptr, 2);
@@ -260,8 +264,8 @@ read_parameters (int argc, char **argv)
           .corruption_threshold = corruption_threshold,
           .min_nr_parties       = min_nr_parties,
           .max_nr_parties       = max_nr_parties,
-          .ratio_rich_poor      = ratio_rich_poor,
-          .nr_rich_parties      = nr_rich_parties,
+          .ratio_heavy_light    = ratio_heavy_light,
+          .nr_heavy_parties     = nr_heavy_parties,
           .to_show              = to_show,
           .min_factor           = min_factor,
           .max_factor           = max_factor};
