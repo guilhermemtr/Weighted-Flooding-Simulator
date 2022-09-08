@@ -15,7 +15,7 @@ We provide a `Makefile` for compiling the source code of the project.
 The simulator relies on a library `<sys/sysinfo.h>` that (to the best of our knowledge) is not available in MacOS.
 The `Makefile` allows for compiling three distinct targets: 
 - ```make bench``` compiles `benchmark.cc` (and all other necessary files), generating executable `bench-bin`.
-The purpose of this executable is benchmarking the performance of the `WFF` protocol via simulations (the results of the benchmarks are written to [`.csv`](https://en.wikipedia.org/wiki/Comma-separated_values) files).
+The purpose of this executable is benchmarking the performance of the `WFF` protocol via simulations (the results of the benchmarks are written to [`.csv`](https://en.wikipedia.org/wiki/Comma-separated_values) files). To see how to run `bench-bin`, refer to section [Running The Benchmarks](#running-the-benchmarks).
 These are the same benchmarks considered in our [paper](https://eprint.iacr.org/2022/608)[^1].
 - ```make kout``` compiles `main.cc` (and all other necessary files), generating executable `kout-bin`.
 This executable allows running the simulator of the `WFF` protocol where the execution parameters are passed as command-line arguments.
